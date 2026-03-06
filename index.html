@@ -1476,30 +1476,7 @@
         </div>
         <div>
           <script type="text/javascript">
-            (function () {
-              emailjs.init({
-                publicKey: "uYfnlksCUO2B7Zgm7",
-              });
-            })();
-
-            document.addEventListener("DOMContentLoaded", function () {
-              const contactForm = document.getElementById("contact-form");
-              if (contactForm) {
-                contactForm.addEventListener("submit", function (event) {
-                  event.preventDefault();
-                  emailjs
-                    .sendForm("service_8wa9d2d", "template_auvix", this)
-                    .then(() => {
-                      alert(
-                        "Email enviado com sucesso! Em breve um consultor entrará em contato.",
-                      );
-                      this.reset();
-                    })
-                    .catch((err) => alert("Erro: " + JSON.stringify(err)));
-                });
-              }
-            });
-          </script>
+            (function(){emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});})();document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("contact-form");e&&e.addEventListener("submit",function(t){t.preventDefault(),emailjs.sendForm("service_8wa9d2d","template_auvix",this).then(()=>{alert("Email enviado com sucesso! Em breve um consultor entrará em contato."),this.reset()}).catch(t=>alert("Erro: "+JSON.stringify(t)))})});</script>
           <form class="contact-form" id="contact-form">
             <div class="form-row">
               <input type="text" name="name" placeholder="Seu nome" required />
