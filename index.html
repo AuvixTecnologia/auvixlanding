@@ -95,10 +95,14 @@
         text-decoration: none;
         font-size: 0.9rem;
         font-weight: 500;
-        transition: color 0.2s;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        transition: all 0.2s ease;
       }
       .nav-links a:hover {
+        background: rgba(96, 203, 233, 0.15);
         color: var(--teal);
+        transform: translateY(-2px);
       }
       .nav-cta {
         background: var(--teal);
@@ -812,7 +816,7 @@
       }
 
       /* ─── RESPONSIVE ─── */
-      @media (max-width: 900px) {
+      @media (max-width: 768px) {
         .hero-grid {
           grid-template-columns: 1fr;
           gap: 3rem;
@@ -862,6 +866,12 @@
         }
         .problems-grid {
           grid-template-columns: 1fr;
+        }
+        .features-list {
+          grid-template-columns: 1fr;
+        }
+        .feat-app-img {
+          grid-column: span 1 !important;
         }
         .form-row {
           grid-template-columns: 1fr;
