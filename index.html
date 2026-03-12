@@ -1547,7 +1547,8 @@
           />
         </svg>
       </a>
-      <p>© 2025 Auvix Tecnologia. Todos os direitos reservados.</p>
+      <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
+      <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
       <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
     </footer>
 
