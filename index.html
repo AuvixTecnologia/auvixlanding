@@ -941,17 +941,19 @@
       .carousel-slide.active { opacity: 1; z-index: 1; }
       .carousel-dots {
         position: absolute;
-        bottom: 14px;
+        bottom: 10px;
         left: 50%;
+        color: aqua;
         transform: translateX(-50%);
         display: flex;
         gap: 7px;
         z-index: 10;
+
       }
       .carousel-dot {
         width: 8px; height: 8px;
         border-radius: 50%;
-        background: rgba(255,255,255,0.35);
+        background: #555;
         border: none;
         cursor: pointer;
         padding: 0;
@@ -960,6 +962,12 @@
       .carousel-dot.active {
         background: var(--teal);
         transform: scale(1.25);
+      }
+      #carousel-mobile {
+        padding-bottom: 30px;
+      }
+      #carousel-mobile .carousel-dots {
+        bottom: 8px;
       }
 
     </style>
