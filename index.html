@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://www.auvix.com.br" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auvix Tecnologia | Controle de Ponto Digital com Gestão inteligente e segura Facial</title>
+    <title>Auvix Tecnologia | Sistema de Controle de Ponto Digital com Reconhecimento Facial</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <meta property="og:site_name" content="Auvix">
     <script type="application/ld+json">
@@ -385,10 +385,10 @@
         position: relative;
       }
       .problems-grid {
-        max-width: 1200px;
+        max-width: 880px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
       }
       .problem-card {
@@ -912,6 +912,110 @@
         }
       }
 
+      /* ─── HERO CHECKS ─── */
+      .hero-checks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        margin-bottom: 2rem;
+      }
+      .hero-checks span {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .check-mark {
+        color: var(--teal);
+        font-style: normal;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      /* ─── PLATFORM BLOCKS ─── */
+      .platform-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+        margin-top: 1.5rem;
+      }
+      .platform-block {
+        background: rgba(96, 203, 233, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+        transition: border-color 0.2s;
+      }
+      .platform-block:hover { border-color: var(--teal2); }
+      .platform-block strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 0.35rem;
+      }
+      .platform-block span {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      /* ─── FEATURES GROUPS ─── */
+      .features-groups {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      .feat-group {
+        background: rgba(8, 18, 30, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.5rem;
+        backdrop-filter: blur(6px);
+        transition: border-color 0.25s, transform 0.25s;
+      }
+      .feat-group:hover {
+        border-color: var(--teal2);
+        transform: translateY(-3px);
+      }
+      .feat-group-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+      .feat-group h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--teal);
+        margin-bottom: 0.9rem;
+      }
+      .feat-group ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .feat-group ul li {
+        color: var(--muted);
+        font-size: 0.83rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.45rem;
+        line-height: 1.4;
+      }
+      .feat-group ul li::before {
+        content: "✓";
+        color: var(--teal);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      @media (max-width: 900px) {
+        .features-groups { grid-template-columns: repeat(2, 1fr); }
+        .platform-blocks { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 480px) {
+        .features-groups { grid-template-columns: 1fr; }
+      }
+
       .fade-up {
         opacity: 0;
         transform: translateY(30px);
@@ -1038,17 +1142,20 @@
       <div class="hero-grid">
         <div>
           <!-- <div class="hero-badge">Auvix Controle de Ponto</div> -->
-          <h1>Controle de ponto <em>completo, moderno</em> e 100% digital.</h1>
+          <h1>Controle de ponto digital com <em>reconhecimento facial</em></h1>
           <p class="hero-text-p">
-            Gerencie a jornada de trabalho dos seus colaboradores com rapidez,
-            precisão e total segurança. Solução fácil de utilizar, empresas de todos os
-            tamanhos.
+            Reduza erros operacionais, automatize o controle de jornada e acompanhe horas extras, faltas e banco de horas em tempo real.
           </p>
+          <div class="hero-checks">
+            <span><em class="check-mark">✔</em> Registro via celular, tablet e web</span>
+            <span><em class="check-mark">✔</em> Reconhecimento facial integrado</span>
+            <span><em class="check-mark">✔</em> Relatórios automáticos em tempo real</span>
+            <span><em class="check-mark">✔</em> Integração com folha de pagamento</span>
+            <span><em class="check-mark">✔</em> Solução fácil de usar</span>
+          </div>
           <div class="hero-actions">
             <a href="#contato" class="btn-primary">Agendar demonstração</a>
-            <a href="#funcionalidades" class="btn-secondary"
-              >Ver funcionalidades</a
-            >
+            <a href="#como-funciona" class="btn-secondary">Ver como funciona</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -1057,13 +1164,13 @@
             <div class="carousel" id="carousel-desktop">
               <div class="carousel-track">
                 <img src="images/carousel/showcase-dashboard.png" alt="Dashboard Auvix" class="carousel-slide active" />
-                <img src="images/carousel/Dashboards Diarios.png" alt="Dashboard Auvix" class="carousel-slide" />
-                <img src="images/carousel/Dashboards Diarios Dark.png" alt="Dashboard Auvix Dark" class="carousel-slide" />
-                <img src="images/carousel/Dashboards Jornada.png" alt="Dashboards Auvix" class="carousel-slide" />
-                <img src="images/carousel/Dashboards Hora Extra.png" alt="Dashboards Auvix" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Diarios.png" alt="Dashboard informacoes diarias" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Diarios Dark.png" alt="Dashboard informacoes diarias Dark" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Jornada.png" alt="Dashboards jornada" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Hora Extra.png" alt="Dashboards hora extra" class="carousel-slide" />
                 <img src="images/carousel/Fechamento de cartão ponto Dark.png" alt="Fechamento de cartão ponto Auvix" class="carousel-slide" />
-                <img src="images/carousel/Relatório de Cartão ponto modelo.png" alt="Relatório de Cartão ponto Auvix" class="carousel-slide" />
-                <img src="images/carousel/cadastro colaborador.jpg" alt= "Relatório de Cartão ponto Auvix" class="carousel-slide" />
+                <img src="images/carousel/Relatório de Cartão ponto modelo.png" alt="Relatório de Cartão ponto modelo" class="carousel-slide" />
+                <img src="images/carousel/cadastro colaborador.jpg" alt= "cadastro do colaborador" class="carousel-slide" />
               </div>
               <div class="carousel-dots">
                 <button class="carousel-dot active" data-idx="0"></button>
@@ -1086,8 +1193,8 @@
     <div class="stats">
       <div class="stats-inner">
         <div class="fade-up">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Digital e sem papel</div>
+          <div class="stat-num">Digital</div>
+          <div class="stat-label">Elimine papel</div>
         </div>
         <div class="fade-up">
           <div class="stat-num">671</div>
@@ -1098,8 +1205,8 @@
           <div class="stat-label">Formas de registro</div>
         </div>
         <div class="fade-up">
-          <div class="stat-num">24/7</div>
-          <div class="stat-label">Backup automático</div>
+          <div class="stat-num">Indicadores</div>
+          <div class="stat-label">Dashboards e indicadores de gestão</div>
         </div>
       </div>
     </div>
@@ -1108,7 +1215,7 @@
     <section class="problems" id="problemas">
       <div class="section-head fade-up">
         <div class="section-tag">Os desafios que você <em>enfrenta</em></div>
-        <h2>Sua empresa enfrenta estes problemas?</h2>
+        <h2>Sua empresa <em>enfrenta</em> estes problemas?</h2>
         <p>
           Reconhece algum desses cenários? A Auvix foi desenvolvida exatamente
           para eliminar cada um deles.
@@ -1116,42 +1223,24 @@
       </div>
       <div class="problems-grid">
         <div class="problem-card fade-up">
-          <div class="problem-icon">📋</div>
-          <p>
-            Registros inconsistentes e sem confiabilidade, feitos manualmente ou
-            em papel.
-          </p>
-        </div>
-        <div class="problem-card fade-up">
-          <div class="problem-icon">⚠️</div>
-          <p>
-            Dificuldade de comprovar a jornada trabalhada em caso de processo
-            trabalhista.
-          </p>
+          <div class="problem-icon">🔁</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Retrabalho constante no RH</strong>
+          <p>Controle manual e conferências demoradas consomem tempo e geram erros operacionais.</p>
         </div>
         <div class="problem-card fade-up">
           <div class="problem-icon">⏰</div>
-          <p>
-            Atrasos, faltas e horas extras sem controle claro ou relatórios
-            confiáveis.
-          </p>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Horas extras sem visibilidade</strong>
+          <p>Atrasos, faltas e banco de horas sem controle claro ou relatórios confiáveis.</p>
         </div>
         <div class="problem-card fade-up">
-          <div class="problem-icon">🔁</div>
-          <p>Erros que geram retrabalho e desgaste com a equipe de RH.</p>
+          <div class="problem-icon">⚠️</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Risco de fraudes no ponto</strong>
+          <p>Registros sem validação comprometem a segurança jurídica e facilitam irregularidades.</p>
         </div>
         <div class="problem-card fade-up">
-          <div class="problem-icon">📊</div>
-          <p>
-            Falta de relatórios precisos para tomada de decisão estratégica.
-          </p>
-        </div>
-        <div class="problem-card fade-up">
-          <div class="problem-icon">😤</div>
-          <p>
-            RH sobrecarregado com conferências manuais e interrupções
-            intermináveis.
-          </p>
+          <div class="problem-icon">📋</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Exposição trabalhista</strong>
+          <p>Dificuldade de comprovar a jornada real em caso de processo ou auditoria.</p>
         </div>
       </div>
     </section>
@@ -1168,51 +1257,29 @@
         </div>
         
         <div class="showcase-text fade-up">
-          <div class="section-tag">A solução que resolve tudo em minutos</div>
-          <h2>Tudo em uma única plataforma <em>Digital</em></h2>
+          <div class="section-tag">A solução completa para sua empresa</div>
+          <h2>Tudo em uma <em>única plataforma</em></h2>
           <p>
-            Automatiza todo o processo de registro, cálculo e gestão de jornada.
-            Substitui processos manuais e traz tecnologia para reduzir erros,
-            custos e retrabalho.
+            Automatize o controle de jornada, elimine retrabalho e reduza erros operacionais com uma plataforma moderna, segura e fácil de usar.
           </p>
-          <ul class="showcase-bullets">
-            <li>Painel  para gestores</li>
-            <li>Relatórios automáticos e completos</li>
-            <li>Gestão de horas extras, faltas e atrasos</li>
-            <li>Controle de banco de horas por funcionário</li>
-            <li>Sistema de auditoria com rastreabilidade total</li>
-            <li>Suporte completo e implantação rápida</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOWCASE 2 — Gestão inteligente e segura Facial -->
-    <section class="showcase" style="background: rgba(8, 18, 30, 0.45)">
-      <div class="showcase-inner reverse">
-        <div class="showcase-img fade-up">
-          <img
-            src="images/showcase-reconhecimento-facial.png"
-            alt="Gestão inteligente e segura facial Auvix"
-          />
-          <div class="showcase-img-badge">🔒 Antifraude ativo</div>
-        </div>
-        <div class="showcase-text fade-up">
-          <div class="section-tag">Tecnologia avançada</div>
-          <h2>Gestão inteligente e segura <em>Facial</em> integrado</h2>
-          <p>
-            Registro de ponto com reconhecimento facial de alta precisão.
-            Seguro, rápido e sem contato físico. Totalmente integrado ao sistema
-            para eliminar fraudes e batidas indevidas.
-          </p>
-          <ul class="showcase-bullets">
-            <li>Identificação facial em milissegundos</li>
-            <li>Geolocalização e validação antifraude</li>
-            <li>Registro via celular, tablet ou web</li>
-            <li>Integração com relógios físicos via AFD</li>
-            <li>Tolerâncias configuráveis por tipo de horário</li>
-            <li>Multi-empresas e multiusuários</li>
-          </ul>
+          <div class="platform-blocks">
+            <div class="platform-block">
+              <strong>📱 Registro inteligente</strong>
+              <span>Ponto via reconhecimento facial, QR Code, tablet, celular ou navegador.</span>
+            </div>
+            <div class="platform-block">
+              <strong>📊 Gestão automatizada</strong>
+              <span>Controle atrasos, banco de horas, faltas e escalas em tempo real.</span>
+            </div>
+            <div class="platform-block">
+              <strong>🔒 Segurança operacional</strong>
+              <span>Geolocalização, validação antifraude e histórico completo de registros.</span>
+            </div>
+            <div class="platform-block">
+              <strong>🔗 Relatórios e integração</strong>
+              <span>Relatórios automáticos e integração com folha de pagamento.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1228,135 +1295,64 @@
             gestão de jornada.
           </p>
         </div>
-        <div class="features-list">
-          <div class="feat fade-up">
-            <div class="feat-icon">😊</div>
-            <div class="feat-text">
-              <strong>Gestão inteligente e segura Facial</strong
-              ><span
-                >Registro seguro e sem contato físico direto no relógio de
-                ponto.</span
-              >
-            </div>
+        <div class="features-groups">
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">📱</div>
+            <h3>Registro de Ponto</h3>
+            <ul>
+              <li>Reconhecimento facial</li>
+              <li>QR Code</li>
+              <li>Crachá</li>
+              <li>Celular e tablet</li>
+              <li>Navegador web</li>
+              <li>Importação de AFD</li>
+            </ul>
           </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">📱</div>
-            <div class="feat-text">
-              <strong>Registro via celular, tablet ou web</strong
-              ><span
-                >Colaboradores registram ponto de qualquer dispositivo com
-                acesso à internet.</span
-              >
-            </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">📈</div>
+            <h3>Gestão de Jornada</h3>
+            <ul>
+              <li>Banco de horas</li>
+              <li>Horas extras e atrasos</li>
+              <li>Escalas e horários</li>
+              <li>Relatórios automáticos</li>
+              <li>Justificativas e férias</li>
+              <li>Multi Escalas/Escalas mistas</li>
+            </ul>
           </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">📍</div>
-            <div class="feat-text">
-              <strong>Geolocalização e antifraude</strong
-              ><span
-                >Validação do local de trabalho para garantir a autenticidade
-                dos registros.</span
-              >
-            </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">🛡️</div>
+            <h3>Segurança</h3>
+            <ul>
+              <li>Geolocalização</li>
+              <li>Validação antifraude</li>
+              <li>Auditoria de ações</li>
+              <li>Backup automático</li>
+              <li>Rastreabilidade total</li>
+              <li>Notificações</li>
+            </ul>
           </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">🔗</div>
-            <div class="feat-text">
-              <strong>Integração com folha de pagamento</strong
-              ><span
-                >Layout configurável para integrar com qualquer software de RH
-                já utilizado.</span
-              >
-            </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">🏢</div>
+            <h3>Administração</h3>
+            <ul>
+              <li>Multi-empresas</li>
+              <li>Perfis de acesso</li>
+              <li>Controle centralizado</li>
+              <li>Integração com folha de pagamento</li>
+              <li>Tolerância configurável</li>
+              <li>Exportação de dados configurável</li>
+            </ul>
           </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">📈</div>
-            <div class="feat-text">
-              <strong>Relatórios automáticos e completos</strong
-              ><span
-                >Dados de horas extras, faltas, atrasos e banco de horas em
-                tempo real.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">🏢</div>
-            <div class="feat-text">
-              <strong>Multi-empresas e multiusuários</strong
-              ><span
-                >Gerencie diversas unidades com perfis de acesso configuráveis
-                por grupo.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">🔄</div>
-            <div class="feat-text">
-              <strong>Importação de AFD</strong
-              ><span
-                >Importa registros de batidas de qualquer relógio que
-                disponibilize o AFD.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">☁️</div>
-            <div class="feat-text">
-              <strong>Backup automático em nuvem</strong
-              ><span
-                >Serviço gratuito integrado com gravação segura dos
-                arquivos.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">📅</div>
-            <div class="feat-text">
-              <strong>Justificativas e férias</strong
-              ><span
-                >Lançamentos por período ou por grupo de funcionários de forma
-                simplificada.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">🛡️</div>
-            <div class="feat-text">
-              <strong>Auditoria de ações</strong
-              ><span
-                >Rastreabilidade completa por usuário, data e hora de cada
-                operação.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">⏱️</div>
-            <div class="feat-text">
-              <strong>Tolerância configurável</strong
-              ><span
-                >Apontamentos gerais ou configurados por tipo de horário de cada
-                equipe.</span
-              >
-            </div>
-          </div>
-          <div class="feat fade-up">
-            <div class="feat-icon">👥</div>
-            <div class="feat-text">
-              <strong>Gestão de acesso</strong
-              ><span
-                >Permissões configuráveis por grupo de perfil de usuários para
-                total controle.</span
-              >
-            </div>
-          </div>
+        </div>
 
           <div
             class="feat fade-up feat-app-img"
             style="
-              grid-column: span 2;
+              margin-top: 2rem;
               background: transparent;
               border: none;
-              padding: 0.5rem 0;
+              padding: 0;
             "
           >
             <div style="
@@ -1376,14 +1372,15 @@
                 
                 
                 <div class="section-tag" style="text-align: left; display: inline-block; margin-bottom: 0.75rem;">Aplicativo Auvix</div>
-                <h3 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3;">
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3;">
                   Leve o controle de ponto<br>no seu bolso
-                </h3>
+                </h2>
                 <p style="color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem; max-width: 400px;">
                   Registre o ponto, acompanhe sua jornada e receba notificações diretamente pelo celular, de qualquer lugar.
                 </p>
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.75rem;">
                   <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Marcação de ponto com geolocalização</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Cerca vitual</li>
                   <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Histórico completo de marcações</li>
                   <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Banco de horas </li>
                   <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Solicitações de ajuste pelo app</li>
@@ -1397,7 +1394,7 @@
                   margin: 20px 0;
                   width: 180px;
                 ">
-                  <img src="images/showcase-app-mobile.png" alt="Dashboard Auvix" class="carousel-slide active"/>
+                  <img src="images/showcase-app-mobile.png" alt="mobile icone Auvix" class="carousel-slide active"/>
                 </div>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR"
@@ -1439,12 +1436,12 @@
                 ">
                   <div class="carousel" id="carousel-mobile">
                     <div class="carousel-track">
-                      <img src="images/carousel/app-BANCO DE HORAS.jpeg" alt="Dashboard Auvix" class="carousel-slide active" />
-                      <img src="images/carousel/app-HISTÓRICO DE MARCAÇÕES.jpeg" alt="Dashboard Auvix" class="carousel-slide" />
-                      <img src="images/carousel/app-MARCAÇÃO DE PONTO.jpeg" alt="Dashboard Auvix" class="carousel-slide" />
-                      <img src="images/carousel/app-OPÇÕES DE SOLICITAÇÕES.jpeg" alt="Dashboard Auvix" class="carousel-slide" />
-                      <img src="images/carousel/app-SOLICITAÇÕES DE AJUSTES.jpeg" alt="Dashboard Auvix" class="carousel-slide" />
-                      <img src="images/carousel/app-TELA PRINCIPAL.jpeg" alt="Dashboard Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-BANCO DE HORAS.jpeg" alt="Banco de Horas Auvix" class="carousel-slide active" />
+                      <img src="images/carousel/app-HISTÓRICO DE MARCAÇÕES.jpeg" alt="Histórico de Marcações Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-MARCAÇÃO DE PONTO.jpeg" alt="Marcação de Ponto Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-OPÇÕES DE SOLICITAÇÕES.jpeg" alt="Opções de Solicitações Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-SOLICITAÇÕES DE AJUSTES.jpeg" alt="Solicitações de Ajustes Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-TELA PRINCIPAL.jpeg" alt="Tela Principal Auvix" class="carousel-slide" />
                     </div>
                     <div class="carousel-dots">
                       <button class="carousel-dot active" data-idx="0"></button>
@@ -1459,7 +1456,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
 
@@ -1504,10 +1500,9 @@
           <div class="step fade-up">
             <div class="step-num">4</div>
             <div class="step-body">
-              <h3>Gestão </h3>
+              <h3>Gestão em tempo real</h3>
               <p>
-                Gestores acompanham tudo no painel: faltas, horas extras, banco
-                de horas e relatórios completos disponíveis 24/7.
+                Gestores acompanham e fazem a gestão defaltas, horas extras, banco de horas. Relatórios completos e indicadores disponíveis 24/7.
               </p>
             </div>
           </div>
@@ -1518,18 +1513,13 @@
     <!-- CTA -->
     <section class="cta-section">
       <div class="cta-inner fade-up">
-        <h2>Agilize o controle da <em>jornada de trabalho</em> com Auvix</h2>
+        <h2>Modernize o controle de jornada da <em>sua empresa</em></h2>
         <p>
-          Solução prática, econômica e moderna para a sua empresa. Leve
-          tecnologia para o seu controle de ponto ainda hoje. Vamos lá?
+          Automatize processos, reduza erros operacionais e tenha total controle da jornada dos colaboradores com uma plataforma moderna, segura e fácil de usar.
         </p>
         <div class="cta-actions">
-          <a href="#contato" class="btn-primary"
-            >Agendar demonstração gratuita</a
-          >
-          <a href="tel:+554691153255" class="btn-secondary"
-            >📞 (46) 99115-3255</a
-          >
+          <a href="#contato" class="btn-primary">Falar com especialista</a>
+          <a href="tel:+554691153255" class="btn-secondary">📞 (46) 99115-3255</a>
         </div>
       </div>
     </section>
@@ -1537,31 +1527,32 @@
 <section style="padding:90px 5vw;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);">
   <div style="max-width:1200px;margin:auto;text-align:center;">
     <span style="display:inline-block;padding:8px 18px;border-radius:999px;background:rgba(96,203,233,0.12);color:#60cbe9;font-size:14px;margin-bottom:20px;">
-      Empresas que buscam mais produtividade no RH
+      Empresas que confiam na Auvix para modernizar o RH
     </span>
 
     <h2 style="font-size:42px;line-height:1.2;margin-bottom:18px;">
-      Plataforma moderna para gestão de jornada
+      Nossa Plataforma em Números
     </h2>
 
     <p style="max-width:760px;margin:0 auto 50px;color:#b6c2cf;font-size:18px;line-height:1.7;">
-      A Auvix ajuda empresas a automatizarem processos de RH, reduzirem retrabalho operacional e aumentarem a segurança no controle de ponto.
+      Resultados reais para empresas que buscam mais controle, produtividade e segurança na gestão da jornada.
+      <br>A Auvix automatiza processos de controle de ponto, reduz retrabalho operacional e oferece mais eficiência para equipes de RH.
     </p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
       <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
         <h3 style="font-size:36px;color:#60cbe9;margin-bottom:8px;">+50</h3>
-        <p style="color:#c9d4df;">Empresas atendidas</p>
+        <p style="color:#c9d4df;">Empresas utilizando a plataforma</p>
       </div>
 
       <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
         <h3 style="font-size:36px;color:#60cbe9;margin-bottom:8px;">+1000</h3>
-        <p style="color:#c9d4df;">Usuários ativos</p>
+        <p style="color:#c9d4df;">Usuários ativos diariamente</p>
       </div>
 
       <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
-        <h3 style="font-size:36px;color:#60cbe9;margin-bottom:8px;">Clientes satisfeitos</h3>
-        <p style="color:#c9d4df;">"Reduzimos drasticamente o retrabalho do RH após a implantação da Auvix."</p>
+        <h3 style="font-size:36px;color:#60cbe9;margin-bottom:8px;">Agilidade</h3>
+        <p style="color:#c9d4df;">“Reduzimos significativamente o tempo gasto com conferências manuais após a implantação da Auvix.”</p>
       </div>
     </div>
   </div>
@@ -1570,60 +1561,127 @@
 
 <section style="padding:90px 5vw;">
   <div style="max-width:1000px;margin:auto;">
-    <div style="text-align:center;margin-bottom:50px;">
-      <h2 style="font-size:42px;margin-bottom:16px;">Perguntas frequentes</h2>
-      <p style="color:#b6c2cf;font-size:18px;">Dúvidas comuns sobre o sistema de controle de ponto da Auvix.</p>
-    </div>
 
-    <div style="display:flex;flex-direction:column;gap:20px;">
-      <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:10px;">O sistema funciona em celular e tablet?</h3>
-        <p style="color:#b6c2cf;">Sim. O registro de ponto pode ser realizado via celular, tablet ou navegador web.</p>
-      </div>
 
-      <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:10px;">Possui reconhecimento facial?</h3>
-        <p style="color:#b6c2cf;">Sim. A plataforma conta com validação facial integrada e recursos antifraude.</p>
-      </div>
+<div style="text-align:center;margin-bottom:50px;">
+  <h2 style="font-size:42px;margin-bottom:16px;">
+    Perguntas frequentes
+  </h2>
 
-      <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:10px;">É possível acompanhar banco de horas no celular?</h3>
-        <p style="color:#b6c2cf;">Sim. O sistema oferece controle de banco de horas, horas extras, atrasos e relatórios completos.</p>
-      </div>
-    </div>
+  <p style="color:#b6c2cf;font-size:18px;">
+    Dúvidas comuns sobre o sistema de controle de ponto da Auvix.
+  </p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:20px;">
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">📱</span>
+      O sistema funciona em celular e tablet?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O registro de ponto pode ser realizado via celular, tablet ou navegador web.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">🧑‍💻</span>
+      Possui reconhecimento facial?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. A plataforma conta com validação facial integrada e recursos antifraude.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">⏱️</span>
+      É possível acompanhar banco de horas no celular?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O sistema oferece controle de banco de horas, horas extras, atrasos e relatórios completos.
+    </p>
+  </div>
+
+</div>
+
+
   </div>
 </section>
 
 
 <section style="padding:90px 5vw;background:#091521;">
   <div style="max-width:1200px;margin:auto;">
-    <div style="text-align:center;margin-bottom:60px;">
-      <h2 style="font-size:42px;margin-bottom:18px;">
-        Reduza retrabalho e ganhe <em>produtividade</em> no RH
-      </h2>
-      <p style="max-width:760px;margin:auto;color:#b6c2cf;font-size:18px;line-height:1.7;">
-        Centralize o controle de jornada em uma plataforma moderna, segura e preparada para empresas que precisam de mais eficiência operacional.
-      </p>
+
+
+<div style="text-align:center;margin-bottom:60px;">
+  <h2 style="font-size:42px;margin-bottom:18px;">
+    Reduza retrabalho e ganhe <em>produtividade</em> no RH
+  </h2>
+
+  <p style="max-width:760px;margin:auto;color:#b6c2cf;font-size:18px;line-height:1.7;">
+    Centralize o controle de jornada em uma plataforma moderna, segura e preparada para empresas que precisam de mais eficiência operacional.
+  </p>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      📊
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
-      <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:12px;">Controle centralizado</h3>
-        <p style="color:#b6c2cf;">Acompanhe registros, banco de horas e escalas em um único painel.</p>
-      </div>
+    <h3 style="margin-bottom:12px;">
+      Controle centralizado
+    </h3>
 
-      <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:12px;">Segurança operacional</h3>
-        <p style="color:#b6c2cf;">Validação facial, geolocalização e histórico completo de marcações.</p>
-      </div>
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Acompanhe registros, banco de horas e escalas em um único painel.
+    </p>
+  </div>
 
-      <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
-        <h3 style="margin-bottom:12px;">Automação do RH</h3>
-        <p style="color:#b6c2cf;">Reduza conferências manuais e agilize processos internos.</p>
-      </div>
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      🔒
     </div>
+
+    <h3 style="margin-bottom:12px;">
+      Segurança operacional
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Validação facial, geolocalização e histórico completo de marcações.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      ⚙️
+    </div>
+
+    <h3 style="margin-bottom:12px;">
+      Automação do RH
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Reduza conferências manuais e agilize processos internos.
+    </p>
+  </div>
+
+</div>
+
+
   </div>
 </section>
+
 
     <!-- CONTACT -->
     <section class="contact" id="contato">
