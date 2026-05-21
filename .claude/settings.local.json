@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"d:\\\\Repositorios\\\\auvixlanding\")",
+      "Bash(dir \"d:\\\\Repositorios\\\\auvixlanding\\\\images\")",
+      "Bash(mkdir \"d:\\\\Repositorios\\\\auvixlanding\\\\blog\")"
+    ],
+    "additionalDirectories": [
+      "d:\\Repositorios\\auvixlanding"
+    ]
+  }
+}
