@@ -1,361 +1,612 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho. Sistema Auvix para gestão de banco de horas."/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.auvix.com.br/banco-de-horas-online.html"/>
-  <title>Banco de Horas Online — Gestão Automatizada | Auvix Tecnologia</title>
-  <link rel="icon" href="favicon.png" type="image/png"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://www.auvix.com.br/banco-de-horas-online.html"/>
-  <meta property="og:title" content="Banco de Horas Online — Gestão Automatizada | Auvix Tecnologia"/>
-  <meta property="og:description" content="Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho. Sistema Auvix para gestão de banco de horas."/>
-  <meta property="og:locale" content="pt_BR"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho. Sistema Auvix para gestão de banco de horas."
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://www.auvix.com.br/banco-de-horas-online.html"
+    />
+    <title>
+      Banco de Horas Online — Gestão Automatizada | Auvix Tecnologia
+    </title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.auvix.com.br/banco-de-horas-online.html"
+    />
+    <meta
+      property="og:title"
+      content="Banco de Horas Online — Gestão Automatizada | Auvix Tecnologia"
+    />
+    <meta
+      property="og:description"
+      content="Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho. Sistema Auvix para gestão de banco de horas."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <script type="application/ld+json">
       {
-        "@type": "WebPage",
-        "name": "Banco de Horas Online — Gestão Automatizada",
-        "url": "https://www.auvix.com.br/banco-de-horas-online.html",
-        "description": "Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho.",
-        "publisher": { "@type": "Organization", "name": "Auvix Tecnologia", "url": "https://www.auvix.com.br" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.auvix.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Banco de Horas Online", "item": "https://www.auvix.com.br/banco-de-horas-online.html" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@context": "https://schema.org",
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "O que é banco de horas?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Banco de horas é um sistema de compensação de jornada previsto na CLT (art. 59) que permite que as horas extras trabalhadas sejam compensadas com folgas em outro momento, em vez de serem pagas como horas extras. Requer acordo individual escrito ou acordo coletivo." }
+            "@type": "WebPage",
+            "name": "Banco de Horas Online — Gestão Automatizada",
+            "url": "https://www.auvix.com.br/banco-de-horas-online.html",
+            "description": "Controle banco de horas online de forma automática. Calcule horas extras, saldos e compensações sem retrabalho.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Auvix Tecnologia",
+              "url": "https://www.auvix.com.br"
+            }
           },
           {
-            "@type": "Question",
-            "name": "Qual o prazo máximo para compensar o banco de horas?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Para banco de horas individual (acordo individual escrito), o prazo máximo de compensação é de 6 meses. Para banco de horas coletivo (acordo ou convenção coletiva), o prazo pode ser de até 1 ano. Horas não compensadas dentro do prazo devem ser pagas com o adicional correspondente." }
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://www.auvix.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Banco de Horas Online",
+                "item": "https://www.auvix.com.br/banco-de-horas-online.html"
+              }
+            ]
           },
           {
-            "@type": "Question",
-            "name": "O sistema Auvix calcula o banco de horas automaticamente?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Auvix calcula automaticamente o saldo de banco de horas de cada colaborador com base nos registros de ponto e na jornada contratada, gerando alertas quando o saldo está próximo do prazo de vencimento e relatórios detalhados para o RH." }
-          },
-          {
-            "@type": "Question",
-            "name": "O banco de horas pode ser negativo?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sim, o banco de horas pode ficar negativo quando o colaborador trabalha menos horas do que a jornada contratada. O sistema Auvix controla tanto os saldos positivos quanto negativos, alertando gestores quando os déficits se tornam significativos." }
-          },
-          {
-            "@type": "Question",
-            "name": "Como o colaborador pode consultar seu saldo de banco de horas?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Os colaboradores podem consultar o saldo do banco de horas diretamente pelo aplicativo Auvix no smartphone, com acesso ao histórico completo de acumulação e compensações. Isso reduz dúvidas e questionamentos junto ao RH." }
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O que é banco de horas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Banco de horas é um sistema de compensação de jornada previsto na CLT (art. 59) que permite que as horas extras trabalhadas sejam compensadas com folgas em outro momento, em vez de serem pagas como horas extras. Requer acordo individual escrito ou acordo coletivo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual o prazo máximo para compensar o banco de horas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Para banco de horas individual (acordo individual escrito), o prazo máximo de compensação é de 6 meses. Para banco de horas coletivo (acordo ou convenção coletiva), o prazo pode ser de até 1 ano. Horas não compensadas dentro do prazo devem ser pagas com o adicional correspondente."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O sistema Auvix calcula o banco de horas automaticamente?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. O Auvix calcula automaticamente o saldo de banco de horas de cada colaborador com base nos registros de ponto e na jornada contratada, gerando alertas quando o saldo está próximo do prazo de vencimento e relatórios detalhados para o RH."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O banco de horas pode ser negativo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim, o banco de horas pode ficar negativo quando o colaborador trabalha menos horas do que a jornada contratada. O sistema Auvix controla tanto os saldos positivos quanto negativos, alertando gestores quando os déficits se tornam significativos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como o colaborador pode consultar seu saldo de banco de horas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Os colaboradores podem consultar o saldo do banco de horas diretamente pelo aplicativo Auvix no smartphone, com acesso ao histórico completo de acumulação e compensações. Isso reduz dúvidas e questionamentos junto ao RH."
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="auvix.css"/>
-</head>
-<body>
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="auvix.css" />
+  </head>
+  <body>
+    <div
+      class="site-bg"
+      style="background-image: url(&quot;images/background-hero.jpg&quot;)"
+    ></div>
 
-<div class="site-bg" style="background-image:url('images/background-hero.jpg')"></div>
-
-<nav>
-  <a href="index.html" class="nav-logo" aria-label="Auvix Tecnologia — início">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:36px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html#problemas">Desafios</a></li>
-    <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
-    <li><a href="index.html#como-funciona">Como funciona</a></li>
-    <li><a href="blog/">Blog</a></li>
-    <li><a href="index.html#contato">Contato</a></li>
-  </ul>
-  <div style="display:flex;gap:1rem;align-items:center">
-    <a href="index.html#contato" class="nav-cta">Fale conosco</a>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Início</a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">Banco de Horas Online</span>
+    <nav>
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="Auvix Tecnologia — início"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 36px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#problemas">Desafios</a></li>
+        <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+      <div style="display: flex; gap: 1rem; align-items: center">
+        <a href="index.html#contato" class="nav-cta">Fale conosco</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </nav>
-    <span class="hero-badge">✦ Cálculo 100% Automático</span>
-    <h1>Banco de Horas <em style="font-style:normal;color:#60cbe9">Online</em> — Gestão Automatizada</h1>
-    <p>Calcule saldos, controle vencimentos e gerencie compensações de banco de horas sem planilhas, sem erros e sem retrabalho para o RH.</p>
-    <div class="hero-actions">
-      <a href="index.html#contato" class="btn-primary">Agendar demonstração</a>
-      <a href="controle-de-jornada.html" class="btn-secondary">Ver gestão de jornada</a>
-    </div>
-  </div>
-</section>
 
-<!-- STATS BAND -->
-<div class="stats-band fade-up">
-  <div class="stats-band-inner">
-    <div>
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Cálculo automático</div>
-    </div>
-    <div>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">Banco de Horas Online</span>
+        </nav>
+        <span class="hero-badge">✦ Cálculo 100% Automático</span>
+        <h1>
+          Banco de Horas
+          <em style="font-style: normal; color: #60cbe9">Online</em> — Gestão
+          Automatizada
+        </h1>
+        <p>
+          Calcule saldos, controle vencimentos e gerencie compensações de banco
+          de horas sem planilhas, sem erros e sem retrabalho para o RH.
+        </p>
+        <div class="hero-actions">
+          <a href="index.html#contato" class="btn-primary"
+            >Agendar demonstração</a
+          >
+          <a href="controle-de-jornada.html" class="btn-secondary"
+            >Ver gestão de jornada</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <div class="stats-band fade-up">
+      <div class="stats-band-inner">
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Cálculo automático</div>
+        </div>
+        <!-- <div>
       <div class="stat-num">0</div>
       <div class="stat-label">Erros de cálculo</div>
-    </div>
-    <div>
-      <div class="stat-num">Tempo real</div>
-      <div class="stat-label">Saldo atualizado</div>
-    </div>
-    <div>
-      <div class="stat-num">CLT</div>
-      <div class="stat-label">Art. 59 e seguintes</div>
-    </div>
-  </div>
-</div>
-
-<!-- O QUE É -->
-<section class="content-section fade-up">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Entenda o conceito</span>
-      <h2>O que é banco de horas e como funciona?</h2>
-    </div>
-    <div class="rich-text">
-      <p>O <strong>banco de horas</strong> é um mecanismo de compensação de jornada previsto no <strong>artigo 59 e seguintes da CLT</strong>, que permite que as horas extras trabalhadas sejam compensadas com folgas em outro momento, em vez de serem pagas imediatamente como adicional de horas extras.</p>
-      <p>Na prática, quando um colaborador trabalha além da jornada contratada, as horas excedentes são "depositadas" em seu banco de horas. Esse saldo pode ser utilizado para compensar dias ou períodos em que ele trabalhará menos horas ou para tirar folgas extras.</p>
-      <p>A <strong>Reforma Trabalhista de 2017 (Lei 13.467/2017)</strong> flexibilizou as regras do banco de horas, permitindo sua adoção por acordo individual escrito (sem necessidade de negociação coletiva), desde que a compensação ocorra no prazo de 6 meses. Para prazos maiores (até 1 ano), ainda é necessário acordo ou convenção coletiva.</p>
-
-      <div class="callout">
-        <strong>Atenção legal:</strong> Horas acumuladas no banco de horas que não forem compensadas dentro do prazo máximo (6 meses para acordo individual, 1 ano para acordo coletivo) devem ser pagas com o adicional de horas extras, acrescendo passivo trabalhista para a empresa.
-      </div>
-
-      <p>Gerenciar o banco de horas manualmente — em planilhas Excel ou sistemas precários — é uma fonte constante de erros, contestações e retrabalho. Com o Auvix, todo o processo é automatizado: o sistema calcula os saldos em tempo real, alerta sobre vencimentos próximos e exporta os dados para a folha de pagamento.</p>
-    </div>
-  </div>
-</section>
-
-<!-- COMO O AUVIX AUTOMATIZA -->
-<section class="content-section dark fade-up">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Automação completa</span>
-      <h2>Como o Auvix automatiza o banco de horas</h2>
-    </div>
-    <div class="content-grid-3">
-      <div class="info-card">
-        <div class="info-card-icon">⚡</div>
-        <h3>Acumulação automática</h3>
-        <p>A cada registro de ponto, o sistema compara as horas trabalhadas com a jornada contratada e atualiza o saldo do banco de horas em tempo real, sem necessidade de intervenção do RH.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🔔</div>
-        <h3>Alertas de vencimento</h3>
-        <p>O sistema envia alertas automáticos quando o saldo de um colaborador está próximo do prazo máximo de compensação, prevenindo passivos trabalhistas por horas não compensadas no prazo.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📊</div>
-        <h3>Relatórios e exportação</h3>
-        <p>Relatórios detalhados de banco de horas por colaborador, departamento ou empresa, com histórico completo. Exportação direta para sistemas de folha de pagamento compatíveis.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FUNCIONALIDADES -->
-<section class="content-section fade-up">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Recursos</span>
-      <h2>Funcionalidades do banco de horas Auvix</h2>
-    </div>
-    <div class="content-grid-4">
-      <div class="info-card">
-        <div class="info-card-icon">🏦</div>
-        <h3>Saldos</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Saldo em tempo real</li>
-          <li>✓ Histórico por período</li>
-          <li>✓ Saldo positivo e negativo</li>
-          <li>✓ Acumulado mensal/anual</li>
-          <li>✓ Acesso pelo app</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📅</div>
-        <h3>Compensações</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Lançamento de folgas</li>
-          <li>✓ Compensação parcial</li>
-          <li>✓ Controle de prazos</li>
-          <li>✓ Aprovação pelo gestor</li>
-          <li>✓ Histórico de compensações</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">⚖️</div>
-        <h3>Legal</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Acordo individual</li>
-          <li>✓ Acordo coletivo</li>
-          <li>✓ Prazos CLT respeitados</li>
-          <li>✓ Auditoria completa</li>
-          <li>✓ Conformidade trabalhista</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📈</div>
-        <h3>Relatórios</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Por colaborador</li>
-          <li>✓ Por departamento</li>
-          <li>✓ Exportação para folha</li>
-          <li>✓ Alertas automáticos</li>
-          <li>✓ Dashboard gerencial</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section fade-up">
-  <div class="faq-inner">
-    <div class="section-head">
-      <span class="section-tag">Dúvidas frequentes</span>
-      <h2>Perguntas sobre banco de horas</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>O que é banco de horas?</h3>
-        <p>É um sistema de compensação de jornada previsto na CLT (art. 59) que permite que horas extras trabalhadas sejam compensadas com folgas em outro momento, em vez de serem pagas imediatamente como adicional.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Qual o prazo máximo para compensar o banco de horas?</h3>
-        <p>Para banco de horas individual (acordo escrito), o prazo é de 6 meses. Para banco de horas coletivo (acordo ou convenção coletiva), o prazo pode ser de até 1 ano. Horas não compensadas no prazo devem ser pagas com adicional.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O sistema Auvix calcula o banco de horas automaticamente?</h3>
-        <p>Sim. O Auvix calcula automaticamente o saldo de banco de horas com base nos registros de ponto e na jornada contratada, com alertas de vencimento e relatórios detalhados para o RH.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O banco de horas pode ficar negativo?</h3>
-        <p>Sim. O saldo fica negativo quando o colaborador trabalha menos horas que a jornada contratada. O Auvix controla tanto saldos positivos quanto negativos, alertando gestores quando os déficits se tornam significativos.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Como o colaborador consulta o saldo do banco de horas?</h3>
-        <p>Os colaboradores podem consultar o saldo diretamente pelo aplicativo Auvix no smartphone, com acesso ao histórico completo de acumulação e compensações, reduzindo dúvidas e questionamentos junto ao RH.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section fade-up">
-  <div class="cta-inner">
-    <h2>Chega de erros no banco de horas da sua empresa</h2>
-    <p>Automatize o cálculo, elimine planilhas manuais e mantenha compliance trabalhista. Veja como o Auvix simplifica a gestão do banco de horas.</p>
-    <div class="cta-actions">
-      <a href="index.html#contato" class="btn-primary">Agendar demonstração gratuita</a>
-      <a href="controle-de-jornada.html" class="btn-secondary">Ver gestão de jornada</a>
-    </div>
-  </div>
-</section>
-
-<!-- ARTIGOS RELACIONADOS -->
-<section class="blog-section fade-up">
-  <div class="blog-inner">
-    <div class="section-head">
-      <span class="section-tag">Aprenda mais</span>
-      <h2>Artigos sobre banco de horas e jornada</h2>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Guia completo</span>
-          <h3><a href="blog/o-que-e-banco-de-horas.html">O que é banco de horas e como funciona?</a></h3>
-          <p>Tudo sobre o banco de horas: legislação, prazos, acordos individuais e coletivos, e como automatizar.</p>
+    </div> -->
+        <div>
+          <div class="stat-num">Tempo real</div>
+          <div class="stat-label">Saldo atualizado</div>
         </div>
-        <div class="blog-card-footer">
-          <a href="blog/o-que-e-banco-de-horas.html">Ler artigo →</a>
+        <div>
+          <div class="stat-num">CLT</div>
+          <div class="stat-label">Art. 59 e seguintes</div>
         </div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">RH</span>
-          <h3><a href="blog/como-reduzir-retrabalho-no-rh.html">Como reduzir retrabalho no RH</a></h3>
-          <p>Quanto tempo o RH perde com cálculos manuais e como a automação pode transformar os processos.</p>
-        </div>
-        <div class="blog-card-footer">
-          <a href="blog/como-reduzir-retrabalho-no-rh.html">Ler artigo →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Legislação</span>
-          <h3><a href="blog/portaria-671-explicada.html">Portaria 671 explicada para empresas</a></h3>
-          <p>Entenda as obrigações legais das empresas em relação ao registro de ponto e gestão de jornada.</p>
-        </div>
-        <div class="blog-card-footer">
-          <a href="blog/portaria-671-explicada.html">Ler artigo →</a>
-        </div>
-      </article>
+      </div>
     </div>
-  </div>
-</section>
 
-<footer>
-  <a href="index.html" class="footer-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:30px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
-  <div class="footer-links">
-    <a href="blog/">Blog</a>
-    <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
-    <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
-    <a href="banco-de-horas-online.html">Banco de Horas</a>
-    <a href="index.html#contato">Contato</a>
-    <a href="https://www.auvix.com.br/privacy">Privacidade</a>
-  </div>
-</footer>
+    <!-- O QUE É -->
+    <section class="content-section fade-up">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Entenda o conceito</span>
+          <h2>O que é banco de horas e como funciona?</h2>
+        </div>
+        <div class="rich-text">
+          <p>
+            O <strong>banco de horas</strong> é um mecanismo de compensação de
+            jornada previsto no <strong>artigo 59 e seguintes da CLT</strong>,
+            que permite que as horas extras trabalhadas sejam compensadas com
+            folgas em outro momento, em vez de serem pagas imediatamente como
+            adicional de horas extras.
+          </p>
+          <p>
+            Na prática, quando um colaborador trabalha além da jornada
+            contratada, as horas excedentes são "depositadas" em seu banco de
+            horas. Esse saldo pode ser utilizado para compensar dias ou períodos
+            em que ele trabalhará menos horas ou para tirar folgas extras.
+          </p>
+          <p>
+            A
+            <strong>Reforma Trabalhista de 2017 (Lei 13.467/2017)</strong>
+            flexibilizou as regras do banco de horas, permitindo sua adoção por
+            acordo individual escrito (sem necessidade de negociação coletiva),
+            desde que a compensação ocorra no prazo de 6 meses. Para prazos
+            maiores (até 1 ano), ainda é necessário acordo ou convenção
+            coletiva.
+          </p>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  hamburger.addEventListener("click", () => navLinks.classList.toggle("open"));
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
-</script>
-</body>
+          <div class="callout">
+            <strong>Atenção legal:</strong> Horas acumuladas no banco de horas
+            que não forem compensadas dentro do prazo máximo (6 meses para
+            acordo individual, 1 ano para acordo coletivo) devem ser pagas com o
+            adicional de horas extras, acrescendo passivo trabalhista para a
+            empresa.
+          </div>
+
+          <p>
+            Gerenciar o banco de horas manualmente — em planilhas Excel ou
+            sistemas precários — é uma fonte constante de erros, contestações e
+            retrabalho. Com o Auvix, todo o processo é automatizado: o sistema
+            calcula os saldos em tempo real, alerta sobre vencimentos próximos e
+            exporta os dados para a folha de pagamento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO O AUVIX AUTOMATIZA -->
+    <section class="content-section dark fade-up">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Automação completa</span>
+          <h2>Como o Auvix automatiza o banco de horas</h2>
+        </div>
+        <div class="content-grid-3">
+          <div class="info-card">
+            <div class="info-card-icon">⚡</div>
+            <h3>Acumulação automática</h3>
+            <p>
+              A cada registro de ponto, o sistema compara as horas trabalhadas
+              com a jornada contratada e atualiza o saldo do banco de horas em
+              tempo real, sem necessidade de intervenção do RH.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🔔</div>
+            <h3>Alertas de vencimento</h3>
+            <p>
+              O sistema envia alertas automáticos quando o saldo de um
+              colaborador está próximo do prazo máximo de compensação,
+              prevenindo passivos trabalhistas por horas não compensadas no
+              prazo.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📊</div>
+            <h3>Relatórios e exportação</h3>
+            <p>
+              Relatórios detalhados de banco de horas por colaborador,
+              departamento ou empresa, com histórico completo. Exportação direta
+              para sistemas de folha de pagamento compatíveis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="content-section fade-up">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Recursos</span>
+          <h2>Funcionalidades do banco de horas Auvix</h2>
+        </div>
+        <div class="content-grid-4">
+          <div class="info-card">
+            <div class="info-card-icon">🏦</div>
+            <h3>Saldos</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Saldo em tempo real</li>
+              <li>✓ Histórico por período</li>
+              <li>✓ Saldo positivo e negativo</li>
+              <li>✓ Acumulado mensal/anual</li>
+              <li>✓ Acesso pelo app</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📅</div>
+            <h3>Compensações</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Lançamento de folgas</li>
+              <li>✓ Compensação parcial</li>
+              <li>✓ Controle de prazos</li>
+              <li>✓ Aprovação pelo gestor</li>
+              <li>✓ Histórico de compensações</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">⚖️</div>
+            <h3>Legal</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Acordo individual</li>
+              <li>✓ Acordo coletivo</li>
+              <li>✓ Prazos CLT respeitados</li>
+              <li>✓ Auditoria completa</li>
+              <li>✓ Conformidade trabalhista</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📈</div>
+            <h3>Relatórios</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Por colaborador</li>
+              <li>✓ Por departamento</li>
+              <li>✓ Exportação para folha</li>
+              <li>✓ Alertas automáticos</li>
+              <li>✓ Dashboard gerencial</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section fade-up">
+      <div class="faq-inner">
+        <div class="section-head">
+          <span class="section-tag">Dúvidas frequentes</span>
+          <h2>Perguntas sobre banco de horas</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>O que é banco de horas?</h3>
+            <p>
+              É um sistema de compensação de jornada previsto na CLT (art. 59)
+              que permite que horas extras trabalhadas sejam compensadas com
+              folgas em outro momento, em vez de serem pagas imediatamente como
+              adicional.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Qual o prazo máximo para compensar o banco de horas?</h3>
+            <p>
+              Para banco de horas individual (acordo escrito), o prazo é de 6
+              meses. Para banco de horas coletivo (acordo ou convenção
+              coletiva), o prazo pode ser de até 1 ano. Horas não compensadas no
+              prazo devem ser pagas com adicional.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O sistema Auvix calcula o banco de horas automaticamente?</h3>
+            <p>
+              Sim. O Auvix calcula automaticamente o saldo de banco de horas com
+              base nos registros de ponto e na jornada contratada, com alertas
+              de vencimento e relatórios detalhados para o RH.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O banco de horas pode ficar negativo?</h3>
+            <p>
+              Sim. O saldo fica negativo quando o colaborador trabalha menos
+              horas que a jornada contratada. O Auvix controla tanto saldos
+              positivos quanto negativos, alertando gestores quando os déficits
+              se tornam significativos.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Como o colaborador consulta o saldo do banco de horas?</h3>
+            <p>
+              Os colaboradores podem consultar o saldo diretamente pelo
+              aplicativo Auvix no smartphone, com acesso ao histórico completo
+              de acumulação e compensações, reduzindo dúvidas e questionamentos
+              junto ao RH.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section fade-up">
+      <div class="cta-inner">
+        <h2>Chega de erros no banco de horas da sua empresa</h2>
+        <p>
+          Automatize o cálculo, elimine planilhas manuais e mantenha compliance
+          trabalhista. Veja como o Auvix simplifica a gestão do banco de horas.
+        </p>
+        <div class="cta-actions">
+          <a href="index.html#contato" class="btn-primary"
+            >Agendar demonstração gratuita</a
+          >
+          <a href="controle-de-jornada.html" class="btn-secondary"
+            >Ver gestão de jornada</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTIGOS RELACIONADOS -->
+    <section class="blog-section fade-up">
+      <div class="blog-inner">
+        <div class="section-head">
+          <span class="section-tag">Aprenda mais</span>
+          <h2>Artigos sobre banco de horas e jornada</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Guia completo</span>
+              <h3>
+                <a href="blog/o-que-e-banco-de-horas.html"
+                  >O que é banco de horas e como funciona?</a
+                >
+              </h3>
+              <p>
+                Tudo sobre o banco de horas: legislação, prazos, acordos
+                individuais e coletivos, e como automatizar.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/o-que-e-banco-de-horas.html">Ler artigo →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">RH</span>
+              <h3>
+                <a href="blog/como-reduzir-retrabalho-no-rh.html"
+                  >Como reduzir retrabalho no RH</a
+                >
+              </h3>
+              <p>
+                Quanto tempo o RH perde com cálculos manuais e como a automação
+                pode transformar os processos.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/como-reduzir-retrabalho-no-rh.html">Ler artigo →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Legislação</span>
+              <h3>
+                <a href="blog/portaria-671-explicada.html"
+                  >Portaria 671 explicada para empresas</a
+                >
+              </h3>
+              <p>
+                Entenda as obrigações legais das empresas em relação ao registro
+                de ponto e gestão de jornada.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/portaria-671-explicada.html">Ler artigo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="index.html" class="footer-logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 30px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <p>
+        © <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos
+        reservados.
+      </p>
+      <div class="footer-links">
+        <a href="blog/">Blog</a>
+        <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
+        <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
+        <a href="banco-de-horas-online.html">Banco de Horas</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>
