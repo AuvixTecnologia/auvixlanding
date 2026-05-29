@@ -369,6 +369,13 @@
         transform: translateY(-2px);
         box-shadow: 0 12px 30px rgba(96, 203, 233, 0.3);
       }
+      .btn-primary:disabled {
+        background: var(--teal2);
+        opacity: 0.55;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
       .btn-secondary {
         border: 1px solid var(--border);
         color: var(--white);
@@ -1197,10 +1204,97 @@
         bottom: 8px;
       }
 
+      /* ─── MODAL ─── */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(5, 12, 22, 0.75);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .modal-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .modal-box {
+        background: linear-gradient(135deg, #0e2236 0%, #0a1929 100%);
+        border: 1px solid rgba(96, 203, 233, 0.3);
+        border-radius: 24px;
+        padding: 3rem 2.5rem;
+        max-width: 440px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(96,203,233,0.08);
+        transform: scale(0.92);
+        transition: transform 0.3s ease;
+      }
+      .modal-overlay.open .modal-box {
+        transform: scale(1);
+      }
+      .modal-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(96, 203, 233, 0.12);
+        border: 2px solid rgba(96, 203, 233, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.8rem;
+      }
+      .modal-box h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #e0e0e0;
+        margin-bottom: 0.75rem;
+      }
+      .modal-box p {
+        color: #9e9e9e;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+      .modal-box p strong { color: #60cbe9; }
+      .modal-close {
+        background: #60cbe9;
+        color: #0d1e2c;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0.8rem 2.2rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .modal-close:hover {
+        background: #b2ebf2;
+        transform: translateY(-2px);
+      }
+
     </style>
   </head>
   <body>
     <div class="site-bg"></div>
+
+    <!-- MODAL SUCESSO -->
+    <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-box">
+        <div class="modal-icon">✉️</div>
+        <h3 id="modalTitle">Mensagem enviada!</h3>
+        <p>Recebemos seu contato. Em breve um <strong>consultor Auvix</strong> entrará em contato com você.</p>
+        <button class="modal-close" id="modalCloseBtn">Entendido</button>
+      </div>
+    </div>
 
     <!-- NAV -->
     <nav>
@@ -1967,7 +2061,40 @@
         </div>
         <div>
           <script type="text/javascript">
-            (function(){emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});})();document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("contact-form");e&&e.addEventListener("submit",function(t){t.preventDefault(),emailjs.sendForm("service_8wa9d2d","template_auvix",this).then(()=>{alert("Email enviado com sucesso! Em breve um consultor comercial entrará em contato."),this.reset()}).catch(t=>alert("Erro: "+JSON.stringify(t)))})});</script>
+            (function(){
+              emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});
+            })();
+            document.addEventListener("DOMContentLoaded", function(){
+              const form = document.getElementById("contact-form");
+              const modal = document.getElementById("successModal");
+              const closeBtn = document.getElementById("modalCloseBtn");
+
+              function openModal(){ modal.classList.add("open"); }
+              function closeModal(){ modal.classList.remove("open"); }
+
+              closeBtn.addEventListener("click", closeModal);
+              modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
+              document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeModal(); });
+
+              form && form.addEventListener("submit", function(e){
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.textContent = "Enviando...";
+                emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
+                  .then(function(){
+                    form.reset();
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                    openModal();
+                  })
+                  .catch(function(err){
+                    alert("Erro ao enviar: " + JSON.stringify(err));
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                  });
+              });
+            });</script>
           <form class="contact-form" id="contact-form">
             <div class="form-row">
               <input type="text" name="name" placeholder="Seu nome" required />
