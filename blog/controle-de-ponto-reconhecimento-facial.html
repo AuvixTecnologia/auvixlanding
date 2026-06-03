@@ -1,252 +1,514 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Como funciona o controle de ponto com reconhecimento facial? Entenda a tecnologia de biometria facial, liveness detection, antifraude e conformidade legal."/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"/>
-  <title>Controle de ponto com reconhecimento facial — como funciona? | Blog Auvix</title>
-  <link rel="icon" href="../favicon.png" type="image/png"/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:url" content="https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"/>
-  <meta property="og:title" content="Controle de ponto com reconhecimento facial — como funciona? | Blog Auvix"/>
-  <meta property="og:description" content="Como funciona o controle de ponto com reconhecimento facial? Entenda a tecnologia de biometria facial, liveness detection, antifraude e conformidade legal."/>
-  <meta property="og:locale" content="pt_BR"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P6PGFMHW1T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P6PGFMHW1T");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Como funciona o controle de ponto com reconhecimento facial? Entenda a tecnologia de biometria facial, liveness detection, antifraude e conformidade legal."
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"
+    />
+    <title>
+      Controle de ponto com reconhecimento facial — como funciona? | Blog Auvix
+    </title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"
+    />
+    <meta
+      property="og:title"
+      content="Controle de ponto com reconhecimento facial — como funciona? | Blog Auvix"
+    />
+    <meta
+      property="og:description"
+      content="Como funciona o controle de ponto com reconhecimento facial? Entenda a tecnologia de biometria facial, liveness detection, antifraude e conformidade legal."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <script type="application/ld+json">
       {
-        "@type": "Article",
-        "headline": "Controle de ponto com reconhecimento facial — como funciona?",
-        "description": "Como funciona a biometria facial no controle de ponto, liveness detection e conformidade legal.",
-        "datePublished": "2026-05-21",
-        "dateModified": "2026-05-21",
-        "author": { "@type": "Organization", "name": "Auvix Tecnologia" },
-        "publisher": { "@type": "Organization", "name": "Auvix Tecnologia", "url": "https://www.auvix.com.br" },
-        "url": "https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.auvix.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.auvix.com.br/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Controle de ponto com reconhecimento facial", "item": "https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html" }
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Controle de ponto com reconhecimento facial — como funciona?",
+            "description": "Como funciona a biometria facial no controle de ponto, liveness detection e conformidade legal.",
+            "datePublished": "2026-05-21",
+            "dateModified": "2026-05-21",
+            "author": { "@type": "Organization", "name": "Auvix Tecnologia" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Auvix Tecnologia",
+              "url": "https://www.auvix.com.br"
+            },
+            "url": "https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://www.auvix.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.auvix.com.br/blog/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Controle de ponto com reconhecimento facial",
+                "item": "https://www.auvix.com.br/blog/controle-de-ponto-reconhecimento-facial.html"
+              }
+            ]
+          }
         ]
       }
-    ]
-  }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../auvix.css"/>
-</head>
-<body>
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../auvix.css" />
+  </head>
+  <body>
+    <div
+      class="site-bg"
+      style="background-image: url(&quot;../images/background-hero.jpg&quot;)"
+    ></div>
 
-<div class="site-bg" style="background-image:url('../images/background-hero.jpg')"></div>
-
-<nav>
-  <a href="../index.html" class="nav-logo" aria-label="Auvix Tecnologia — início">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:36px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="../index.html#problemas">Desafios</a></li>
-    <li><a href="../index.html#funcionalidades">Funcionalidades</a></li>
-    <li><a href="../index.html#como-funciona">Como funciona</a></li>
-    <li><a href="./">Blog</a></li>
-    <li><a href="../index.html#contato">Contato</a></li>
-  </ul>
-  <div style="display:flex;gap:1rem;align-items:center">
-    <a href="../index.html#contato" class="nav-cta">Fale conosco</a>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Início</a>
-      <span class="breadcrumb-sep">›</span>
-      <a href="./">Blog</a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">Ponto com reconhecimento facial</span>
-    </nav>
-    <span class="article-tag-pill">Tecnologia</span>
-    <h1>Controle de ponto com <em style="font-style:normal;color:#60cbe9">reconhecimento facial</em> — como funciona?</h1>
-    <div class="article-meta">
-      <span class="article-meta-item">21 de maio de 2026</span>
-      <span class="article-meta-item">· 7 min de leitura</span>
-      <span class="article-meta-item">· Por Auvix Tecnologia</span>
-    </div>
-  </div>
-</section>
-
-<section class="article-layout fade-up">
-  <div class="article-layout-inner">
-    <div class="rich-text">
-
-      <p>O reconhecimento facial deixou de ser ficção científica e se tornou uma tecnologia acessível e confiável para o controle de ponto de empresas de todos os tamanhos. Mas como a tecnologia realmente funciona? O que garante que o sistema não será enganado com uma foto? E como ela se compara a outros métodos biométricos?</p>
-
-      <p>Neste artigo, explicamos em detalhes a tecnologia por trás do reconhecimento facial para controle de ponto, desde a captura da imagem até a validação antifraude.</p>
-
-      <h2>Como funciona o reconhecimento facial</h2>
-
-      <h3>1. Captura da imagem</h3>
-      <p>O processo começa com a câmera — seja a câmera frontal de um smartphone, a câmera de um tablet em um totem ou uma câmera IP dedicada. O sistema detecta automaticamente um rosto na imagem e inicia o processo de identificação. Isso acontece em tempo real, sem necessidade de o colaborador pressionar botões ou realizar qualquer ação além de olhar para o dispositivo.</p>
-
-      <h3>2. Extração de características faciais</h3>
-      <p>A inteligência artificial analisa o rosto capturado e extrai um conjunto de características biométricas únicas: a distância entre os olhos, o formato da mandíbula, a geometria do nariz, a posição das maçãs do rosto e outros pontos de referência faciais. Esses dados formam um <strong>mapa biométrico</strong> — uma representação matemática do rosto que é única para cada pessoa, como uma "impressão digital do rosto".</p>
-
-      <h3>3. Comparação com o banco de dados</h3>
-      <p>O mapa biométrico extraído é comparado com os perfis cadastrados no banco de dados. Algoritmos de deep learning calculam a similaridade entre o rosto capturado e os perfis registrados, determinando se há uma correspondência com índice de confiança acima do limiar configurado (geralmente acima de 98%). O processo inteiro demora menos de 1 segundo.</p>
-
-      <div class="callout">
-        <strong>Precisão:</strong> Sistemas modernos de reconhecimento facial, como o utilizado pelo Auvix, atingem precisão de identificação superior a 99,9%, muito acima da biometria por impressão digital (que fica em torno de 98-99%) e praticamente eliminando falsos positivos e falsos negativos em condições normais de uso.
-      </div>
-
-      <h2>O que é liveness detection (detecção de vivacidade)?</h2>
-
-      <p>Uma das maiores preocupações com o reconhecimento facial é a possibilidade de fraude: alguém apresentando uma foto ou vídeo do colaborador para o sistema. A <strong>liveness detection</strong> (detecção de vivacidade) é a tecnologia que impede exatamente isso.</p>
-
-      <p>O sistema analisa múltiplos fatores para determinar se está "vendo" um rosto real e vivo: movimentos sutis naturais do rosto (microtremeliques), textura tridimensional da pele, reflexo de luz nos olhos, resposta a solicitações de movimentação (piscar, virar a cabeça) e outros indicadores. Se o sistema detectar que está sendo apresentado a uma imagem estática, um vídeo ou uma máscara, o registro é recusado automaticamente.</p>
-
-      <h2>Vantagens sobre a biometria por impressão digital</h2>
-
-      <p>O reconhecimento facial supera a biometria por impressão digital em vários aspectos importantes:</p>
-
-      <ul>
-        <li><strong>Higiene:</strong> O facial é completamente sem contato, eliminando a preocupação com superfícies compartilhadas e transmissão de germes — uma preocupação que ficou muito mais relevante após a pandemia de COVID-19.</li>
-        <li><strong>Velocidade:</strong> O reconhecimento facial é mais rápido (menos de 1 segundo) e não tem problemas de leitura causados por pele seca, suja ou com cortes.</li>
-        <li><strong>Distância:</strong> O facial pode funcionar a distância, sem que o colaborador precise parar em um terminal específico — facilitando o fluxo em locais com muitos funcionários.</li>
-        <li><strong>Mobilidade:</strong> Funciona perfeitamente em smartphones para equipes externas, o que não é possível com terminais de digital fixos.</li>
+    <nav>
+      <a
+        href="../index.html"
+        class="nav-logo"
+        aria-label="Auvix Tecnologia — início"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 36px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#problemas">Desafios</a></li>
+        <li><a href="../index.html#funcionalidades">Funcionalidades</a></li>
+        <li><a href="../index.html#como-funciona">Como funciona</a></li>
+        <li><a href="./">Blog</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
       </ul>
-
-      <h2>Antifraude e integração com geolocalização</h2>
-
-      <p>Além da liveness detection, o sistema Auvix combina o reconhecimento facial com <strong>validação de geolocalização</strong>. Isso cria uma dupla camada de segurança: o sistema confirma tanto quem está registrando o ponto (biometria facial) quanto onde o registro está sendo feito (GPS).</p>
-
-      <p>Se um colaborador tentar registrar o ponto fora da área permitida — mesmo com reconhecimento facial válido — o sistema bloqueia o registro e notifica o gestor. Isso é especialmente importante para equipes em campo e home office.</p>
-
-      <h2>Conformidade legal e privacidade dos dados</h2>
-
-      <p>O uso de dados biométricos para controle de ponto é legal no Brasil, desde que respeite as diretrizes da <strong>LGPD (Lei Geral de Proteção de Dados)</strong>. Isso inclui: consentimento expresso do colaborador, uso exclusivo para a finalidade declarada (controle de ponto), armazenamento seguro e criptografado, e direito do colaborador de solicitar a exclusão dos dados ao término do contrato.</p>
-
-      <p>O sistema Auvix foi desenvolvido em conformidade com a LGPD e com a <a href="../reconhecimento-facial-ponto.html">Portaria 671</a>, garantindo que o uso do reconhecimento facial para controle de ponto seja juridicamente válido e seguro para a empresa e para os colaboradores.</p>
-
-    </div>
-  </div>
-</section>
-
-<section class="faq-section fade-up">
-  <div class="faq-inner">
-    <div class="section-head">
-      <span class="section-tag">Dúvidas</span>
-      <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>O reconhecimento facial pode ser enganado com uma foto?</h3>
-        <p>Com liveness detection, não. O sistema detecta se está sendo apresentado a uma imagem estática, vídeo ou máscara, bloqueando automaticamente tentativas de fraude.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O ponto facial é mais seguro que a biometria digital?</h3>
-        <p>Sim, em vários aspectos: maior precisão, sem contato físico (mais higiênico), funciona em smartphones para equipes externas e não tem problemas com pele danificada.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O uso de biometria facial respeita a LGPD?</h3>
-        <p>Sim, desde que haja consentimento expresso, uso exclusivo para a finalidade declarada e armazenamento seguro. O Auvix é desenvolvido em conformidade total com a LGPD.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Preciso de hardware especial para o ponto facial?</h3>
-        <p>Não. Funciona com a câmera de qualquer smartphone, tablet ou computador. Para instalações fixas, também suportamos totens e terminais dedicados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section fade-up">
-  <div class="cta-inner">
-    <h2>Quer automatizar o controle de ponto da sua empresa?</h2>
-    <p>Veja o reconhecimento facial Auvix em ação. Demonstração gratuita, sem compromisso.</p>
-    <div class="cta-actions">
-      <a href="../index.html#contato" class="btn-primary">Agendar demonstração gratuita</a>
-      <a href="../reconhecimento-facial-ponto.html" class="btn-secondary">Ver ponto facial</a>
-    </div>
-  </div>
-</section>
-
-<section class="related-section fade-up">
-  <div class="related-inner">
-    <div class="section-head">
-      <span class="section-tag">Continue lendo</span>
-      <h2>Artigos relacionados</h2>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Segurança</span>
-          <h3><a href="como-evitar-fraudes-ponto-eletronico.html">Como evitar fraudes no ponto eletrônico</a></h3>
-          <p>Tipos de fraude e como a biometria facial as elimina completamente.</p>
+      <div style="display: flex; gap: 1rem; align-items: center">
+        <a href="../index.html#contato" class="nav-cta">Fale conosco</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
         </div>
-        <div class="blog-card-footer"><a href="como-evitar-fraudes-ponto-eletronico.html">Ler →</a></div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Comparativo</span>
-          <h3><a href="formas-de-registro-de-ponto-eletronico.html">Formas de registro de ponto eletrônico</a></h3>
-          <p>Guia comparativo de todos os métodos disponíveis.</p>
-        </div>
-        <div class="blog-card-footer"><a href="formas-de-registro-de-ponto-eletronico.html">Ler →</a></div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Legislação</span>
-          <h3><a href="portaria-671-explicada.html">Portaria 671 explicada</a></h3>
-          <p>O que a regulamentação exige e como o facial se enquadra.</p>
-        </div>
-        <div class="blog-card-footer"><a href="portaria-671-explicada.html">Ler →</a></div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </nav>
 
-<footer>
-  <a href="../index.html" class="footer-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:30px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
-  <div class="footer-links">
-    <a href="./">Blog</a>
-    <a href="../controle-de-ponto-digital.html">Controle de Ponto</a>
-    <a href="../reconhecimento-facial-ponto.html">Ponto Facial</a>
-    <a href="../index.html#contato">Contato</a>
-    <a href="https://www.auvix.com.br/privacy">Privacidade</a>
-  </div>
-</footer>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="./">Blog</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current"
+            >Ponto com reconhecimento facial</span
+          >
+        </nav>
+        <span class="article-tag-pill">Tecnologia</span>
+        <h1>
+          Controle de ponto com
+          <em style="font-style: normal; color: #60cbe9"
+            >reconhecimento facial</em
+          >
+          — como funciona?
+        </h1>
+        <div class="article-meta">
+          <span class="article-meta-item">21 de maio de 2026</span>
+          <span class="article-meta-item">· 7 min de leitura</span>
+          <span class="article-meta-item">· Por Auvix Tecnologia</span>
+        </div>
+      </div>
+    </section>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  hamburger.addEventListener("click", () => navLinks.classList.toggle("open"));
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
-</script>
-</body>
+    <section class="article-layout fade-up">
+      <div class="article-layout-inner">
+        <div class="rich-text">
+          <p>
+            O reconhecimento facial deixou de ser ficção científica e se tornou
+            uma tecnologia acessível e confiável para o controle de ponto de
+            empresas de todos os tamanhos. Mas como a tecnologia realmente
+            funciona? O que garante que o sistema não será enganado com uma
+            foto? E como ela se compara a outros métodos biométricos?
+          </p>
+
+          <p>
+            Neste artigo, explicamos em detalhes a tecnologia por trás do
+            reconhecimento facial para controle de ponto, desde a captura da
+            imagem até a validação antifraude.
+          </p>
+
+          <h2>Como funciona o reconhecimento facial</h2>
+
+          <h3>1. Captura da imagem</h3>
+          <p>
+            O processo começa com a câmera — seja a câmera frontal de um
+            smartphone, a câmera de um tablet em um totem ou uma câmera IP
+            dedicada. O sistema detecta automaticamente um rosto na imagem e
+            inicia o processo de identificação. Isso acontece em tempo real, sem
+            necessidade de o colaborador pressionar botões ou realizar qualquer
+            ação além de olhar para o dispositivo.
+          </p>
+
+          <h3>2. Extração de características faciais</h3>
+          <p>
+            A inteligência artificial analisa o rosto capturado e extrai um
+            conjunto de características biométricas únicas: a distância entre os
+            olhos, o formato da mandíbula, a geometria do nariz, a posição das
+            maçãs do rosto e outros pontos de referência faciais. Esses dados
+            formam um <strong>mapa biométrico</strong> — uma representação
+            matemática do rosto que é única para cada pessoa, como uma
+            "impressão digital do rosto".
+          </p>
+
+          <h3>3. Comparação com o banco de dados</h3>
+          <p>
+            O mapa biométrico extraído é comparado com os perfis cadastrados no
+            banco de dados. Algoritmos de deep learning calculam a similaridade
+            entre o rosto capturado e os perfis registrados, determinando se há
+            uma correspondência com índice de confiança acima do limiar
+            configurado (geralmente acima de 98%). O processo inteiro demora
+            menos de 1 segundo.
+          </p>
+
+          <div class="callout">
+            <strong>Precisão:</strong> Sistemas modernos de reconhecimento
+            facial, como o utilizado pelo Auvix, atingem precisão de
+            identificação superior a 99,9%, muito acima da biometria por
+            impressão digital (que fica em torno de 98-99%) e praticamente
+            eliminando falsos positivos e falsos negativos em condições normais
+            de uso.
+          </div>
+
+          <h2>O que é liveness detection (detecção de vivacidade)?</h2>
+
+          <p>
+            Uma das maiores preocupações com o reconhecimento facial é a
+            possibilidade de fraude: alguém apresentando uma foto ou vídeo do
+            colaborador para o sistema. A
+            <strong>liveness detection</strong> (detecção de vivacidade) é a
+            tecnologia que impede exatamente isso.
+          </p>
+
+          <p>
+            O sistema analisa múltiplos fatores para determinar se está "vendo"
+            um rosto real e vivo: movimentos sutis naturais do rosto
+            (microtremeliques), textura tridimensional da pele, reflexo de luz
+            nos olhos, resposta a solicitações de movimentação (piscar, virar a
+            cabeça) e outros indicadores. Se o sistema detectar que está sendo
+            apresentado a uma imagem estática, um vídeo ou uma máscara, o
+            registro é recusado automaticamente.
+          </p>
+
+          <h2>Vantagens sobre a biometria por impressão digital</h2>
+
+          <p>
+            O reconhecimento facial supera a biometria por impressão digital em
+            vários aspectos importantes:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Higiene:</strong> O facial é completamente sem contato,
+              eliminando a preocupação com superfícies compartilhadas e
+              transmissão de germes — uma preocupação que ficou muito mais
+              relevante após a pandemia de COVID-19.
+            </li>
+            <li>
+              <strong>Velocidade:</strong> O reconhecimento facial é mais rápido
+              (menos de 1 segundo) e não tem problemas de leitura causados por
+              pele seca, suja ou com cortes.
+            </li>
+            <li>
+              <strong>Distância:</strong> O facial pode funcionar a distância,
+              sem que o colaborador precise parar em um terminal específico —
+              facilitando o fluxo em locais com muitos funcionários.
+            </li>
+            <li>
+              <strong>Mobilidade:</strong> Funciona perfeitamente em smartphones
+              para equipes externas, o que não é possível com terminais de
+              digital fixos.
+            </li>
+          </ul>
+
+          <h2>Antifraude e integração com geolocalização</h2>
+
+          <p>
+            Além da liveness detection, o sistema Auvix combina o reconhecimento
+            facial com <strong>validação de geolocalização</strong>. Isso cria
+            uma dupla camada de segurança: o sistema confirma tanto quem está
+            registrando o ponto (biometria facial) quanto onde o registro está
+            sendo feito (GPS).
+          </p>
+
+          <p>
+            Se um colaborador tentar registrar o ponto fora da área permitida —
+            mesmo com reconhecimento facial válido — o sistema bloqueia o
+            registro e notifica o gestor. Isso é especialmente importante para
+            equipes em campo e home office.
+          </p>
+
+          <h2>Conformidade legal e privacidade dos dados</h2>
+
+          <p>
+            O uso de dados biométricos para controle de ponto é legal no Brasil,
+            desde que respeite as diretrizes da
+            <strong>LGPD (Lei Geral de Proteção de Dados)</strong>. Isso inclui:
+            consentimento expresso do colaborador, uso exclusivo para a
+            finalidade declarada (controle de ponto), armazenamento seguro e
+            criptografado, e direito do colaborador de solicitar a exclusão dos
+            dados ao término do contrato.
+          </p>
+
+          <p>
+            O sistema Auvix foi desenvolvido em conformidade com a LGPD e com a
+            <a href="../reconhecimento-facial-ponto.html">Portaria 671</a>,
+            garantindo que o uso do reconhecimento facial para controle de ponto
+            seja juridicamente válido e seguro para a empresa e para os
+            colaboradores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section fade-up">
+      <div class="faq-inner">
+        <div class="section-head">
+          <span class="section-tag">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>O reconhecimento facial pode ser enganado com uma foto?</h3>
+            <p>
+              Com liveness detection, não. O sistema detecta se está sendo
+              apresentado a uma imagem estática, vídeo ou máscara, bloqueando
+              automaticamente tentativas de fraude.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O ponto facial é mais seguro que a biometria digital?</h3>
+            <p>
+              Sim, em vários aspectos: maior precisão, sem contato físico (mais
+              higiênico), funciona em smartphones para equipes externas e não
+              tem problemas com pele danificada.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O uso de biometria facial respeita a LGPD?</h3>
+            <p>
+              Sim, desde que haja consentimento expresso, uso exclusivo para a
+              finalidade declarada e armazenamento seguro. O Auvix é
+              desenvolvido em conformidade total com a LGPD.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Preciso de hardware especial para o ponto facial?</h3>
+            <p>
+              Não. Funciona com a câmera de qualquer smartphone, tablet ou
+              computador. Para instalações fixas, também suportamos totens e
+              terminais dedicados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section fade-up">
+      <div class="cta-inner">
+        <h2>Quer automatizar o controle de ponto da sua empresa?</h2>
+        <p>
+          Veja o reconhecimento facial Auvix em ação. Demonstração gratuita, sem
+          compromisso.
+        </p>
+        <div class="cta-actions">
+          <a href="../index.html#contato" class="btn-primary"
+            >Agendar demonstração gratuita</a
+          >
+          <a href="../reconhecimento-facial-ponto.html" class="btn-secondary"
+            >Ver ponto facial</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section fade-up">
+      <div class="related-inner">
+        <div class="section-head">
+          <span class="section-tag">Continue lendo</span>
+          <h2>Artigos relacionados</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Segurança</span>
+              <h3>
+                <a href="como-evitar-fraudes-ponto-eletronico.html"
+                  >Como evitar fraudes no ponto eletrônico</a
+                >
+              </h3>
+              <p>
+                Tipos de fraude e como a biometria facial as elimina
+                completamente.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="como-evitar-fraudes-ponto-eletronico.html">Ler →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Comparativo</span>
+              <h3>
+                <a href="formas-de-registro-de-ponto-eletronico.html"
+                  >Formas de registro de ponto eletrônico</a
+                >
+              </h3>
+              <p>Guia comparativo de todos os métodos disponíveis.</p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="formas-de-registro-de-ponto-eletronico.html">Ler →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Legislação</span>
+              <h3>
+                <a href="portaria-671-explicada.html">Portaria 671 explicada</a>
+              </h3>
+              <p>O que a regulamentação exige e como o facial se enquadra.</p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="portaria-671-explicada.html">Ler →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="../index.html" class="footer-logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 30px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <p>
+        © <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos
+        reservados.
+      </p>
+      <div class="footer-links">
+        <a href="./">Blog</a>
+        <a href="../controle-de-ponto-digital.html">Controle de Ponto</a>
+        <a href="../reconhecimento-facial-ponto.html">Ponto Facial</a>
+        <a href="../index.html#contato">Contato</a>
+        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>

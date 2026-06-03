@@ -1,401 +1,685 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma. Sistema de controle de jornada para empresas. Portaria 671 homologado."/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.auvix.com.br/controle-de-jornada.html"/>
-  <title>Gestão e Controle de Jornada de Trabalho | Auvix Tecnologia</title>
-  <link rel="icon" href="favicon.png" type="image/png"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://www.auvix.com.br/controle-de-jornada.html"/>
-  <meta property="og:title" content="Gestão e Controle de Jornada de Trabalho | Auvix Tecnologia"/>
-  <meta property="og:description" content="Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma. Sistema de controle de jornada para empresas. Portaria 671 homologado."/>
-  <meta property="og:locale" content="pt_BR"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P6PGFMHW1T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P6PGFMHW1T");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma. Sistema de controle de jornada para empresas. Portaria 671 homologado."
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://www.auvix.com.br/controle-de-jornada.html"
+    />
+    <title>Gestão e Controle de Jornada de Trabalho | Auvix Tecnologia</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.auvix.com.br/controle-de-jornada.html"
+    />
+    <meta
+      property="og:title"
+      content="Gestão e Controle de Jornada de Trabalho | Auvix Tecnologia"
+    />
+    <meta
+      property="og:description"
+      content="Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma. Sistema de controle de jornada para empresas. Portaria 671 homologado."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <script type="application/ld+json">
       {
-        "@type": "WebPage",
-        "name": "Gestão e Controle de Jornada de Trabalho",
-        "url": "https://www.auvix.com.br/controle-de-jornada.html",
-        "description": "Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma.",
-        "publisher": { "@type": "Organization", "name": "Auvix Tecnologia", "url": "https://www.auvix.com.br" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.auvix.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Controle de Jornada", "item": "https://www.auvix.com.br/controle-de-jornada.html" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@context": "https://schema.org",
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "O que é controle de jornada de trabalho?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Controle de jornada é o conjunto de processos e tecnologias que registram, monitoram e gerenciam o tempo de trabalho dos colaboradores, incluindo entradas, saídas, intervalos, horas extras, escalas e banco de horas." }
+            "@type": "WebPage",
+            "name": "Gestão e Controle de Jornada de Trabalho",
+            "url": "https://www.auvix.com.br/controle-de-jornada.html",
+            "description": "Gerencie jornadas, escalas, horas extras e banco de horas em uma única plataforma.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Auvix Tecnologia",
+              "url": "https://www.auvix.com.br"
+            }
           },
           {
-            "@type": "Question",
-            "name": "Qual é a jornada máxima de trabalho permitida pela CLT?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A CLT estabelece a jornada máxima de 8 horas diárias e 44 horas semanais. Horas além desse limite são consideradas extraordinárias e devem ser remuneradas com acréscimo mínimo de 50% ou compensadas pelo banco de horas, mediante acordo coletivo." }
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://www.auvix.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Controle de Jornada",
+                "item": "https://www.auvix.com.br/controle-de-jornada.html"
+              }
+            ]
           },
           {
-            "@type": "Question",
-            "name": "O sistema Auvix gerencia escalas de trabalho diferenciadas?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Auvix suporta jornadas padrão (8h/dia), escalas 12x36, 6x1, turno revezamento e jornadas personalizadas, aplicando automaticamente as regras de cada escala para cálculo de horas extras, adicional noturno e banco de horas." }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona o banco de horas no sistema Auvix?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O banco de horas é calculado automaticamente com base na diferença entre as horas trabalhadas e a jornada contratada. O saldo positivo pode ser compensado em folgas futuras. O sistema mantém o histórico completo e gera relatórios por colaborador, departamento ou empresa." }
-          },
-          {
-            "@type": "Question",
-            "name": "O sistema funciona para empresas com múltiplas unidades?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Auvix é uma plataforma multi-empresa e multi-unidade. É possível gerenciar diferentes CNPJ, filiais e departamentos em uma única conta, com relatórios consolidados ou separados por unidade." }
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O que é controle de jornada de trabalho?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Controle de jornada é o conjunto de processos e tecnologias que registram, monitoram e gerenciam o tempo de trabalho dos colaboradores, incluindo entradas, saídas, intervalos, horas extras, escalas e banco de horas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual é a jornada máxima de trabalho permitida pela CLT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A CLT estabelece a jornada máxima de 8 horas diárias e 44 horas semanais. Horas além desse limite são consideradas extraordinárias e devem ser remuneradas com acréscimo mínimo de 50% ou compensadas pelo banco de horas, mediante acordo coletivo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O sistema Auvix gerencia escalas de trabalho diferenciadas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. O Auvix suporta jornadas padrão (8h/dia), escalas 12x36, 6x1, turno revezamento e jornadas personalizadas, aplicando automaticamente as regras de cada escala para cálculo de horas extras, adicional noturno e banco de horas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como funciona o banco de horas no sistema Auvix?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O banco de horas é calculado automaticamente com base na diferença entre as horas trabalhadas e a jornada contratada. O saldo positivo pode ser compensado em folgas futuras. O sistema mantém o histórico completo e gera relatórios por colaborador, departamento ou empresa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O sistema funciona para empresas com múltiplas unidades?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. O Auvix é uma plataforma multi-empresa e multi-unidade. É possível gerenciar diferentes CNPJ, filiais e departamentos em uma única conta, com relatórios consolidados ou separados por unidade."
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="auvix.css"/>
-</head>
-<body>
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="auvix.css" />
+  </head>
+  <body>
+    <div
+      class="site-bg"
+      style="background-image: url(&quot;images/background-hero.jpg&quot;)"
+    ></div>
 
-<div class="site-bg" style="background-image:url('images/background-hero.jpg')"></div>
-
-<nav>
-  <a href="index.html" class="nav-logo" aria-label="Auvix Tecnologia — início">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:36px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html#problemas">Desafios</a></li>
-    <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
-    <li><a href="index.html#como-funciona">Como funciona</a></li>
-    <li><a href="blog/">Blog</a></li>
-    <li><a href="index.html#contato">Contato</a></li>
-  </ul>
-  <div style="display:flex;gap:1rem;align-items:center">
-    <a href="index.html#contato" class="nav-cta">Fale conosco</a>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Início</a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">Controle de Jornada</span>
+    <nav>
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="Auvix Tecnologia — início"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 36px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#problemas">Desafios</a></li>
+        <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+      <div style="display: flex; gap: 1rem; align-items: center">
+        <a href="index.html#contato" class="nav-cta">Fale conosco</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </nav>
-    <span class="hero-badge">✦ Portaria 671 Homologado</span>
-    <h1>Gestão Completa da <em style="font-style:normal;color:#60cbe9">Jornada de Trabalho</em></h1>
-    <p>Gerencie escalas, jornadas, horas extras, adicional noturno e banco de horas de forma totalmente automática — para equipes internas e externas.</p>
-    <div class="hero-actions">
-      <a href="index.html#contato" class="btn-primary">Agendar demonstração</a>
-      <a href="#funcionalidades" class="btn-secondary">Ver funcionalidades</a>
-    </div>
-  </div>
-</section>
 
-<!-- STATS BAND -->
-<div class="stats-band fade-up">
-  <div class="stats-band-inner">
-    <div>
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Cálculo automático</div>
-    </div>
-    <div>
-      <div class="stat-num">+10</div>
-      <div class="stat-label">Tipos de escalas suportadas</div>
-    </div>
-    <div>
-      <div class="stat-num">0</div>
-      <div class="stat-label">Planilhas manuais necessárias</div>
-    </div>
-    <div>
-      <div class="stat-num">Multi</div>
-      <div class="stat-label">Empresa e multi-unidade</div>
-    </div>
-  </div>
-</div>
-
-<!-- O QUE É -->
-<section class="content-section fade-up">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Entenda o conceito</span>
-      <h2>O que é controle de jornada de trabalho?</h2>
-    </div>
-    <div class="rich-text">
-      <p>O <strong>controle de jornada de trabalho</strong> vai além do simples registro de ponto: é a gestão completa do tempo de trabalho dos colaboradores, abrangendo o registro de entradas e saídas, o cálculo de horas extras, o gerenciamento de escalas e o controle do banco de horas.</p>
-      <p>A <strong>CLT estabelece regras claras</strong> sobre a jornada máxima de trabalho: 8 horas diárias e 44 horas semanais (art. 58). Qualquer tempo trabalhado além desses limites deve ser remunerado como hora extra (com acréscimo de no mínimo 50%) ou compensado por meio de banco de horas, mediante acordo individual escrito ou acordo coletivo.</p>
-      <p>O descumprimento dessas regras expõe as empresas a passivos trabalhistas significativos. Em reclamações trabalhistas, a ausência de registros precisos presume-se como veracidade da jornada declarada pelo trabalhador — o que pode resultar em condenações milionárias, especialmente quando somadas multas, correções e honorários.</p>
-
-      <div class="callout">
-        <strong>Importante:</strong> Pela CLT (art. 74, §2º), empresas com 20 ou mais empregados são obrigadas a adotar controles de jornada. A Portaria 671 regulamenta os sistemas eletrônicos e define os requisitos técnicos e legais que devem ser cumpridos.
-      </div>
-
-      <p>Com o Auvix, toda a gestão de jornada é automatizada: as regras de cada escala e tipo de jornada são configuradas uma vez e o sistema calcula automaticamente todos os adicionais, compensações e saldos — sem intervenção manual do RH.</p>
-    </div>
-  </div>
-</section>
-
-<!-- REGRAS CLT -->
-<section class="content-section dark fade-up">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Legislação trabalhista</span>
-      <h2>CLT e jornada: o que sua empresa precisa saber</h2>
-    </div>
-    <div class="content-grid-3">
-      <div class="info-card">
-        <div class="info-card-icon">⏱️</div>
-        <h3>Jornada máxima</h3>
-        <p>A CLT estabelece jornada máxima de 8 horas/dia e 44 horas/semana. Horas além do limite são extras e devem ser pagas com adicional de 50% (100% em domingos e feriados) ou compensadas via banco de horas.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🌙</div>
-        <h3>Adicional noturno</h3>
-        <p>O trabalho realizado entre 22h e 5h tem adicional noturno de 20% sobre o valor da hora. O sistema Auvix identifica e calcula automaticamente esse adicional para todos os colaboradores em turno noturno.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📅</div>
-        <h3>Escalas especiais</h3>
-        <p>A CLT e convenções coletivas permitem escalas diferenciadas como 12x36, 6x1 e turnos ininterruptos. O Auvix configura e gerencia todas essas escalas, aplicando as regras corretas para cada modalidade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FUNCIONALIDADES -->
-<section class="content-section fade-up" id="funcionalidades">
-  <div class="content-inner">
-    <div class="section-head">
-      <span class="section-tag">Plataforma completa</span>
-      <h2>Tudo para gerenciar a jornada da sua equipe</h2>
-    </div>
-    <div class="content-grid-4">
-      <div class="info-card">
-        <div class="info-card-icon">📋</div>
-        <h3>Escalas</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Jornada padrão 8h/dia</li>
-          <li>✓ Escala 12x36</li>
-          <li>✓ Escala 6x1</li>
-          <li>✓ Turno revezamento</li>
-          <li>✓ Jornadas personalizadas</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">💰</div>
-        <h3>Horas extras</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Cálculo automático 50%</li>
-          <li>✓ Adicional 100% feriados</li>
-          <li>✓ Adicional noturno 20%</li>
-          <li>✓ Limite por período</li>
-          <li>✓ Alertas de ultrapassagem</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🏦</div>
-        <h3>Banco de horas</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Saldo em tempo real</li>
-          <li>✓ Compensação automática</li>
-          <li>✓ Histórico completo</li>
-          <li>✓ Acordo individual/coletivo</li>
-          <li>✓ Relatório por colaborador</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🏢</div>
-        <h3>Multi-empresa</h3>
-        <ul style="color:var(--muted);font-size:0.9rem;line-height:1.8;list-style:none;padding:0">
-          <li>✓ Múltiplos CNPJ</li>
-          <li>✓ Múltiplas filiais</li>
-          <li>✓ Relatórios consolidados</li>
-          <li>✓ Gestão centralizada</li>
-          <li>✓ Permissões por unidade</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how fade-up">
-  <div class="how-inner">
-    <div class="section-head">
-      <span class="section-tag">Passo a passo</span>
-      <h2>Como o Auvix gerencia a jornada da sua equipe</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>Configure as jornadas e escalas</h3>
-          <p>Defina os tipos de jornada, escalas e regras específicas da sua empresa. O sistema suporta qualquer configuração, desde jornadas simples até escalas complexas de turnos.</p>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">Controle de Jornada</span>
+        </nav>
+        <span class="hero-badge">✦ Portaria 671 Homologado</span>
+        <h1>
+          Gestão Completa da
+          <em style="font-style: normal; color: #60cbe9"
+            >Jornada de Trabalho</em
+          >
+        </h1>
+        <p>
+          Gerencie escalas, jornadas, horas extras, adicional noturno e banco de
+          horas de forma totalmente automática — para equipes internas e
+          externas.
+        </p>
+        <div class="hero-actions">
+          <a href="index.html#contato" class="btn-primary"
+            >Agendar demonstração</a
+          >
+          <a href="#funcionalidades" class="btn-secondary"
+            >Ver funcionalidades</a
+          >
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>Vincule colaboradores às jornadas</h3>
-          <p>Associe cada colaborador à sua jornada e escala correspondente. Mudanças de escala são registradas historicamente, garantindo cálculos precisos em qualquer período.</p>
+    </section>
+
+    <!-- STATS BAND -->
+    <div class="stats-band fade-up">
+      <div class="stats-band-inner">
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Cálculo automático</div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>Acompanhe em tempo real</h3>
-          <p>Visualize no dashboard quem está presente, quem está em atraso, horas extras acumuladas e saldo de banco de horas — tudo atualizado conforme os registros chegam.</p>
+        <div>
+          <div class="stat-num">+10</div>
+          <div class="stat-label">Tipos de escalas suportadas</div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-body">
-          <h3>Exporte para a folha de pagamento</h3>
-          <p>Ao fechar o período, exporte os dados de horas trabalhadas, extras e banco de horas diretamente para o seu sistema de folha, sem redigitação manual.</p>
+        <div>
+          <div class="stat-num">0</div>
+          <div class="stat-label">Planilhas manuais necessárias</div>
+        </div>
+        <div>
+          <div class="stat-num">Multi</div>
+          <div class="stat-label">Empresa e multi-unidade</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- FAQ -->
-<section class="faq-section fade-up">
-  <div class="faq-inner">
-    <div class="section-head">
-      <span class="section-tag">Dúvidas frequentes</span>
-      <h2>Perguntas sobre controle de jornada</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>O que é controle de jornada de trabalho?</h3>
-        <p>É a gestão completa do tempo de trabalho dos colaboradores: registro de entradas e saídas, cálculo de horas extras, gerenciamento de escalas e controle do banco de horas, tudo em conformidade com a CLT e a Portaria 671.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Qual é a jornada máxima permitida pela CLT?</h3>
-        <p>A CLT estabelece jornada máxima de 8 horas diárias e 44 horas semanais. Horas além desse limite são extraordinárias e devem ser remuneradas com acréscimo mínimo de 50% ou compensadas pelo banco de horas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O sistema gerencia escalas diferenciadas como 12x36?</h3>
-        <p>Sim. O Auvix suporta jornadas padrão, escalas 12x36, 6x1, turno de revezamento e jornadas personalizadas, aplicando automaticamente as regras de cada escala para cálculo de horas extras, adicional noturno e banco de horas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Como funciona o banco de horas no sistema?</h3>
-        <p>O banco de horas é calculado automaticamente com base na diferença entre as horas trabalhadas e a jornada contratada. O saldo pode ser compensado em folgas futuras, e o sistema mantém histórico completo por colaborador.</p>
-      </div>
-      <div class="faq-item">
-        <h3>O sistema funciona para empresas com múltiplas unidades?</h3>
-        <p>Sim. O Auvix é multi-empresa e multi-unidade, permitindo gerenciar diferentes CNPJ e filiais em uma única conta, com relatórios consolidados ou separados por unidade conforme a necessidade.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- O QUE É -->
+    <section class="content-section fade-up">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Entenda o conceito</span>
+          <h2>O que é controle de jornada de trabalho?</h2>
+        </div>
+        <div class="rich-text">
+          <p>
+            O <strong>controle de jornada de trabalho</strong> vai além do
+            simples registro de ponto: é a gestão completa do tempo de trabalho
+            dos colaboradores, abrangendo o registro de entradas e saídas, o
+            cálculo de horas extras, o gerenciamento de escalas e o controle do
+            banco de horas.
+          </p>
+          <p>
+            A <strong>CLT estabelece regras claras</strong> sobre a jornada
+            máxima de trabalho: 8 horas diárias e 44 horas semanais (art. 58).
+            Qualquer tempo trabalhado além desses limites deve ser remunerado
+            como hora extra (com acréscimo de no mínimo 50%) ou compensado por
+            meio de banco de horas, mediante acordo individual escrito ou acordo
+            coletivo.
+          </p>
+          <p>
+            O descumprimento dessas regras expõe as empresas a passivos
+            trabalhistas significativos. Em reclamações trabalhistas, a ausência
+            de registros precisos presume-se como veracidade da jornada
+            declarada pelo trabalhador — o que pode resultar em condenações
+            milionárias, especialmente quando somadas multas, correções e
+            honorários.
+          </p>
 
-<!-- CTA -->
-<section class="cta-section fade-up">
-  <div class="cta-inner">
-    <h2>Automatize a gestão de jornada da sua empresa</h2>
-    <p>Elimine planilhas manuais, reduza erros no fechamento da folha e mantenha sua empresa em conformidade com a CLT. Veja o Auvix em ação.</p>
-    <div class="cta-actions">
-      <a href="index.html#contato" class="btn-primary">Agendar demonstração gratuita</a>
-      <a href="banco-de-horas-online.html" class="btn-secondary">Saiba sobre banco de horas</a>
-    </div>
-  </div>
-</section>
+          <div class="callout">
+            <strong>Importante:</strong> Pela CLT (art. 74, §2º), empresas com
+            20 ou mais empregados são obrigadas a adotar controles de jornada. A
+            Portaria 671 regulamenta os sistemas eletrônicos e define os
+            requisitos técnicos e legais que devem ser cumpridos.
+          </div>
 
-<!-- ARTIGOS RELACIONADOS -->
-<section class="blog-section fade-up">
-  <div class="blog-inner">
-    <div class="section-head">
-      <span class="section-tag">Conteúdo relacionado</span>
-      <h2>Aprenda mais sobre jornada de trabalho</h2>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Guia</span>
-          <h3><a href="blog/o-que-e-banco-de-horas.html">O que é banco de horas e como funciona?</a></h3>
-          <p>Entenda o framework legal do banco de horas, como acumular e compensar saldos corretamente.</p>
+          <p>
+            Com o Auvix, toda a gestão de jornada é automatizada: as regras de
+            cada escala e tipo de jornada são configuradas uma vez e o sistema
+            calcula automaticamente todos os adicionais, compensações e saldos —
+            sem intervenção manual do RH.
+          </p>
         </div>
-        <div class="blog-card-footer">
-          <a href="blog/o-que-e-banco-de-horas.html">Ler artigo →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Equipes externas</span>
-          <h3><a href="blog/controle-de-jornada-equipes-externas.html">Controle de jornada para equipes externas</a></h3>
-          <p>Como gerenciar a jornada de colaboradores que trabalham fora do escritório com geolocalização.</p>
-        </div>
-        <div class="blog-card-footer">
-          <a href="blog/controle-de-jornada-equipes-externas.html">Ler artigo →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <div class="blog-card-body">
-          <span class="blog-card-tag">Legislação</span>
-          <h3><a href="blog/portaria-671-explicada.html">Portaria 671 explicada para empresas</a></h3>
-          <p>Tudo que você precisa saber sobre a principal regulamentação do ponto eletrônico no Brasil.</p>
-        </div>
-        <div class="blog-card-footer">
-          <a href="blog/portaria-671-explicada.html">Ler artigo →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-  <a href="index.html" class="footer-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="4749 643 11716 3600" style="height:30px;width:auto;display:block">
-      <polygon fill="#60cbe9" points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"/>
-      <path fill="#ffffff" d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"/>
-      <path fill="#ffffff" d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"/>
-      <path fill="#ffffff" d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"/>
-      <path fill="#ffffff" d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"/>
-      <path fill="#60cbe9" d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"/>
-    </svg>
-  </a>
-  <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
-  <div class="footer-links">
-    <a href="blog/">Blog</a>
-    <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
-    <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
-    <a href="banco-de-horas-online.html">Banco de Horas</a>
-    <a href="index.html#contato">Contato</a>
-    <a href="https://www.auvix.com.br/privacy">Privacidade</a>
-  </div>
-</footer>
+    <!-- REGRAS CLT -->
+    <section class="content-section dark fade-up">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Legislação trabalhista</span>
+          <h2>CLT e jornada: o que sua empresa precisa saber</h2>
+        </div>
+        <div class="content-grid-3">
+          <div class="info-card">
+            <div class="info-card-icon">⏱️</div>
+            <h3>Jornada máxima</h3>
+            <p>
+              A CLT estabelece jornada máxima de 8 horas/dia e 44 horas/semana.
+              Horas além do limite são extras e devem ser pagas com adicional de
+              50% (100% em domingos e feriados) ou compensadas via banco de
+              horas.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🌙</div>
+            <h3>Adicional noturno</h3>
+            <p>
+              O trabalho realizado entre 22h e 5h tem adicional noturno de 20%
+              sobre o valor da hora. O sistema Auvix identifica e calcula
+              automaticamente esse adicional para todos os colaboradores em
+              turno noturno.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📅</div>
+            <h3>Escalas especiais</h3>
+            <p>
+              A CLT e convenções coletivas permitem escalas diferenciadas como
+              12x36, 6x1 e turnos ininterruptos. O Auvix configura e gerencia
+              todas essas escalas, aplicando as regras corretas para cada
+              modalidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  hamburger.addEventListener("click", () => navLinks.classList.toggle("open"));
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
-</script>
-</body>
+    <!-- FUNCIONALIDADES -->
+    <section class="content-section fade-up" id="funcionalidades">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Plataforma completa</span>
+          <h2>Tudo para gerenciar a jornada da sua equipe</h2>
+        </div>
+        <div class="content-grid-4">
+          <div class="info-card">
+            <div class="info-card-icon">📋</div>
+            <h3>Escalas</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Jornada padrão 8h/dia</li>
+              <li>✓ Escala 12x36</li>
+              <li>✓ Escala 6x1</li>
+              <li>✓ Turno revezamento</li>
+              <li>✓ Jornadas personalizadas</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💰</div>
+            <h3>Horas extras</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Cálculo automático 50%</li>
+              <li>✓ Adicional 100% feriados</li>
+              <li>✓ Adicional noturno 20%</li>
+              <li>✓ Limite por período</li>
+              <li>✓ Alertas de ultrapassagem</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🏦</div>
+            <h3>Banco de horas</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Saldo em tempo real</li>
+              <li>✓ Compensação automática</li>
+              <li>✓ Histórico completo</li>
+              <li>✓ Acordo individual/coletivo</li>
+              <li>✓ Relatório por colaborador</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🏢</div>
+            <h3>Multi-empresa</h3>
+            <ul
+              style="
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.8;
+                list-style: none;
+                padding: 0;
+              "
+            >
+              <li>✓ Múltiplos CNPJ</li>
+              <li>✓ Múltiplas filiais</li>
+              <li>✓ Relatórios consolidados</li>
+              <li>✓ Gestão centralizada</li>
+              <li>✓ Permissões por unidade</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how fade-up">
+      <div class="how-inner">
+        <div class="section-head">
+          <span class="section-tag">Passo a passo</span>
+          <h2>Como o Auvix gerencia a jornada da sua equipe</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>Configure as jornadas e escalas</h3>
+              <p>
+                Defina os tipos de jornada, escalas e regras específicas da sua
+                empresa. O sistema suporta qualquer configuração, desde jornadas
+                simples até escalas complexas de turnos.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>Vincule colaboradores às jornadas</h3>
+              <p>
+                Associe cada colaborador à sua jornada e escala correspondente.
+                Mudanças de escala são registradas historicamente, garantindo
+                cálculos precisos em qualquer período.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>Acompanhe em tempo real</h3>
+              <p>
+                Visualize no dashboard quem está presente, quem está em atraso,
+                horas extras acumuladas e saldo de banco de horas — tudo
+                atualizado conforme os registros chegam.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <h3>Exporte para a folha de pagamento</h3>
+              <p>
+                Ao fechar o período, exporte os dados de horas trabalhadas,
+                extras e banco de horas diretamente para o seu sistema de folha,
+                sem redigitação manual.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section fade-up">
+      <div class="faq-inner">
+        <div class="section-head">
+          <span class="section-tag">Dúvidas frequentes</span>
+          <h2>Perguntas sobre controle de jornada</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>O que é controle de jornada de trabalho?</h3>
+            <p>
+              É a gestão completa do tempo de trabalho dos colaboradores:
+              registro de entradas e saídas, cálculo de horas extras,
+              gerenciamento de escalas e controle do banco de horas, tudo em
+              conformidade com a CLT e a Portaria 671.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Qual é a jornada máxima permitida pela CLT?</h3>
+            <p>
+              A CLT estabelece jornada máxima de 8 horas diárias e 44 horas
+              semanais. Horas além desse limite são extraordinárias e devem ser
+              remuneradas com acréscimo mínimo de 50% ou compensadas pelo banco
+              de horas.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O sistema gerencia escalas diferenciadas como 12x36?</h3>
+            <p>
+              Sim. O Auvix suporta jornadas padrão, escalas 12x36, 6x1, turno de
+              revezamento e jornadas personalizadas, aplicando automaticamente
+              as regras de cada escala para cálculo de horas extras, adicional
+              noturno e banco de horas.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Como funciona o banco de horas no sistema?</h3>
+            <p>
+              O banco de horas é calculado automaticamente com base na diferença
+              entre as horas trabalhadas e a jornada contratada. O saldo pode
+              ser compensado em folgas futuras, e o sistema mantém histórico
+              completo por colaborador.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>O sistema funciona para empresas com múltiplas unidades?</h3>
+            <p>
+              Sim. O Auvix é multi-empresa e multi-unidade, permitindo gerenciar
+              diferentes CNPJ e filiais em uma única conta, com relatórios
+              consolidados ou separados por unidade conforme a necessidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section fade-up">
+      <div class="cta-inner">
+        <h2>Automatize a gestão de jornada da sua empresa</h2>
+        <p>
+          Elimine planilhas manuais, reduza erros no fechamento da folha e
+          mantenha sua empresa em conformidade com a CLT. Veja o Auvix em ação.
+        </p>
+        <div class="cta-actions">
+          <a href="index.html#contato" class="btn-primary"
+            >Agendar demonstração gratuita</a
+          >
+          <a href="banco-de-horas-online.html" class="btn-secondary"
+            >Saiba sobre banco de horas</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTIGOS RELACIONADOS -->
+    <section class="blog-section fade-up">
+      <div class="blog-inner">
+        <div class="section-head">
+          <span class="section-tag">Conteúdo relacionado</span>
+          <h2>Aprenda mais sobre jornada de trabalho</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Guia</span>
+              <h3>
+                <a href="blog/o-que-e-banco-de-horas.html"
+                  >O que é banco de horas e como funciona?</a
+                >
+              </h3>
+              <p>
+                Entenda o framework legal do banco de horas, como acumular e
+                compensar saldos corretamente.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/o-que-e-banco-de-horas.html">Ler artigo →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Equipes externas</span>
+              <h3>
+                <a href="blog/controle-de-jornada-equipes-externas.html"
+                  >Controle de jornada para equipes externas</a
+                >
+              </h3>
+              <p>
+                Como gerenciar a jornada de colaboradores que trabalham fora do
+                escritório com geolocalização.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/controle-de-jornada-equipes-externas.html"
+                >Ler artigo →</a
+              >
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Legislação</span>
+              <h3>
+                <a href="blog/portaria-671-explicada.html"
+                  >Portaria 671 explicada para empresas</a
+                >
+              </h3>
+              <p>
+                Tudo que você precisa saber sobre a principal regulamentação do
+                ponto eletrônico no Brasil.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="blog/portaria-671-explicada.html">Ler artigo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="index.html" class="footer-logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 30px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <p>
+        © <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos
+        reservados.
+      </p>
+      <div class="footer-links">
+        <a href="blog/">Blog</a>
+        <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
+        <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
+        <a href="banco-de-horas-online.html">Banco de Horas</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>
