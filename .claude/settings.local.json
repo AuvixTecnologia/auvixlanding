@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dir \"d:\\\\Repositorios\\\\auvixlanding\")",
       "Bash(dir \"d:\\\\Repositorios\\\\auvixlanding\\\\images\")",
-      "Bash(mkdir \"d:\\\\Repositorios\\\\auvixlanding\\\\blog\")"
+      "Bash(mkdir \"d:\\\\Repositorios\\\\auvixlanding\\\\blog\")",
+      "PowerShell(cd d:\\\\Repositorios\\\\auvixlanding; \\(Get-Content sitemap.xml\\) -replace 'controle-de-ponto-\\(rio-de-janeiro|belo-horizonte|curitiba|porto-alegre|florianopolis|brasilia|salvador|recife|fortaleza|goiania|manaus\\)\\\\.html', 'controle-de-ponto-$1/' | Set-Content sitemap.xml -Encoding utf8)",
+      "PowerShell(cd d:\\\\Repositorios\\\\auvixlanding; \\(Get-Content sitemap.xml\\) -replace 'auvix\\\\.com\\\\.br/controle-de-ponto-\\([^/]+\\)/', 'auvix.com.br/cidades/$1/' | Set-Content sitemap.xml -Encoding utf8)"
     ],
     "additionalDirectories": [
       "d:\\Repositorios\\auvixlanding"
