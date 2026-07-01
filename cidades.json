@@ -1,14 +1,98 @@
 [
-  { "name": "São Paulo",       "slug": "sao-paulo",       "state": "SP", "stateName": "São Paulo",          "region": "Sudeste"      },
-  { "name": "Rio de Janeiro",  "slug": "rio-de-janeiro",  "state": "RJ", "stateName": "Rio de Janeiro",     "region": "Sudeste"      },
-  { "name": "Belo Horizonte",  "slug": "belo-horizonte",  "state": "MG", "stateName": "Minas Gerais",       "region": "Sudeste"      },
-  { "name": "Curitiba",        "slug": "curitiba",        "state": "PR", "stateName": "Paraná",             "region": "Sul"          },
-  { "name": "Porto Alegre",    "slug": "porto-alegre",    "state": "RS", "stateName": "Rio Grande do Sul",  "region": "Sul"          },
-  { "name": "Florianópolis",   "slug": "florianopolis",   "state": "SC", "stateName": "Santa Catarina",     "region": "Sul"          },
-  { "name": "Brasília",        "slug": "brasilia",        "state": "DF", "stateName": "Distrito Federal",   "region": "Centro-Oeste" },
-  { "name": "Salvador",        "slug": "salvador",        "state": "BA", "stateName": "Bahia",              "region": "Nordeste"     },
-  { "name": "Recife",          "slug": "recife",          "state": "PE", "stateName": "Pernambuco",         "region": "Nordeste"     },
-  { "name": "Fortaleza",       "slug": "fortaleza",       "state": "CE", "stateName": "Ceará",              "region": "Nordeste"     },
-  { "name": "Goiânia",         "slug": "goiania",         "state": "GO", "stateName": "Goiás",              "region": "Centro-Oeste" },
-  { "name": "Manaus",          "slug": "manaus",          "state": "AM", "stateName": "Amazonas",           "region": "Norte"        }
+  {
+    "name": "São Paulo",
+    "slug": "sao-paulo",
+    "state": "SP",
+    "stateName": "São Paulo",
+    "region": "Sudeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "slug": "rio-de-janeiro",
+    "state": "RJ",
+    "stateName": "Rio de Janeiro",
+    "region": "Sudeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Belo Horizonte",
+    "slug": "belo-horizonte",
+    "state": "MG",
+    "stateName": "Minas Gerais",
+    "region": "Sudeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "Curitiba",
+    "slug": "curitiba",
+    "state": "PR",
+    "stateName": "Paraná",
+    "region": "Sul",
+    "statePrev": "do"
+  },
+  {
+    "name": "Florianópolis",
+    "slug": "florianopolis",
+    "state": "SC",
+    "stateName": "Santa Catarina",
+    "region": "Sul",
+    "statePrev": "de"
+  },
+  {
+    "name": "Porto Alegre",
+    "slug": "porto-alegre",
+    "state": "RS",
+    "stateName": "Rio Grande do Sul",
+    "region": "Sul",
+    "statePrev": "do"
+  },
+  {
+    "name": "Brasília",
+    "slug": "brasilia",
+    "state": "DF",
+    "stateName": "Distrito Federal",
+    "region": "Centro-Oeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Salvador",
+    "slug": "salvador",
+    "state": "BA",
+    "stateName": "Bahia",
+    "region": "Nordeste",
+    "statePrev": "da"
+  },
+  {
+    "name": "Recife",
+    "slug": "recife",
+    "state": "PE",
+    "stateName": "Pernambuco",
+    "region": "Nordeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "Fortaleza",
+    "slug": "fortaleza",
+    "state": "CE",
+    "stateName": "Ceará",
+    "region": "Nordeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Goiânia",
+    "slug": "goiania",
+    "state": "GO",
+    "stateName": "Goiás",
+    "region": "Centro-Oeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "Manaus",
+    "slug": "manaus",
+    "state": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "statePrev": "do"
+  }
 ]
