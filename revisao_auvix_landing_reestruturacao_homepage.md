@@ -213,7 +213,7 @@ Adicionar:
 
 ## Exemplo
 
-+50 empresas utilizando a plataforma
++500 empresas utilizando a plataforma
 
 "Reduzimos drasticamente o retrabalho do RH após a implantação da Auvix."
 
