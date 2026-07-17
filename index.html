@@ -10,7 +10,7 @@
 
   gtag('config', 'G-P6PGFMHW1T');
 </script>
-    <meta name="description" content="Sistema de controle de ponto digital com reconhecimento facial, geolocalização e gestão completa da jornada de trabalho. Ideal para empresas que desejam automa[...]
+    <meta name="description" content="Sistema de controle de ponto digital com reconhecimento facial, geolocalização e gestão completa da jornada de trabalho. Ideal para empresas que desejam automatizar o RH e reduzir erros operacionais.">
     <meta name="robots" content="index, follow">
     <meta name="title" content="Auvix Tecnologia - Controle de Ponto Digital">
     <link rel="canonical" href="https://www.auvix.com.br" />
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.auvix.com.br">
     <meta property="og:title" content="Auvix Tecnologia | Sistema de Controle de Ponto Digital com Reconhecimento Facial">
-    <meta property="og:description" content="Sistema de controle de ponto digital com reconhecimento facial, geolocalização e gestão completa da jornada de trabalho. Automatize o RH e reduza erros [...]
+    <meta property="og:description" content="Sistema de controle de ponto digital com reconhecimento facial, geolocalização e gestão completa da jornada de trabalho. Automatize o RH e reduza erros operacionais.">
     <meta property="og:image" content="https://www.auvix.com.br/images/background-hero.jpg">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -81,7 +81,7 @@
           "name": "Auvix — Controle de Ponto Digital",
           "operatingSystem": "Android, Web",
           "applicationCategory": "BusinessApplication",
-          "description": "Sistema de controle de ponto digital com reconhecimento facial, banco de horas, geolocalização e gestão completa da jornada de trabalho. Homologado conforme a Portaria 671[...]
+          "description": "Sistema de controle de ponto digital com reconhecimento facial, banco de horas, geolocalização e gestão completa da jornada de trabalho. Homologado conforme a Portaria 671.",
           "url": "https://www.auvix.com.br",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.auvix.ponto",
           "aggregateRating": {
@@ -96,7 +96,7 @@
               "@type": "Review",
               "author": { "@type": "Person", "name": "Rodrigo Mendes" },
               "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-              "reviewBody": "O sistema resolveu completamente o controle de ponto da nossa equipe externa. A geolocalização e o reconhecimento facial eliminaram as fraudes e reduziram muito o trabal[...]
+              "reviewBody": "O sistema resolveu completamente o controle de ponto da nossa equipe externa. A geolocalização e o reconhecimento facial eliminaram as fraudes e reduziram muito o trabalho do RH."
             },
             {
               "@type": "Review",
@@ -998,191 +998,654 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
+        align-items: start;
       }
-      .contact-text h2 {
+      .contact h2 {
         font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-size: 2rem;
         font-weight: 800;
-        line-height: 1.2;
         margin-bottom: 1rem;
       }
-      .contact-text h2 em {
-        color: var(--teal);
+      .contact h2 em {
         font-style: normal;
+        color: var(--teal);
       }
-      .contact-text p {
+      .contact-desc {
         color: var(--muted);
-        font-size: 0.95rem;
-        line-height: 1.75;
-        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
       }
-      .contact-text p strong {
-        color: var(--white);
+      .contact-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        flex: 1;
+        min-width: 0;
+      }
+      .contact-data-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.75rem;
+      }
+      .contact-photo {
+        width: 210px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow:
+          0 24px 60px rgba(0, 0, 0, 0.5),
+          0 0 60px rgba(96, 203, 233, 0.08);
+      }
+      .contact-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @media (max-width: 640px) {
+        .contact-data-row {
+          flex-direction: column;
+          align-items: center;
+        }
+        .contact-photo {
+          width: 70%;
+          max-width: 280px;
+        }
+      }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .contact-item-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        flex-shrink: 0;
+        background: rgba(96, 203, 233, 0.1);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+      }
+      .contact-item-body strong {
+        display: block;
+        font-size: 0.85rem;
+        color: var(--teal);
         font-weight: 600;
+      }
+      .contact-item-body span {
+        font-size: 0.9rem;
+        color: var(--muted);
       }
       .contact-form {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1rem;
       }
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
       }
-      .form-group label {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--white);
-        letter-spacing: 0.05em;
-      }
-      .form-group input,
-      .form-group textarea {
-        background: rgba(14, 34, 54, 0.4);
+      .contact-form input,
+      .contact-form textarea {
+        background: rgba(8, 18, 30, 0.7);
         border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 0.65rem 1rem;
+        border-radius: 10px;
+        padding: 0.9rem 1.1rem;
         color: var(--white);
         font-family: "DM Sans", sans-serif;
-        transition: all 0.2s;
         font-size: 0.9rem;
-      }
-      .form-group input::placeholder,
-      .form-group textarea::placeholder {
-        color: rgba(158, 158, 158, 0.6);
-      }
-      .form-group input:focus,
-      .form-group textarea:focus {
         outline: none;
+        transition: border-color 0.2s;
+        width: 100%;
+        backdrop-filter: blur(6px);
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: var(--muted);
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
         border-color: var(--teal);
-        background: rgba(96, 203, 233, 0.05);
       }
-      .form-group textarea {
-        min-height: 120px;
+      .contact-form textarea {
         resize: vertical;
-      }
-      .form-submit {
-        align-self: flex-start;
-        margin-top: 0.5rem;
-      }
-      @media (max-width: 768px) {
-        .contact-inner {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
+        min-height: 120px;
       }
 
       /* ─── FOOTER ─── */
-      .footer {
-        background: rgba(8, 18, 30, 0.9);
+      footer {
+        padding: 2rem 5vw;
         border-top: 1px solid var(--border);
-        padding: 3rem 5vw;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: rgba(8, 18, 30, 0.9);
+        backdrop-filter: blur(16px);
+      }
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        height: 30px;
+      }
+      footer p {
+        font-size: 0.8rem;
         color: var(--muted);
-        font-size: 0.85rem;
+      }
+      footer a {
+        color: var(--muted);
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--teal);
       }
 
       /* ─── RESPONSIVE ─── */
       @media (max-width: 1024px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
         .stats-inner {
           grid-template-columns: repeat(2, 1fr);
         }
         .problems-grid {
-          grid-template-columns: 1fr;
-        }
-        .showcase-inner {
-          grid-template-columns: 1fr;
-          gap: 3rem;
+          grid-template-columns: 1fr 1fr;
         }
         .features-list {
           grid-template-columns: 1fr;
         }
+        .feat-app-img {
+          grid-column: span 1 !important;
+        }
+        .feat-app-img > div {
+          grid-template-columns: 1fr !important;
+          padding: 1.5rem !important;
+          gap: 2rem !important;
+        }
+        .feat-app-img > div > div:last-child {
+          display: flex;
+          justify-content: center;
+        }
+        .showcase-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .showcase-inner.reverse {
+          direction: ltr;
+        }
+        .contact-inner {
+          grid-template-columns: 1fr;
+        }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         .nav-links {
           display: none;
+        }
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(8, 18, 30, 0.97);
+          padding: 1.5rem 5vw;
+          border-bottom: 1px solid var(--border);
+          gap: 1.2rem;
         }
         .hamburger {
           display: flex;
         }
-        .hero {
-          padding: 7rem 5vw 4rem;
-        }
         .stats-inner {
           grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
+          gap: 1.2rem;
         }
-        .stat-num {
-          font-size: 1.8rem;
+        .problems-grid {
+          grid-template-columns: 1fr;
         }
-        .hero h1 {
-          font-size: clamp(1.6rem, 4vw, 2.8rem);
+        .features-list {
+          grid-template-columns: 1fr;
         }
-        .hero-card {
-          padding: 1.5rem;
-          gap: 1.5rem;
+        .feat-app-img {
+          grid-column: span 1 !important;
+        }
+        .feat-app-img > div {
+          padding: 1.2rem !important;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
         }
       }
+
+      /* ─── HERO CHECKS ─── */
+      .hero-checks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        margin-bottom: 2rem;
+      }
+      .hero-checks span {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .check-mark {
+        color: var(--teal);
+        font-style: normal;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      /* ─── PLATFORM BLOCKS ─── */
+      .platform-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+        margin-top: 1.5rem;
+      }
+      .platform-block {
+        background: rgba(96, 203, 233, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+        transition: border-color 0.2s;
+      }
+      .platform-block:hover { border-color: var(--teal2); }
+      .platform-block strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 0.35rem;
+      }
+      .platform-block span {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      /* ─── FEATURES GROUPS ─── */
+      .features-groups {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      .feat-group {
+        background: rgba(8, 18, 30, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.5rem;
+        backdrop-filter: blur(6px);
+        transition: border-color 0.25s, transform 0.25s;
+      }
+      .feat-group:hover {
+        border-color: var(--teal2);
+        transform: translateY(-3px);
+      }
+      .feat-group-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+      .feat-group h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--teal);
+        margin-bottom: 0.9rem;
+      }
+      .feat-group ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .feat-group ul li {
+        color: var(--muted);
+        font-size: 0.83rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.45rem;
+        line-height: 1.4;
+      }
+      .feat-group ul li::before {
+        content: "✓";
+        color: var(--teal);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      @media (max-width: 768px) {
+        .features-groups { grid-template-columns: repeat(2, 1fr); }
+        .platform-blocks { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 480px) {
+        .features-groups { grid-template-columns: 1fr; }
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ─── CAROUSEL ─── */
+      .carousel { position: relative; width: 100%; }
+      .carousel-track { position: relative; width: 100%; }
+      .carousel-slide {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        border-radius: 0;
+      }
+      .carousel-slide:first-child { position: relative; }
+      .carousel-slide.active { opacity: 1; z-index: 1; }
+      .carousel-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        color: aqua;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 7px;
+        z-index: 10;
+
+      }
+      .carousel-dot {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: #555;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .carousel-dot.active {
+        background: var(--teal);
+        transform: scale(1.25);
+      }
+      #carousel-mobile {
+        padding-bottom: 30px;
+      }
+      #carousel-mobile .carousel-dots {
+        bottom: 8px;
+      }
+
+      /* ─── MODAL ─── */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(5, 12, 22, 0.75);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .modal-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .modal-box {
+        background: linear-gradient(135deg, #0e2236 0%, #0a1929 100%);
+        border: 1px solid rgba(96, 203, 233, 0.3);
+        border-radius: 24px;
+        padding: 3rem 2.5rem;
+        max-width: 440px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(96,203,233,0.08);
+        transform: scale(0.92);
+        transition: transform 0.3s ease;
+      }
+      .modal-overlay.open .modal-box {
+        transform: scale(1);
+      }
+      .modal-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(96, 203, 233, 0.12);
+        border: 2px solid rgba(96, 203, 233, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.8rem;
+      }
+      .modal-box h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #e0e0e0;
+        margin-bottom: 0.75rem;
+      }
+      .modal-box p {
+        color: #9e9e9e;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+      .modal-box p strong { color: #60cbe9; }
+      .modal-close {
+        background: #60cbe9;
+        color: #0d1e2c;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0.8rem 2.2rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .modal-close:hover {
+        background: #b2ebf2;
+        transform: translateY(-2px);
+      }
+
+      /* ─── MODAL REPRESENTANTE ─── */
+      .modal-box.modal-form-box {
+        max-width: 520px;
+        text-align: left;
+        padding: 2.5rem 2.25rem;
+        position: relative;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .modal-form-box p {
+        margin-bottom: 1.5rem;
+      }
+      .modal-x {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        background: none;
+        border: none;
+        color: var(--muted);
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .modal-x:hover {
+        color: #60cbe9;
+      }
+
     </style>
   </head>
   <body>
     <div class="site-bg"></div>
 
+    <!-- MODAL SUCESSO -->
+    <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-box">
+        <div class="modal-icon">✉️</div>
+        <h3 id="modalTitle">Mensagem enviada!</h3>
+        <p>Recebemos seu contato. Em breve um <strong>consultor Auvix</strong> entrará em contato com você.</p>
+        <button class="modal-close" id="modalCloseBtn">Entendido</button>
+      </div>
+    </div>
+
+    <!-- MODAL SEJA NOSSO REPRESENTANTE -->
+    <div class="modal-overlay" id="repModal" role="dialog" aria-modal="true" aria-labelledby="repModalTitle">
+      <div class="modal-box modal-form-box">
+        <button class="modal-x" id="repModalCloseBtn" aria-label="Fechar">&times;</button>
+        <h3 id="repModalTitle">Seja nosso representante</h3>
+        <p>Quer representar a Auvix na sua região? Preencha o formulário e nossa equipe entrará em contato com você.</p>
+        <form class="contact-form" id="rep-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Seu nome" required />
+            <input type="text" name="company" placeholder="Empresa (se possuir)" />
+          </div>
+          <input type="email" name="email" placeholder="E-mail" required />
+          <input type="tel" name="phone" placeholder="Telefone" required />
+          <input type="text" name="city" placeholder="Cidade / Região de atuação" required />
+          <textarea
+            name="message"
+            placeholder="Conte um pouco sobre você e sua experiência comercial"
+            required
+          ></textarea>
+          <button type="submit" class="btn-primary">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- NAV -->
     <nav>
-      <a href="/" class="nav-logo">
-        <img src="images/auvix-logo.svg" alt="Auvix Logo" />
+      <a href="#" class="nav-logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 36px; width: auto; display: block"
+        >
+          <defs>
+            <style>
+              .fn {
+                fill: #ffffff;
+              }
+              .ft {
+                fill: #60cbe9;
+              }
+            </style>
+          </defs>
+          <polygon
+            class="ft"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            class="fn"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            class="fn"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            class="fn"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            class="fn"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            class="ft"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
       </a>
-      <ul class="nav-links">
-        <li><a href="#recursos">Recursos</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#problemas">Desafios</a></li>
         <li><a href="#funcionalidades">Funcionalidades</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="#" class="open-rep-modal">Seja um representante</a></li>
+        <li><a href="https://ponto.auvix.com.br/" >Acessar a Plataforma</a></li>
       </ul>
-      <a href="#contato" class="nav-cta">Solicitar Demo</a>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div style="display: flex; gap: 1rem; align-items: center">
+        <a href="#contato" class="nav-cta">Fale conosco</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </nav>
 
-    <div class="whatsapp-float">
-      <div class="whatsapp-tooltip">Entre em contato</div>
-      <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/svgs/brands/whatsapp.svg" alt="WhatsApp" />
-    </div>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
+    <!-- HERO -->
+    <section class="hero">
       <div class="hero-grid">
-        <div>
-          <div class="hero-badge">🌟 Confira a solução mais avançada</div>
-          <h1>
-            Sistema de Controle de Ponto <em>Digital</em>
-          </h1>
+        <div class="hero-card">
+          <!-- <div class="hero-badge">Auvix Controle de Ponto</div> -->
+          <div class="hero-card-text">
+          <h1>Controle de ponto digital com <em>reconhecimento facial</em></h1>
           <p class="hero-text-p">
-            Com reconhecimento facial, geolocalização e banco de horas automático. Compatível com a Portaria 671 do Ministério do Trabalho.
+            Reduza erros operacionais, automatize o controle de jornada e acompanhe horas extras, faltas e banco de horas em tempo real.
           </p>
-          <div class="hero-actions">
-            <button class="btn-primary" id="btn-demo">Solicitar Demo</button>
-            <a href="#" class="btn-secondary">Ver Demo</a>
+          <div class="hero-checks">
+            <span><em class="check-mark">✔</em> Registro via celular, tablet e web</span>
+            <span><em class="check-mark">✔</em> Reconhecimento facial integrado</span>
+            <span><em class="check-mark">✔</em> Relatórios automáticos em tempo real</span>
+            <span><em class="check-mark">✔</em> Integração com folha de pagamento</span>
+            <span><em class="check-mark">✔</em> Solução fácil de usar</span>
           </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-card">
-            <div class="hero-card-text">
-              <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">Mais de <span style="color: var(--teal); font-weight: 700; font-size: 1.4rem;">+2000</span> empresas confiam no Auvix para gerenciar a jornada de trabalho dos seus colaboradores em todo o Brasil.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn-primary">Agendar demonstração</a>
+            <a href="#como-funciona" class="btn-secondary">Ver como funciona</a>
+          </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-person">
+              <img src="images/wo1.webp" alt="Consultora Auvix Tecnologia" fetchpriority="high" />
             </div>
-            <div class="hero-media">
-              <div class="hero-img-face">
-                <img src="images/hero-person.jpg" alt="Person" />
-                <div class="hero-float">
-                  <span class="hero-float-icon">✓</span>
-                  <span class="hero-float-text">
-                    <strong>Rápido</strong>
-                    Menos de 2 segundos
-                  </span>
-                </div>
+            <div class="hero-img-face">
+   
+            <div class="carousel" id="carousel-desktop">
+              <div class="carousel-track">
+                <img src="images/carousel/showcase-dashboard.png" alt="Dashboard Auvix" class="carousel-slide active" />
+                <img src="images/carousel/Dashboards Diarios.png" alt="Dashboard informacoes diarias" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Diarios Dark.png" alt="Dashboard informacoes diarias Dark" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Jornada.png" alt="Dashboards jornada" class="carousel-slide" />
+                <img src="images/carousel/Dashboards Hora Extra.png" alt="Dashboards hora extra" class="carousel-slide" />
+                <img src="images/carousel/Fechamento de cartão ponto Dark.png" alt="Fechamento de cartão ponto Auvix" class="carousel-slide" />
+                <img src="images/carousel/Relatório de Cartão ponto modelo.png" alt="Relatório de Cartão ponto modelo" class="carousel-slide" />
+                <img src="images/carousel/cadastro colaborador.jpg" alt= "cadastro do colaborador" class="carousel-slide" />
               </div>
+              <div class="carousel-dots">
+                <button class="carousel-dot active" data-idx="0"></button>
+                <button class="carousel-dot" data-idx="1"></button>
+                <button class="carousel-dot" data-idx="2"></button>
+                <button class="carousel-dot" data-idx="3"></button>
+                <button class="carousel-dot" data-idx="4"></button>
+                <button class="carousel-dot" data-idx="5"></button>
+                <button class="carousel-dot" data-idx="6"></button>
+                <button class="carousel-dot" data-idx="7"></button>
+              </div>
+            </div>
+
             </div>
           </div>
         </div>
@@ -1190,25 +1653,984 @@
     </section>
 
     <!-- STATS -->
-    <section class="stats" id="stats">
+    <div class="stats">
       <div class="stats-inner">
-        <div>
-          <div class="stat-num">+2000</div>
-          <div class="stat-label">Empresas ativas</div>
+        <div class="fade-up">
+          <div class="stat-num">Digital</div>
+          <div class="stat-label">Elimine papel</div>
         </div>
-        <div>
-          <div class="stat-num">+100mil</div>
-          <div class="stat-label">Colaboradores registrados</div>
+        <div class="fade-up">
+          <div class="stat-num">671</div>
+          <div class="stat-label">Portaria homologada</div>
         </div>
-        <div>
-          <div class="stat-num">+5mil</div>
-          <div class="stat-label">Registros por hora</div>
+        <div class="fade-up">
+          <div class="stat-num">+10</div>
+          <div class="stat-label">Formas de registro</div>
         </div>
-        <div>
-          <div class="stat-num">99,8%</div>
-          <div class="stat-label">Acurácia de reconhecimento</div>
+        <div class="fade-up">
+          <div class="stat-num">Indicadores</div>
+          <div class="stat-label">Dashboards e indicadores de gestão</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROBLEMS -->
+    <section class="problems" id="problemas">
+      <div class="section-head fade-up">
+        <div class="section-tag">Os desafios que você <em>enfrenta</em></div>
+        <h2>Sua empresa <em>enfrenta</em> estes problemas?</h2>
+        <p>
+          Reconhece algum desses cenários? A Auvix foi desenvolvida exatamente
+          para eliminar cada um deles.
+        </p>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card fade-up">
+          <div class="problem-icon">🔁</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Retrabalho constante no RH</strong>
+          <p>Controle manual e conferências demoradas consomem tempo e geram erros operacionais.</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">⏰</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Horas extras sem visibilidade</strong>
+          <p>Atrasos, faltas e banco de horas sem controle claro ou relatórios confiáveis.</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">⚠️</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Risco de fraudes no ponto</strong>
+          <p>Registros sem validação comprometem a segurança jurídica e facilitam irregularidades.</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">📋</div>
+          <strong style="display:block;font-size:1rem;font-weight:500;margin-bottom:0.5rem;color:var(--white);">Exposição trabalhista</strong>
+          <p>Dificuldade de comprovar a jornada real em caso de processo ou auditoria.</p>
         </div>
       </div>
     </section>
-  </body>
+
+    <!-- SHOWCASE 1 — Dashboard -->
+    <section class="showcase">
+      <div class="showcase-inner">
+        <div class="showcase-img fade-up">
+          <img
+            src="images/conhecer.png"
+            alt="Dashboard Auvix — sistema de controle de ponto digital com gestão de jornada"
+            loading="lazy"
+          />
+          <div class="showcase-img-badge">📊 Painel </div>
+        </div>
+        
+        <div class="showcase-text fade-up">
+          <div class="section-tag">A solução completa para sua empresa</div>
+          <h2>Tudo em uma <em>única plataforma</em></h2>
+          <p>
+            Automatize o controle de jornada, elimine retrabalho e reduza erros operacionais com uma plataforma moderna, segura e fácil de usar.
+          </p>
+          <div class="platform-blocks">
+            <div class="platform-block">
+              <strong>📱 Registro inteligente</strong>
+              <span>Ponto via reconhecimento facial, QR Code, tablet, celular ou navegador.</span>
+            </div>
+            <div class="platform-block">
+              <strong>📊 Gestão automatizada</strong>
+              <span>Controle atrasos, banco de horas, faltas e escalas em tempo real.</span>
+            </div>
+            <div class="platform-block">
+              <strong>🔒 Segurança operacional</strong>
+              <span>Geolocalização, validação antifraude e histórico completo de registros.</span>
+            </div>
+            <div class="platform-block">
+              <strong>🔗 Relatórios e integração</strong>
+              <span>Relatórios automáticos e integração com folha de pagamento.</span>
+            </div>
+          </div>
+           <div style="text-align:center;margin-top:2rem;">
+                 <a href="controle-de-ponto-digital.html" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--teal);font-size:0.9rem;font-weight:600;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+                  Saiba mais <span style="font-size:1rem;">→</span>
+                </a>
+                </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="funcionalidades">
+      <div class="features-inner">
+        <div class="section-head fade-up">
+          <div class="section-tag">Funcionalidades</div>
+          <h2>Mais controle para o RH e mais segurança para sua empresa</h2>
+          <p>
+            O sistema Auvix automatiza todo o processo de registro, cálculo e
+            gestão de jornada.
+          </p>
+        </div>
+        <div class="features-groups">
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">📱</div>
+            <h3>Registro de Ponto</h3>
+            <ul>
+              <li>Reconhecimento facial</li>
+              <li>QR Code</li>
+              <li>Crachá</li>
+              <li>Celular e tablet</li>
+              <li>Navegador web</li>
+              <li>Importação de AFD</li>
+            </ul>
+          </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">📈</div>
+            <h3>Gestão de Jornada</h3>
+            <ul>
+              <li>Banco de horas</li>
+              <li>Horas extras e atrasos</li>
+              <li>Escalas e horários</li>
+              <li>Relatórios automáticos</li>
+              <li>Justificativas e férias</li>
+              <li>Multi Escalas/Escalas mistas</li>
+            </ul>
+          </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">🛡️</div>
+            <h3>Segurança</h3>
+            <ul>
+              <li>Geolocalização</li>
+              <li>Validação antifraude</li>
+              <li>Auditoria de ações</li>
+              <li>Backup automático</li>
+              <li>Rastreabilidade total</li>
+              <li>Notificações</li>
+            </ul>
+          </div>
+          <div class="feat-group fade-up">
+            <div class="feat-group-icon">🏢</div>
+            <h3>Administração</h3>
+            <ul>
+              <li>Multi-empresas</li>
+              <li>Perfis de acesso</li>
+              <li>Controle centralizado</li>
+              <li>Integração com folha de pagamento</li>
+              <li>Tolerância configurável</li>
+              <li>Exportação de dados configurável</li>
+            </ul>
+          </div>
+          
+           <div class="feat-group fade-up" style="grid-column: 1 / -1; text-align:center;">
+            <h3>Saiba Mais:</h3>
+            <a href="reconhecimento-facial-ponto.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:2rem;color:var(--muted); font-size:0.9rem;font-weight:600;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+                  Reconhecimento Facial <span style="font-size:1rem;">→</span></a>
+            <a href="banco-de-horas-online.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:2rem;color:var(--muted);font-size:0.9rem;font-weight:600;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+                  Banco de Horas <span style="font-size:1rem; ">→</span></a>
+            <a href="controle-de-jornada.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:2rem;color:var(--muted);font-size:0.9rem;font-weight:600;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+                  Gestão da Jornada <span style="font-size:1rem; ">→</span></a>
+          
+          </div>
+        </div>
+
+          <div
+            class="feat fade-up feat-app-img"
+            style="
+              margin-top: 2rem;
+              background: transparent;
+              border: none;
+              padding: 0;
+            "
+          >
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr auto;
+              gap: 3rem;
+              align-items: center;
+              background: rgba(8, 18, 30, 0.6);
+              border: 1px solid var(--border);
+              border-radius: 20px;
+              padding: 2.5rem 3rem;
+              width: 100%;
+              backdrop-filter: blur(8px);
+            ">
+              <!-- Texto -->
+              <div>
+                
+                
+                <div class="section-tag" style="text-align: left; display: inline-block; margin-bottom: 0.75rem;">Aplicativo Auvix</div>
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3;">
+                  Leve o controle de ponto<br>no seu bolso
+                </h2>
+                <p style="color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem; max-width: 400px;">
+                  Registre o ponto, acompanhe sua jornada e receba notificações diretamente pelo celular, de qualquer lugar.
+                </p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.75rem;">
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Marcação de ponto com geolocalização</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Cerca vitual</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Histórico completo de marcações</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Banco de horas </li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Solicitações de ajuste pelo app</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Envio de atestados e documentos</li>
+                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Solicitação de férias, etc..</li>
+                </ul>
+              
+                <div style="
+                  border-radius: 16px;
+                  border: 1px solid var(--border);
+                  overflow: hidden;
+                  margin: 20px 0;
+                  width: 260px;
+                  box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 60px rgba(96,203,233,0.08);
+                ">
+                  <img src="images/h-facial1-cut.webp" alt="Colaboradora usando o app Auvix de controle de ponto no celular" style="width: 100%; height: auto; display: block;" loading="lazy"/>
+                </div>
+                
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.7rem;
+                    background: #000;
+                    border: 1px solid rgba(255,255,255,0.15);
+                    border-radius: 10px;
+                    padding: 0.6rem 1.2rem;
+                    text-decoration: none;
+                    transition: opacity 0.2s;
+                    margin: 20px 0;
+                  "
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                >
+
+                  <img src="images/google-play.png" alt="Baixar na Google Play" style="height: 26px; width: auto; display: block;" loading="lazy" />  
+                  <div>
+                    <span style="font-size: 0.62rem; color: rgba(255,255,255,0.75); display: block; line-height: 1;">Disponível no</span>
+                    <span style="font-size: 0.9rem; color: #fff; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;">Google Play</span>
+                  </div>
+                </a>
+                <a
+                  href="https://apps.apple.com/br/app/auvix-ponto/id6784364342"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.7rem;
+                    background: #000;
+                    border: 1px solid rgba(255,255,255,0.15);
+                    border-radius: 10px;
+                    padding: 0.6rem 1.2rem;
+                    text-decoration: none;
+                    transition: opacity 0.2s;
+                    margin: 20px 0;
+                  "
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                >
+
+                  <img src="images/apple.png" alt="Baixar na App Store" style="height: 26px; width: auto; display: block; filter: brightness(0) invert(1);" loading="lazy" />
+                  <div>
+                    <span style="font-size: 0.62rem; color: rgba(255,255,255,0.75); display: block; line-height: 1;">Disponível na</span>
+                    <span style="font-size: 0.9rem; color: #fff; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;">App Store</span>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Carousel celular -->
+              <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <div style="
+                  border-radius: 32px;
+                  border: 2px solid var(--border);
+                  overflow: hidden;
+                  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+                  width: 240px;
+                ">
+                  <div class="carousel" id="carousel-mobile">
+                    <div class="carousel-track">
+                      <img src="images/carousel/app-BANCO DE HORAS.jpeg" alt="Banco de Horas Auvix" class="carousel-slide active" />
+                      <img src="images/carousel/app-HISTÓRICO DE MARCAÇÕES.jpeg" alt="Histórico de Marcações Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-MARCAÇÃO DE PONTO.jpeg" alt="Marcação de Ponto Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-OPÇÕES DE SOLICITAÇÕES.jpeg" alt="Opções de Solicitações Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-SOLICITAÇÕES DE AJUSTES.jpeg" alt="Solicitações de Ajustes Auvix" class="carousel-slide" />
+                      <img src="images/carousel/app-TELA PRINCIPAL.jpeg" alt="Tela Principal Auvix" class="carousel-slide" />
+                    </div>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot active" data-idx="0"></button>
+                      <button class="carousel-dot" data-idx="1"></button>
+                      <button class="carousel-dot" data-idx="2"></button>
+                      <button class="carousel-dot" data-idx="3"></button>
+                      <button class="carousel-dot" data-idx="4"></button>
+                      <button class="carousel-dot" data-idx="5"></button>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center;">
+                 <a href="controle-de-ponto-mobile.html" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--teal);font-size:0.9rem;font-weight:600;text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+                  Saiba mais sobre o app <span style="font-size:1rem;">→</span>
+                </a>
+                </div>
+              </div>
+               
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how" id="como-funciona">
+      <div class="how-inner">
+        <div class="section-head fade-up">
+          <div class="section-tag">Como funciona</div>
+          <h2>Automatize o controle de jornada</h2>
+        </div>
+        <div class="steps">
+          <div class="step fade-up">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Implantação rápida feita por especialistas</h3>
+              <p>
+                Nossa equipe configura o sistema para sua empresa, com suporte
+                completo. Sem burocracia, sem complicação técnica.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>Cadastro dos colaboradores</h3>
+              <p>
+                Registre funcionários, defina horários, grupos e perfis de
+                acesso. O sistema se adapta à estrutura e regras da sua empresa.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>Registros automáticos e seguros</h3>
+              <p>
+                Colaboradores registram ponto via Facial, QrCode, Celular, Tablet ou
+                web, com geolocalização e validação antifraude.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h3>Gestão em tempo real</h3>
+              <p>
+                Gestores acompanham e fazem a gestão defaltas, horas extras, banco de horas. Relatórios completos e indicadores disponíveis 24/7.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-inner fade-up">
+        <h2>Modernize o controle de jornada da <em>sua empresa</em></h2>
+        <p>
+          Automatize processos, reduza erros operacionais e tenha total controle da jornada dos colaboradores com uma plataforma moderna, segura e fácil de usar.
+        </p>
+        <div class="cta-actions">
+          <a href="#contato" class="btn-primary">Falar com especialista</a>
+          <a href="tel:+554691153255" class="btn-secondary">📞 (46) 99115-3255</a>
+        </div>
+      </div>
+    </section>
+
+<section class="how" style="padding:90px 5vw;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1200px;margin:auto;text-align:center;">
+    <span style="display:inline-block;padding:8px 18px;border-radius:999px;background:rgba(96,203,233,0.12);color:#60cbe9;font-size:14px;margin-bottom:20px;">
+      Empresas que confiam na Auvix para modernizar o RH
+    </span>
+
+    <h2 style="font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.2;margin-bottom:18px;">
+      Nossa Plataforma em <em>Números</em>
+    </h2>
+
+    <p style="max-width:760px;margin:0 auto 50px;color:#b6c2cf;font-size:clamp(1rem,2.5vw,1.125rem);line-height:1.7;">
+      Resultados reais para empresas que buscam mais controle, produtividade e segurança na gestão da jornada.
+      <br>A Auvix automatiza processos de controle de ponto, reduz retrabalho operacional e oferece mais eficiência para equipes de RH.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
+      <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
+        <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:#60cbe9;margin-bottom:8px;">+500</h3>
+        <p style="color:#c9d4df;">Clientes</p>
+      </div>
+
+      <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
+        <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:#60cbe9;margin-bottom:8px;">+2000</h3>
+        <p style="color:#c9d4df;">Usuários ativos diariamente</p>
+      </div>
+
+      <div style="padding:28px;background:rgba(255,255,255,0.03);border-radius:20px;">
+        <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:#60cbe9;margin-bottom:8px;">Agilidade</h3>
+        <p style="color:#c9d4df;">“Reduzimos significativamente o tempo gasto com conferências manuais após a implantação da Auvix.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding:90px 5vw;">
+  <div style="max-width:1000px;margin:auto;">
+
+
+<div style="text-align:center;margin-bottom:50px;">
+  <h2 style="font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:16px;">
+    Perguntas frequentes
+  </h2>
+
+  <p style="color:#b6c2cf;font-size:clamp(1rem,2.5vw,1.125rem);">
+    Dúvidas comuns sobre o sistema de controle de ponto da Auvix.
+  </p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:20px;">
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">📱</span>
+      O sistema funciona em celular e tablet?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O registro de ponto pode ser realizado via celular, tablet ou navegador web.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">🧑‍💻</span>
+      Possui reconhecimento facial?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. A plataforma conta com validação facial integrada e recursos antifraude.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">⏱️</span>
+      É possível acompanhar banco de horas no celular?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O sistema oferece controle completo de banco de horas, horas extras, atrasos e relatórios acessíveis diretamente pelo aplicativo.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">📄</span>
+      O sistema Auvix está em conformidade com a Portaria 671?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O sistema Auvix é homologado conforme a Portaria 671 do Ministério do Trabalho e Previdência, que regulamenta o registro eletrônico de ponto no Brasil. Isso garante segurança jurídica para sua empresa em auditorias e processos trabalhistas.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">🚗</span>
+      O sistema funciona para equipes externas e colaboradores em campo?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Sim. O Auvix oferece controle de jornada com geolocalização e cerca virtual, permitindo o registro seguro e validado de ponto para equipes externas, vendedores, motoristas e colaboradores em campo — tudo via aplicativo, online e offline
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:18px;background:rgba(255,255,255,0.03);">
+    <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:24px;">🚀</span>
+      Como funciona a implantação do sistema?
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      A implantação é realizada pela equipe de especialistas da Auvix, com suporte completo do início ao fim. O processo é rápido, sem burocracia técnica e inclui treinamento para o time de RH. Não é necessário conhecimento técnico prévio.
+    </p>
+  </div>
+
+</div>
+
+
+  </div>
+</section>
+
+
+<section class="how" style="padding:90px 5vw;background:#091521;">
+  <div style="max-width:1200px;margin:auto;">
+
+
+<div style="display:flex;align-items:center;gap:3rem;flex-wrap:wrap;justify-content:center;margin-bottom:60px;">
+  <div style="flex:1;min-width:280px;">
+    <h2 style="font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:18px;">
+      Reduza retrabalho</br> e ganhe <em>produtividade</em> no RH
+    </h2>
+
+    <p style="max-width:760px;color:#b6c2cf;font-size:clamp(1rem,2.5vw,1.125rem);line-height:1.7;">
+      Centralize o controle de jornada em uma plataforma moderna, segura e preparada para empresas que precisam de mais eficiência operacional.
+    </p>
+  </div>
+  <div style="flex:0 0 280px;max-width:280px;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 60px rgba(96,203,233,0.08);">
+    <img src="images/wo3-cut.webp" alt="Especialista Auvix com o aplicativo de controle de ponto" style="width:100%;height:auto;display:block;" loading="lazy" />
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      📊
+    </div>
+
+    <h3 style="margin-bottom:12px;">
+      Controle centralizado
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Acompanhe registros, banco de horas e escalas em um único painel.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      🔒
+    </div>
+
+    <h3 style="margin-bottom:12px;">
+      Segurança operacional
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Validação facial, geolocalização e histórico completo de marcações.
+    </p>
+  </div>
+
+  <div style="padding:28px;border-radius:22px;background:rgba(255,255,255,0.03);">
+    
+    <div style="font-size:38px;margin-bottom:18px;">
+      ⚙️
+    </div>
+
+    <h3 style="margin-bottom:12px;">
+      Automação do RH
+    </h3>
+
+    <p style="color:#b6c2cf;line-height:1.7;">
+      Reduza conferências manuais e agilize processos internos.
+    </p>
+  </div>
+
+</div>
+
+
+  </div>
+</section>
+
+<!-- LOCAL SEO -->
+    <section style="padding:64px 5vw 48px;background:#060f18;border-top:1px solid rgba(255,255,255,0.06);">
+      <div style="max-width:1000px;margin:auto;text-align:center;">
+        <div style="display:inline-block;background:rgba(0,163,255,0.08);border:1px solid rgba(0,163,255,0.18);border-radius:100px;padding:6px 18px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;color:#0af;text-transform:uppercase;margin-bottom:20px;">
+          100% online · Atendimento nacional
+        </div>
+        <h2 style="font-size:clamp(1.3rem,3.5vw,1.8rem);margin-bottom:14px;font-weight:700;">
+          Sistema de controle de ponto para empresas em <em>todo o Brasil</em>
+        </h2>
+        <p style="color:#8a9bb0;font-size:0.97rem;line-height:1.75;max-width:760px;margin:0 auto 32px;">
+          A Auvix é uma plataforma 100% online. A implantação é feita de forma remota, sem necessidade de visita técnica,
+          atendendo empresas de todos os portes em <em>qualquer estado do Brasil</em> —
+          do <strong>Amazonas</strong> ao <strong>Rio Grande do Sul</strong>, do <strong>Nordeste</strong> ao <strong>Centro-Oeste</strong>.
+          Suporte dedicado, onboarding guiado e atendimento ágil independente de onde sua empresa estiver.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;">
+          <a href="cidades/sao-paulo/"      style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">São Paulo · SP</a>
+          <a href="cidades/rio-de-janeiro/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Rio de Janeiro · RJ</a>
+          <a href="cidades/belo-horizonte/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Belo Horizonte · MG</a>
+          <a href="cidades/curitiba/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Curitiba · PR</a>
+          <a href="cidades/porto-alegre/"   style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Porto Alegre · RS</a>
+          <a href="cidades/florianopolis/"  style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Florianópolis · SC</a>
+          <a href="cidades/brasilia/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Brasília · DF</a>
+          <a href="cidades/salvador/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Salvador · BA</a>
+          <a href="cidades/recife/"         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Recife · PE</a>
+          <a href="cidades/fortaleza/"      style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Fortaleza · CE</a>
+          <a href="cidades/goiania/"        style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Goiânia · GO</a>
+          <a href="cidades/manaus/"         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Manaus · AM</a>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact" id="contato">
+      <div class="contact-inner">
+        <div>
+          <h2>Fale com um <em>especialista</em> da Auvix</h2>
+          <p class="contact-desc">
+            Atendemos empresas em todo o Brasil. Entre em contato e nossa equipe vai apresentar a solução ideal para o seu negócio com uma demonstração gratuita.
+          </p>
+          <div class="contact-data-row">
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"> <img
+                    src="images/map.png"
+                    alt="Endereço Auvix Tecnologia"
+                    style="width: 32px; height: 32px"
+                    loading="lazy"
+                  />
+                  </a></div>
+              <div class="contact-item-body">
+                <strong>Endereço</strong>
+                <span
+                  >Rua Octaviano Teixeira dos Santos, nº1561 Sala 407-B, Ed.
+                  Office One, Bairro Nossa Senhora Aparecida, CEP 85601-030
+                  Francisco Beltrão PR</span
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"> <a href="https://wa.me/5546991153255"><img
+                    src="images/whats.png"
+                    alt="WhatsApp Auvix"
+                    style="width: 32px; height: 32px"
+                    loading="lazy"
+                  />
+                  </a></div>
+              <div class="contact-item-body">
+               <a href="https://wa.me/5546991153255" style="text-decoration: none;"><strong>
+                  Telefone / WhatsApp
+                  </strong>
+                <span>(46) 99115-3255</span></a> 
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"> <a href="mailto:contato@auvix.com.br"><img
+                    src="images/mail.png"
+                    alt="E-mail Auvix"
+                    style="width: 32px; height: 32px"
+                    loading="lazy"
+                  />
+                  </a></div>
+              <div class="contact-item-body">
+                <strong>E-mail</strong>
+                <a href="mailto:contato@auvix.com.br" style="text-decoration: none;"
+                  ><span>contato@auvix.com.br</span></a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item-icon">
+                  <a href="https://www.instagram.com/auvix.tecnologia/" style="text-decoration: none;">
+                  <img
+                    src="images/instagram.png"
+                    alt="Instagram Auvix Tecnologia"
+                    style="width: 32px; height: 32px"
+                    loading="lazy"
+                  />
+                  </a>
+                </div>
+                <div class="contact-item-body">
+                  <strong>Instagram</strong>
+                  <a href="https://www.instagram.com/auvix.tecnologia/" style="text-decoration: none;">
+                  <span>@auvix.tecnologia</span>
+                </a>
+                </div>
+                 
+              </a>
+            </div>
+             <div class="contact-item">
+                <div class="contact-item-icon">
+                  <a href="https://www.linkedin.com/company/auvix-tecnologia" style="text-decoration: none;">
+                  <img
+                    src="images/LinkedIn_icon.svg"
+                    alt="LinkedIn Auvix Tecnologia"
+                    style="width: 32px; height: 32px"
+                    loading="lazy"
+                  />
+                  </a>
+                </div>
+                <div class="contact-item-body">
+                  <strong>LinkedIn</strong>
+                  <a href="https://www.linkedin.com/company/auvix-tecnologia" style="text-decoration: none;">
+                  <span>@auvix-tecnologia</span>
+                </a>
+                </div>
+
+              </a>
+            </div>
+          </div>
+          <div class="contact-photo">
+            <img src="images/wo-call-cut.webp" alt="Atendimento Auvix — fale com um especialista" loading="lazy" />
+          </div>
+          </div>
+        </div>
+        <div>
+          <script type="text/javascript">
+            (function(){
+              emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});
+            })();
+            document.addEventListener("DOMContentLoaded", function(){
+              const form = document.getElementById("contact-form");
+              const modal = document.getElementById("successModal");
+              const closeBtn = document.getElementById("modalCloseBtn");
+
+              function openModal(){ modal.classList.add("open"); }
+              function closeModal(){ modal.classList.remove("open"); }
+
+              closeBtn.addEventListener("click", closeModal);
+              modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
+
+              // Modal "Seja nosso representante"
+              const repModal = document.getElementById("repModal");
+              const repForm = document.getElementById("rep-form");
+              const repCloseBtn = document.getElementById("repModalCloseBtn");
+
+              function openRepModal(){ repModal.classList.add("open"); }
+              function closeRepModal(){ repModal.classList.remove("open"); }
+
+              document.querySelectorAll(".open-rep-modal").forEach(function(el){
+                el.addEventListener("click", function(e){
+                  e.preventDefault();
+                  const navLinks = document.getElementById("navLinks");
+                  if(navLinks) navLinks.classList.remove("open");
+                  openRepModal();
+                });
+              });
+              repCloseBtn.addEventListener("click", closeRepModal);
+              repModal.addEventListener("click", function(e){ if(e.target === repModal) closeRepModal(); });
+
+              document.addEventListener("keydown", function(e){
+                if(e.key === "Escape"){ closeModal(); closeRepModal(); }
+              });
+
+              repForm && repForm.addEventListener("submit", function(e){
+                e.preventDefault();
+                const btn = repForm.querySelector('button[type="submit"]');
+                const msgField = repForm.querySelector('textarea[name="message"]');
+                const city = repForm.querySelector('input[name="city"]').value;
+                const originalMsg = msgField.value;
+                msgField.value = "[QUERO SER UM REPRESENTANTE AUVIX]\nCidade/Região de atuação: " + city + "\n\n" + originalMsg;
+                btn.disabled = true;
+                btn.textContent = "Enviando...";
+                emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
+                  .then(function(){
+                    repForm.reset();
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                    closeRepModal();
+                    openModal();
+                  })
+                  .catch(function(err){
+                    alert("Erro ao enviar: " + JSON.stringify(err));
+                    msgField.value = originalMsg;
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                  });
+              });
+
+              form && form.addEventListener("submit", function(e){
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.textContent = "Enviando...";
+                emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
+                  .then(function(){
+                    form.reset();
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                    openModal();
+                  })
+                  .catch(function(err){
+                    alert("Erro ao enviar: " + JSON.stringify(err));
+                    btn.disabled = false;
+                    btn.textContent = "Enviar mensagem";
+                  });
+              });
+            });</script>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Seu nome" required />
+              <input
+                type="text"
+                name="company"
+                placeholder="Empresa"
+                required
+              />
+            </div>
+            <input type="email" name="email" placeholder="E-mail" required />
+            <input type="tel" name="phone" placeholder="Telefone" required />
+            <textarea
+              name="message"
+              placeholder="Como podemos ajudar sua empresa?"
+              required
+            ></textarea>
+            <button type="submit" class="btn-primary">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+     
+    
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="#" class="footer-logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 30px; width: auto; display: block"
+        >
+          <defs>
+            <style>
+              .fn {
+                fill: #ffffff;
+              }
+              .ft {
+                fill: #60cbe9;
+              }
+            </style>
+          </defs>
+          <polygon
+            class="ft"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            class="fn"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            class="fn"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            class="fn"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            class="fn"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            class="ft"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
+      <div style="display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;">
+        <a href="blog/">Blog</a>
+        <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
+        <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
+        <a href="controle-de-jornada.html">Gestão de Jornada</a>
+        <a href="banco-de-horas-online.html">Banco de Horas</a>
+        <a href="controle-de-ponto-mobile.html">App Mobile</a>
+        <a href="#" class="open-rep-modal">Seja nosso representante</a>
+        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+        <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
+      </div>
+      <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+      <div style="display:flex;gap:0.75rem;align-items:center;">
+        <a href="https://www.instagram.com/auvix.tecnologia/" target="_blank" rel="noopener" title="Instagram Auvix" style="display:flex;align-items:center;color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/auvix-tecnologia" target="_blank" rel="noopener" title="LinkedIn Auvix" style="display:flex;align-items:center;color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR" target="_blank" rel="noopener" title="Baixar app Auvix no Google Play" style="display:flex;align-items:center;gap:0.45rem;color:var(--muted);transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586zm-3.595 2.116L7.583 8.68 1.03 14.755c.201 1.029 1.36 1.6 2.303 1.031l7.294-4.296zM1 13.396V2.604L6.846 8 1 13.396zM1.03 1.245l6.553 6.075 3.044-2.811L3.333.214C2.39-.355 1.231.216 1.03 1.245z"/>
+          </svg>
+          <span style="font-size:0.75rem;line-height:1;">Google Play</span>
+        </a>
+        <a href="https://apps.apple.com/br/app/auvix-ponto/id6784364342" target="_blank" rel="noopener" title="Baixar app Auvix na App Store" style="display:flex;align-items:center;gap:0.45rem;color:var(--muted);transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.898.319.232 1.219.665 2.056.646.626-.019 1.001-.427 1.929-.427.928 0 1.283.427 1.928.427.845 0 1.678-.671 2.253-1.658.373-.646.626-1.278.789-1.869-.013-.005-1.564-.606-1.578-2.401z"/>
+          </svg>
+          <span style="font-size:0.75rem;line-height:1;">App Store</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+
+      // Smooth scroll with nav offset for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+          const target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          navLinks.classList.remove("open");
+          const navHeight = document.querySelector("nav").offsetHeight;
+          const targetTop =
+            target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+          window.scrollTo({ top: targetTop, behavior: "smooth" });
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+
+      function initCarousel(containerId, interval) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        const slides = container.querySelectorAll(".carousel-slide");
+        const dots = container.querySelectorAll(".carousel-dot");
+        if (!slides.length) return;
+        let cur = 0;
+        function goTo(idx) {
+          slides[cur].classList.remove("active");
+          dots[cur].classList.remove("active");
+          cur = idx;
+          slides[cur].classList.add("active");
+          dots[cur].classList.add("active");
+        }
+        dots.forEach((d) => d.addEventListener("click", () => goTo(+d.dataset.idx)));
+        setInterval(() => goTo((cur + 1) % slides.length), interval);
+      }
+      initCarousel("carousel-desktop", 4000);
+      initCarousel("carousel-mobile", 4000);
+    </script>
+
+    <a
+      href="https://wa.me/5546991153255"
+      target="_blank"
+      rel="noopener"
+      aria-label="Fale conosco no WhatsApp"
+      class="whatsapp-float"
+    >
+      <span class="whatsapp-tooltip">Falar conosco no WhatsApp</span>
+      <img
+        src="images/whats.png"
+        alt="WhatsApp Auvix"
+        loading="lazy"
+      />
+    </a>
+
+</body>
 </html>
