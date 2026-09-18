@@ -2242,10 +2242,17 @@
         .region-badge{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 18px;font-size:0.82rem;font-weight:600;color:#b6c2cf;cursor:pointer;transition:border-color .2s,color .2s,background .2s;font-family:inherit;}
         .region-badge:hover{border-color:rgba(0,163,255,0.4);color:#fff;}
         .region-badge.active{background:rgba(0,163,255,0.14);border-color:#0af;color:#fff;}
-        .city-badge{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;display:none;}
+        .city-badge{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;display:inline-block;}
         .city-badge:hover{border-color:rgba(0,163,255,0.4);color:#fff;}
-        .city-badge.show{display:inline-block;}
         .city-hint{color:#5c6c7d;font-size:0.85rem;}
+        .region-group{display:none;flex-direction:column;gap:18px;}
+        .region-group.show{display:flex;}
+        .state-group{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;}
+        .state-label{min-width:150px;text-align:right;padding-right:6px;font-size:0.78rem;font-weight:700;letter-spacing:0.03em;color:#60cbe9;text-transform:uppercase;}
+        .state-cities{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;flex:1;}
+        @media (max-width:640px){
+          .state-label{min-width:100%;text-align:center;padding-right:0;}
+        }
       </style>
       <div style="max-width:1000px;margin:auto;text-align:center;">
         <div style="display:inline-block;background:rgba(0,163,255,0.08);border:1px solid rgba(0,163,255,0.18);border-radius:100px;padding:6px 18px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;color:#0af;text-transform:uppercase;margin-bottom:20px;">
@@ -2271,41 +2278,257 @@
 
         <div id="cityBadges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;">
           <span class="city-hint" id="cityHint">Selecione uma região para ver as cidades atendidas.</span>
-          <a href="cidades/rio-branco/"     class="city-badge" data-region="Norte">Rio Branco · AC</a>
-          <a href="cidades/macapa/"         class="city-badge" data-region="Norte">Macapá · AP</a>
-          <a href="cidades/manaus/"         class="city-badge" data-region="Norte">Manaus · AM</a>
-          <a href="cidades/belem/"          class="city-badge" data-region="Norte">Belém · PA</a>
-          <a href="cidades/porto-velho/"    class="city-badge" data-region="Norte">Porto Velho · RO</a>
-          <a href="cidades/boa-vista/"      class="city-badge" data-region="Norte">Boa Vista · RR</a>
-          <a href="cidades/palmas/"         class="city-badge" data-region="Norte">Palmas · TO</a>
-          <a href="cidades/maceio/"         class="city-badge" data-region="Nordeste">Maceió · AL</a>
-          <a href="cidades/salvador/"       class="city-badge" data-region="Nordeste">Salvador · BA</a>
-          <a href="cidades/fortaleza/"      class="city-badge" data-region="Nordeste">Fortaleza · CE</a>
-          <a href="cidades/sao-luis/"       class="city-badge" data-region="Nordeste">São Luís · MA</a>
-          <a href="cidades/joao-pessoa/"    class="city-badge" data-region="Nordeste">João Pessoa · PB</a>
-          <a href="cidades/recife/"         class="city-badge" data-region="Nordeste">Recife · PE</a>
-          <a href="cidades/teresina/"       class="city-badge" data-region="Nordeste">Teresina · PI</a>
-          <a href="cidades/natal/"          class="city-badge" data-region="Nordeste">Natal · RN</a>
-          <a href="cidades/aracaju/"        class="city-badge" data-region="Nordeste">Aracaju · SE</a>
-          <a href="cidades/brasilia/"       class="city-badge" data-region="Centro-Oeste">Brasília · DF</a>
-          <a href="cidades/goiania/"        class="city-badge" data-region="Centro-Oeste">Goiânia · GO</a>
-          <a href="cidades/cuiaba/"         class="city-badge" data-region="Centro-Oeste">Cuiabá · MT</a>
-          <a href="cidades/campo-grande/"   class="city-badge" data-region="Centro-Oeste">Campo Grande · MS</a>
-          <a href="cidades/vitoria/"        class="city-badge" data-region="Sudeste">Vitória · ES</a>
-          <a href="cidades/belo-horizonte/" class="city-badge" data-region="Sudeste">Belo Horizonte · MG</a>
-          <a href="cidades/rio-de-janeiro/" class="city-badge" data-region="Sudeste">Rio de Janeiro · RJ</a>
-          <a href="cidades/sao-paulo/"      class="city-badge" data-region="Sudeste">São Paulo · SP</a>
-          <a href="cidades/curitiba/"       class="city-badge" data-region="Sul">Curitiba · PR</a>
-          <a href="cidades/porto-alegre/"   class="city-badge" data-region="Sul">Porto Alegre · RS</a>
-          <a href="cidades/florianopolis/"  class="city-badge" data-region="Sul">Florianópolis · SC</a>
+          <div class="region-group" data-region="Norte">
+            <div class="state-group">
+              <span class="state-label">Acre — AC</span>
+              <div class="state-cities">
+                <a href="cidades/rio-branco/" class="city-badge">Rio Branco</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Amapá — AP</span>
+              <div class="state-cities">
+                <a href="cidades/macapa/" class="city-badge">Macapá</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Amazonas — AM</span>
+              <div class="state-cities">
+                <a href="cidades/manaus/" class="city-badge">Manaus</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Pará — PA</span>
+              <div class="state-cities">
+                <a href="cidades/ananindeua/" class="city-badge">Ananindeua</a>
+                <a href="cidades/belem/" class="city-badge">Belém</a>
+                <a href="cidades/parauapebas/" class="city-badge">Parauapebas</a>
+                <a href="cidades/santarem/" class="city-badge">Santarém</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Rondônia — RO</span>
+              <div class="state-cities">
+                <a href="cidades/porto-velho/" class="city-badge">Porto Velho</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Roraima — RR</span>
+              <div class="state-cities">
+                <a href="cidades/boa-vista/" class="city-badge">Boa Vista</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Tocantins — TO</span>
+              <div class="state-cities">
+                <a href="cidades/palmas/" class="city-badge">Palmas</a>
+              </div>
+            </div>
+          </div>
+          <div class="region-group" data-region="Nordeste">
+            <div class="state-group">
+              <span class="state-label">Alagoas — AL</span>
+              <div class="state-cities">
+                <a href="cidades/maceio/" class="city-badge">Maceió</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Bahia — BA</span>
+              <div class="state-cities">
+                <a href="cidades/feira-de-santana/" class="city-badge">Feira de Santana</a>
+                <a href="cidades/salvador/" class="city-badge">Salvador</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Ceará — CE</span>
+              <div class="state-cities">
+                <a href="cidades/caucaia/" class="city-badge">Caucaia</a>
+                <a href="cidades/fortaleza/" class="city-badge">Fortaleza</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Maranhão — MA</span>
+              <div class="state-cities">
+                <a href="cidades/sao-jose-de-ribamar/" class="city-badge">São José de Ribamar</a>
+                <a href="cidades/sao-luis/" class="city-badge">São Luís</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Paraíba — PB</span>
+              <div class="state-cities">
+                <a href="cidades/campina-grande/" class="city-badge">Campina Grande</a>
+                <a href="cidades/joao-pessoa/" class="city-badge">João Pessoa</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Pernambuco — PE</span>
+              <div class="state-cities">
+                <a href="cidades/caruaru/" class="city-badge">Caruaru</a>
+                <a href="cidades/jaboatao-dos-guararapes/" class="city-badge">Jaboatão dos Guararapes</a>
+                <a href="cidades/olinda/" class="city-badge">Olinda</a>
+                <a href="cidades/paulista/" class="city-badge">Paulista</a>
+                <a href="cidades/petrolina/" class="city-badge">Petrolina</a>
+                <a href="cidades/recife/" class="city-badge">Recife</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Piauí — PI</span>
+              <div class="state-cities">
+                <a href="cidades/teresina/" class="city-badge">Teresina</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Rio Grande do Norte — RN</span>
+              <div class="state-cities">
+                <a href="cidades/mossoro/" class="city-badge">Mossoró</a>
+                <a href="cidades/natal/" class="city-badge">Natal</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Sergipe — SE</span>
+              <div class="state-cities">
+                <a href="cidades/aracaju/" class="city-badge">Aracaju</a>
+              </div>
+            </div>
+          </div>
+          <div class="region-group" data-region="Centro-Oeste">
+            <div class="state-group">
+              <span class="state-label">Distrito Federal — DF</span>
+              <div class="state-cities">
+                <a href="cidades/brasilia/" class="city-badge">Brasília</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Goiás — GO</span>
+              <div class="state-cities">
+                <a href="cidades/anapolis/" class="city-badge">Anápolis</a>
+                <a href="cidades/aparecida-de-goiania/" class="city-badge">Aparecida de Goiânia</a>
+                <a href="cidades/goiania/" class="city-badge">Goiânia</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Mato Grosso — MT</span>
+              <div class="state-cities">
+                <a href="cidades/cuiaba/" class="city-badge">Cuiabá</a>
+                <a href="cidades/varzea-grande/" class="city-badge">Várzea Grande</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Mato Grosso do Sul — MS</span>
+              <div class="state-cities">
+                <a href="cidades/campo-grande/" class="city-badge">Campo Grande</a>
+              </div>
+            </div>
+          </div>
+          <div class="region-group" data-region="Sudeste">
+            <div class="state-group">
+              <span class="state-label">Espírito Santo — ES</span>
+              <div class="state-cities">
+                <a href="cidades/cariacica/" class="city-badge">Cariacica</a>
+                <a href="cidades/serra/" class="city-badge">Serra</a>
+                <a href="cidades/vila-velha/" class="city-badge">Vila Velha</a>
+                <a href="cidades/vitoria/" class="city-badge">Vitória</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Minas Gerais — MG</span>
+              <div class="state-cities">
+                <a href="cidades/belo-horizonte/" class="city-badge">Belo Horizonte</a>
+                <a href="cidades/betim/" class="city-badge">Betim</a>
+                <a href="cidades/contagem/" class="city-badge">Contagem</a>
+                <a href="cidades/divinopolis/" class="city-badge">Divinópolis</a>
+                <a href="cidades/juiz-de-fora/" class="city-badge">Juiz de Fora</a>
+                <a href="cidades/montes-claros/" class="city-badge">Montes Claros</a>
+                <a href="cidades/uberaba/" class="city-badge">Uberaba</a>
+                <a href="cidades/uberlandia/" class="city-badge">Uberlândia</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Rio de Janeiro — RJ</span>
+              <div class="state-cities">
+                <a href="cidades/belford-roxo/" class="city-badge">Belford Roxo</a>
+                <a href="cidades/campos-dos-goytacazes/" class="city-badge">Campos dos Goytacazes</a>
+                <a href="cidades/duque-de-caxias/" class="city-badge">Duque de Caxias</a>
+                <a href="cidades/niteroi/" class="city-badge">Niterói</a>
+                <a href="cidades/nova-iguacu/" class="city-badge">Nova Iguaçu</a>
+                <a href="cidades/rio-de-janeiro/" class="city-badge">Rio de Janeiro</a>
+                <a href="cidades/sao-goncalo/" class="city-badge">São Gonçalo</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">São Paulo — SP</span>
+              <div class="state-cities">
+                <a href="cidades/bauru/" class="city-badge">Bauru</a>
+                <a href="cidades/campinas/" class="city-badge">Campinas</a>
+                <a href="cidades/carapicuiba/" class="city-badge">Carapicuíba</a>
+                <a href="cidades/franca/" class="city-badge">Franca</a>
+                <a href="cidades/guarulhos/" class="city-badge">Guarulhos</a>
+                <a href="cidades/itaquaquecetuba/" class="city-badge">Itaquaquecetuba</a>
+                <a href="cidades/limeira/" class="city-badge">Limeira</a>
+                <a href="cidades/maua/" class="city-badge">Mauá</a>
+                <a href="cidades/mogi-das-cruzes/" class="city-badge">Mogi das Cruzes</a>
+                <a href="cidades/osasco/" class="city-badge">Osasco</a>
+                <a href="cidades/piracicaba/" class="city-badge">Piracicaba</a>
+                <a href="cidades/praia-grande/" class="city-badge">Praia Grande</a>
+                <a href="cidades/ribeirao-preto/" class="city-badge">Ribeirão Preto</a>
+                <a href="cidades/santo-andre/" class="city-badge">Santo André</a>
+                <a href="cidades/sao-bernardo-do-campo/" class="city-badge">São Bernardo do Campo</a>
+                <a href="cidades/sao-jose-do-rio-preto/" class="city-badge">São José do Rio Preto</a>
+                <a href="cidades/sao-jose-dos-campos/" class="city-badge">São José dos Campos</a>
+                <a href="cidades/sao-paulo/" class="city-badge">São Paulo</a>
+                <a href="cidades/sao-vicente/" class="city-badge">São Vicente</a>
+                <a href="cidades/sorocaba/" class="city-badge">Sorocaba</a>
+                <a href="cidades/sumare/" class="city-badge">Sumaré</a>
+                <a href="cidades/suzano/" class="city-badge">Suzano</a>
+                <a href="cidades/taboao-da-serra/" class="city-badge">Taboão da Serra</a>
+              </div>
+            </div>
+          </div>
+          <div class="region-group" data-region="Sul">
+            <div class="state-group">
+              <span class="state-label">Paraná — PR</span>
+              <div class="state-cities">
+                <a href="cidades/cascavel/" class="city-badge">Cascavel</a>
+                <a href="cidades/curitiba/" class="city-badge">Curitiba</a>
+                <a href="cidades/londrina/" class="city-badge">Londrina</a>
+                <a href="cidades/maringa/" class="city-badge">Maringá</a>
+                <a href="cidades/ponta-grossa/" class="city-badge">Ponta Grossa</a>
+                <a href="cidades/sao-jose-dos-pinhais/" class="city-badge">São José dos Pinhais</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Rio Grande do Sul — RS</span>
+              <div class="state-cities">
+                <a href="cidades/canoas/" class="city-badge">Canoas</a>
+                <a href="cidades/caxias-do-sul/" class="city-badge">Caxias do Sul</a>
+                <a href="cidades/porto-alegre/" class="city-badge">Porto Alegre</a>
+              </div>
+            </div>
+            <div class="state-group">
+              <span class="state-label">Santa Catarina — SC</span>
+              <div class="state-cities">
+                <a href="cidades/blumenau/" class="city-badge">Blumenau</a>
+                <a href="cidades/florianopolis/" class="city-badge">Florianópolis</a>
+                <a href="cidades/itajai/" class="city-badge">Itajaí</a>
+                <a href="cidades/joinville/" class="city-badge">Joinville</a>
+                <a href="cidades/sao-jose/" class="city-badge">São José</a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <p style="margin-top:24px;">
+          <a href="cidades/" style="color:#60cbe9;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(96,203,233,0.4);">
+            Ver todas as cidades atendidas →
+          </a>
+        </p>
       </div>
     </section>
 
     <script>
       (function () {
         var regionBtns = document.querySelectorAll("#regionBadges .region-badge");
-        var cityLinks = document.querySelectorAll("#cityBadges .city-badge");
+        var regionGroups = document.querySelectorAll("#cityBadges .region-group");
         var hint = document.getElementById("cityHint");
         regionBtns.forEach(function (btn) {
           btn.addEventListener("click", function () {
@@ -2313,14 +2536,14 @@
             var alreadyActive = btn.classList.contains("active");
             regionBtns.forEach(function (b) { b.classList.remove("active"); });
             if (alreadyActive) {
-              cityLinks.forEach(function (a) { a.classList.remove("show"); });
+              regionGroups.forEach(function (g) { g.classList.remove("show"); });
               hint.style.display = "";
               return;
             }
             btn.classList.add("active");
             hint.style.display = "none";
-            cityLinks.forEach(function (a) {
-              a.classList.toggle("show", a.getAttribute("data-region") === region);
+            regionGroups.forEach(function (g) {
+              g.classList.toggle("show", g.getAttribute("data-region") === region);
             });
           });
         });
