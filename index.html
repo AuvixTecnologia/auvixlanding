@@ -2238,6 +2238,15 @@
 
 <!-- LOCAL SEO -->
     <section style="padding:64px 5vw 48px;background:#060f18;border-top:1px solid rgba(255,255,255,0.06);">
+      <style>
+        .region-badge{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 18px;font-size:0.82rem;font-weight:600;color:#b6c2cf;cursor:pointer;transition:border-color .2s,color .2s,background .2s;font-family:inherit;}
+        .region-badge:hover{border-color:rgba(0,163,255,0.4);color:#fff;}
+        .region-badge.active{background:rgba(0,163,255,0.14);border-color:#0af;color:#fff;}
+        .city-badge{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;display:none;}
+        .city-badge:hover{border-color:rgba(0,163,255,0.4);color:#fff;}
+        .city-badge.show{display:inline-block;}
+        .city-hint{color:#5c6c7d;font-size:0.85rem;}
+      </style>
       <div style="max-width:1000px;margin:auto;text-align:center;">
         <div style="display:inline-block;background:rgba(0,163,255,0.08);border:1px solid rgba(0,163,255,0.18);border-radius:100px;padding:6px 18px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;color:#0af;text-transform:uppercase;margin-bottom:20px;">
           100% online · Atendimento nacional
@@ -2251,22 +2260,72 @@
           do <strong>Amazonas</strong> ao <strong>Rio Grande do Sul</strong>, do <strong>Nordeste</strong> ao <strong>Centro-Oeste</strong>.
           Suporte dedicado, onboarding guiado e atendimento ágil independente de onde sua empresa estiver.
         </p>
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;">
-          <a href="cidades/sao-paulo/"      style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">São Paulo · SP</a>
-          <a href="cidades/rio-de-janeiro/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Rio de Janeiro · RJ</a>
-          <a href="cidades/belo-horizonte/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Belo Horizonte · MG</a>
-          <a href="cidades/curitiba/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Curitiba · PR</a>
-          <a href="cidades/porto-alegre/"   style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Porto Alegre · RS</a>
-          <a href="cidades/florianopolis/"  style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Florianópolis · SC</a>
-          <a href="cidades/brasilia/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Brasília · DF</a>
-          <a href="cidades/salvador/"       style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Salvador · BA</a>
-          <a href="cidades/recife/"         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Recife · PE</a>
-          <a href="cidades/fortaleza/"      style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Fortaleza · CE</a>
-          <a href="cidades/goiania/"        style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Goiânia · GO</a>
-          <a href="cidades/manaus/"         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:#b6c2cf;text-decoration:none;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(0,163,255,0.4)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.color='#b6c2cf'">Manaus · AM</a>
+
+        <div id="regionBadges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:22px;">
+          <button type="button" class="region-badge" data-region="Norte">Norte</button>
+          <button type="button" class="region-badge" data-region="Nordeste">Nordeste</button>
+          <button type="button" class="region-badge" data-region="Centro-Oeste">Centro-Oeste</button>
+          <button type="button" class="region-badge" data-region="Sudeste">Sudeste</button>
+          <button type="button" class="region-badge" data-region="Sul">Sul</button>
+        </div>
+
+        <div id="cityBadges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;">
+          <span class="city-hint" id="cityHint">Selecione uma região para ver as cidades atendidas.</span>
+          <a href="cidades/rio-branco/"     class="city-badge" data-region="Norte">Rio Branco · AC</a>
+          <a href="cidades/macapa/"         class="city-badge" data-region="Norte">Macapá · AP</a>
+          <a href="cidades/manaus/"         class="city-badge" data-region="Norte">Manaus · AM</a>
+          <a href="cidades/belem/"          class="city-badge" data-region="Norte">Belém · PA</a>
+          <a href="cidades/porto-velho/"    class="city-badge" data-region="Norte">Porto Velho · RO</a>
+          <a href="cidades/boa-vista/"      class="city-badge" data-region="Norte">Boa Vista · RR</a>
+          <a href="cidades/palmas/"         class="city-badge" data-region="Norte">Palmas · TO</a>
+          <a href="cidades/maceio/"         class="city-badge" data-region="Nordeste">Maceió · AL</a>
+          <a href="cidades/salvador/"       class="city-badge" data-region="Nordeste">Salvador · BA</a>
+          <a href="cidades/fortaleza/"      class="city-badge" data-region="Nordeste">Fortaleza · CE</a>
+          <a href="cidades/sao-luis/"       class="city-badge" data-region="Nordeste">São Luís · MA</a>
+          <a href="cidades/joao-pessoa/"    class="city-badge" data-region="Nordeste">João Pessoa · PB</a>
+          <a href="cidades/recife/"         class="city-badge" data-region="Nordeste">Recife · PE</a>
+          <a href="cidades/teresina/"       class="city-badge" data-region="Nordeste">Teresina · PI</a>
+          <a href="cidades/natal/"          class="city-badge" data-region="Nordeste">Natal · RN</a>
+          <a href="cidades/aracaju/"        class="city-badge" data-region="Nordeste">Aracaju · SE</a>
+          <a href="cidades/brasilia/"       class="city-badge" data-region="Centro-Oeste">Brasília · DF</a>
+          <a href="cidades/goiania/"        class="city-badge" data-region="Centro-Oeste">Goiânia · GO</a>
+          <a href="cidades/cuiaba/"         class="city-badge" data-region="Centro-Oeste">Cuiabá · MT</a>
+          <a href="cidades/campo-grande/"   class="city-badge" data-region="Centro-Oeste">Campo Grande · MS</a>
+          <a href="cidades/vitoria/"        class="city-badge" data-region="Sudeste">Vitória · ES</a>
+          <a href="cidades/belo-horizonte/" class="city-badge" data-region="Sudeste">Belo Horizonte · MG</a>
+          <a href="cidades/rio-de-janeiro/" class="city-badge" data-region="Sudeste">Rio de Janeiro · RJ</a>
+          <a href="cidades/sao-paulo/"      class="city-badge" data-region="Sudeste">São Paulo · SP</a>
+          <a href="cidades/curitiba/"       class="city-badge" data-region="Sul">Curitiba · PR</a>
+          <a href="cidades/porto-alegre/"   class="city-badge" data-region="Sul">Porto Alegre · RS</a>
+          <a href="cidades/florianopolis/"  class="city-badge" data-region="Sul">Florianópolis · SC</a>
         </div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        var regionBtns = document.querySelectorAll("#regionBadges .region-badge");
+        var cityLinks = document.querySelectorAll("#cityBadges .city-badge");
+        var hint = document.getElementById("cityHint");
+        regionBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var region = btn.getAttribute("data-region");
+            var alreadyActive = btn.classList.contains("active");
+            regionBtns.forEach(function (b) { b.classList.remove("active"); });
+            if (alreadyActive) {
+              cityLinks.forEach(function (a) { a.classList.remove("show"); });
+              hint.style.display = "";
+              return;
+            }
+            btn.classList.add("active");
+            hint.style.display = "none";
+            cityLinks.forEach(function (a) {
+              a.classList.toggle("show", a.getAttribute("data-region") === region);
+            });
+          });
+        });
+      })();
+    </script>
     <!-- CONTACT -->
     <section class="contact" id="contato">
       <div class="contact-inner">

@@ -94,5 +94,125 @@
     "stateName": "Amazonas",
     "region": "Norte",
     "statePrev": "do"
+  },
+  {
+    "name": "Rio Branco",
+    "slug": "rio-branco",
+    "state": "AC",
+    "stateName": "Acre",
+    "region": "Norte",
+    "statePrev": "do"
+  },
+  {
+    "name": "Macapá",
+    "slug": "macapa",
+    "state": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "statePrev": "do"
+  },
+  {
+    "name": "Belém",
+    "slug": "belem",
+    "state": "PA",
+    "stateName": "Pará",
+    "region": "Norte",
+    "statePrev": "do"
+  },
+  {
+    "name": "Porto Velho",
+    "slug": "porto-velho",
+    "state": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "statePrev": "de"
+  },
+  {
+    "name": "Boa Vista",
+    "slug": "boa-vista",
+    "state": "RR",
+    "stateName": "Roraima",
+    "region": "Norte",
+    "statePrev": "de"
+  },
+  {
+    "name": "Palmas",
+    "slug": "palmas",
+    "state": "TO",
+    "stateName": "Tocantins",
+    "region": "Norte",
+    "statePrev": "do"
+  },
+  {
+    "name": "Maceió",
+    "slug": "maceio",
+    "state": "AL",
+    "stateName": "Alagoas",
+    "region": "Nordeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "São Luís",
+    "slug": "sao-luis",
+    "state": "MA",
+    "stateName": "Maranhão",
+    "region": "Nordeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "João Pessoa",
+    "slug": "joao-pessoa",
+    "state": "PB",
+    "stateName": "Paraíba",
+    "region": "Nordeste",
+    "statePrev": "da"
+  },
+  {
+    "name": "Teresina",
+    "slug": "teresina",
+    "state": "PI",
+    "stateName": "Piauí",
+    "region": "Nordeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Natal",
+    "slug": "natal",
+    "state": "RN",
+    "stateName": "Rio Grande do Norte",
+    "region": "Nordeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Aracaju",
+    "slug": "aracaju",
+    "state": "SE",
+    "stateName": "Sergipe",
+    "region": "Nordeste",
+    "statePrev": "de"
+  },
+  {
+    "name": "Cuiabá",
+    "slug": "cuiaba",
+    "state": "MT",
+    "stateName": "Mato Grosso",
+    "region": "Centro-Oeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Campo Grande",
+    "slug": "campo-grande",
+    "state": "MS",
+    "stateName": "Mato Grosso do Sul",
+    "region": "Centro-Oeste",
+    "statePrev": "do"
+  },
+  {
+    "name": "Vitória",
+    "slug": "vitoria",
+    "state": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "statePrev": "do"
   }
 ]
