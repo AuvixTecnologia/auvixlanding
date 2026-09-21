@@ -11,7 +11,7 @@
 :root {
   /* Paleta clara hibrida: base clara + faixas azuis (nav, hero, CTA, rodape) */
   --bg: #eef4f9;
-  --bg2: #ffffff;
+  --bg2: #e6effa;
   --card: #ffffff;
   --band-1: #164a76;
   --band-2: #0c2a45;
@@ -25,6 +25,7 @@
   --border: #dae7f1;
   --on-brand: #ffffff;
   --brand-hover: #0a4f86;
+  --panel: rgba(230, 239, 250, 0.82);
   --shadow-card: 0 10px 26px rgba(14, 62, 100, 0.07);
   --shadow-card-hover: 0 18px 38px rgba(14, 62, 100, 0.12);
 }
@@ -61,8 +62,18 @@ body {
 
 /* ─── BACKGROUND ─── */
 .site-bg {
-  /* A imagem de fundo agora vive apenas nas faixas azuis (hero/CTA/rodape) */
-  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.site-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(238, 244, 249, 0.62);
 }
 
 /* ─── NAV ─── */
@@ -299,7 +310,7 @@ nav {
   padding: 5rem 5vw;
 }
 .content-section.dark {
-  background: var(--card);
+  background: var(--panel);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
@@ -451,7 +462,7 @@ nav {
   padding: 3rem 5vw;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: var(--card);
+  background: var(--panel);
   backdrop-filter: blur(10px);
 }
 .stats-band-inner {
@@ -477,7 +488,7 @@ nav {
 /* ─── HOW IT WORKS ─── */
 .how {
   padding: 6rem 5vw;
-  background: var(--card);
+  background: var(--panel);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--border);
 }
@@ -765,7 +776,7 @@ nav {
 .related-section {
   padding: 4rem 5vw;
   border-top: 1px solid var(--border);
-  background: var(--card);
+  background: var(--panel);
 }
 .related-inner {
   max-width: 1200px;

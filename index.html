@@ -254,7 +254,7 @@
       :root {
         /* Paleta clara hibrida: base clara + faixas azuis (nav, hero, CTA, rodape) */
         --bg: #eef4f9;
-        --bg2: #ffffff;
+        --bg2: #e6effa;
         --card: #ffffff;
         --band-1: #164a76;
         --band-2: #0c2a45;
@@ -268,6 +268,7 @@
         --border: #dae7f1;
         --on-brand: #ffffff;
         --brand-hover: #0a4f86;
+        --panel: rgba(230, 239, 250, 0.82);
         --shadow-card: 0 10px 26px rgba(14, 62, 100, 0.07);
         --shadow-card-hover: 0 18px 38px rgba(14, 62, 100, 0.12);
       }
@@ -304,8 +305,19 @@
 
       /* ─── GLOBAL BACKGROUND ─── */
       .site-bg {
-        /* A imagem de fundo agora vive apenas nas faixas azuis (hero/CTA/rodape) */
-        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: url("images/background-hero-white.webp");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+      }
+      .site-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(238, 244, 249, 0.62);
       }
 
       /* ─── NAV ─── */
@@ -625,7 +637,7 @@
         padding: 3rem 5vw;
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
-        background: var(--card);
+        background: var(--panel);
         backdrop-filter: blur(10px);
       }
       .stats-inner {
@@ -734,7 +746,7 @@
       /* ─── SHOWCASE ─── */
       .showcase {
         padding: 6rem 5vw;
-        background: var(--card);
+        background: var(--panel);
         backdrop-filter: blur(8px);
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
@@ -892,7 +904,7 @@
       /* ─── HOW IT WORKS ─── */
       .how {
         padding: 6rem 5vw;
-        background: var(--card);
+        background: var(--panel);
         backdrop-filter: blur(10px);
         border-top: 1px solid var(--border);
       }
@@ -1188,15 +1200,6 @@
         .feat-app-img {
           grid-column: span 1 !important;
         }
-        .feat-app-img > div {
-          grid-template-columns: 1fr !important;
-          padding: 1.5rem !important;
-          gap: 2rem !important;
-        }
-        .feat-app-img > div > div:last-child {
-          display: flex;
-          justify-content: center;
-        }
         .showcase-inner {
           grid-template-columns: 1fr;
           gap: 2.5rem;
@@ -1240,15 +1243,114 @@
         .feat-app-img {
           grid-column: span 1 !important;
         }
-        .feat-app-img > div {
-          padding: 1.2rem !important;
-        }
         .form-row {
           grid-template-columns: 1fr;
         }
         footer {
           flex-direction: column;
           text-align: center;
+        }
+      }
+
+      /* ─── CARDS COM HOVER ─── */
+      .soft-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .soft-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--teal);
+        box-shadow: var(--shadow-card-hover);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .soft-card:hover {
+          transform: none;
+        }
+      }
+
+      /* ─── CARD DO APP ─── */
+      .app-card-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px 240px;
+        gap: 2.5rem;
+        align-items: center;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 2.5rem 3rem;
+        width: 100%;
+      }
+      .app-card-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem 1.5rem;
+        margin-bottom: 1.75rem;
+      }
+      .app-card-list li {
+        color: var(--muted);
+        font-size: 0.92rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
+        line-height: 1.45;
+      }
+      .app-card-list li span {
+        color: var(--teal);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .app-card-stores {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .app-card-photo {
+        width: 260px;
+        max-width: 100%;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        overflow: hidden;
+        box-shadow: 0 20px 44px rgba(14, 62, 100, 0.14);
+      }
+      .app-card-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .app-card-phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .app-card-phone-frame {
+        border-radius: 32px;
+        border: 2px solid var(--border);
+        overflow: hidden;
+        box-shadow: 0 20px 44px rgba(14, 62, 100, 0.14);
+        width: 240px;
+        max-width: 100%;
+      }
+      @media (max-width: 1180px) {
+        .app-card-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          justify-items: center;
+          gap: 2rem;
+          padding: 2rem 2.25rem;
+        }
+        .app-card-text {
+          grid-column: 1 / -1;
+          justify-self: stretch;
+        }
+      }
+      @media (max-width: 760px) {
+        .app-card-grid {
+          grid-template-columns: 1fr;
+          padding: 1.75rem 1.5rem;
+        }
+        .app-card-list {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -1861,22 +1963,9 @@
               padding: 0;
             "
           >
-            <div style="
-              display: grid;
-              grid-template-columns: 1fr auto;
-              gap: 3rem;
-              align-items: center;
-              background: var(--card);
-              border: 1px solid var(--border);
-              border-radius: 20px;
-              padding: 2.5rem 3rem;
-              width: 100%;
-              backdrop-filter: blur(8px);
-            ">
+            <div class="app-card-grid">
               <!-- Texto -->
-              <div>
-                
-                
+              <div class="app-card-text">
                 <div class="section-tag" style="text-align: left; display: inline-block; margin-bottom: 0.75rem;">Aplicativo Auvix</div>
                 <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3;">
                   Leve o controle de ponto<br>no seu bolso
@@ -1884,26 +1973,17 @@
                 <p style="color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem; max-width: 400px;">
                   Registre o ponto, acompanhe sua jornada e receba notificações diretamente pelo celular, de qualquer lugar.
                 </p>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.75rem;">
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Marcação de ponto com geolocalização</li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Cerca vitual</li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Histórico completo de marcações</li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Banco de horas </li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Solicitações de ajuste pelo app</li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Envio de atestados e documentos</li>
-                  <li style="color: var(--muted); font-size: 0.92rem; display: flex; align-items: center; gap: 0.55rem;"><span style="color: var(--teal); font-weight: 700;">✓</span> Solicitação de férias, etc..</li>
+                <ul class="app-card-list">
+                  <li><span>✓</span> Marcação de ponto com geolocalização</li>
+                  <li><span>✓</span> Cerca virtual</li>
+                  <li><span>✓</span> Histórico completo de marcações</li>
+                  <li><span>✓</span> Banco de horas</li>
+                  <li><span>✓</span> Solicitações de ajuste pelo app</li>
+                  <li><span>✓</span> Envio de atestados e documentos</li>
+                  <li><span>✓</span> Solicitação de férias, etc..</li>
                 </ul>
-              
-                <div style="
-                  border-radius: 16px;
-                  border: 1px solid var(--border);
-                  overflow: hidden;
-                  margin: 20px 0;
-                  width: 260px;
-                  box-shadow: 0 20px 44px rgba(14, 62, 100, 0.14);
-                ">
-                  <img src="images/h-facial1-cut.webp" alt="Colaboradora usando o app Auvix de controle de ponto no celular" style="width: 100%; height: auto; display: block;" loading="lazy"/>
-                </div>
+
+                <div class="app-card-stores">
                 
                 <a
                   href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR"
@@ -1919,7 +1999,6 @@
                     padding: 0.6rem 1.2rem;
                     text-decoration: none;
                     transition: opacity 0.2s;
-                    margin: 20px 0;
                   "
                   onmouseover="this.style.opacity='0.8'"
                   onmouseout="this.style.opacity='1'"
@@ -1945,7 +2024,6 @@
                     padding: 0.6rem 1.2rem;
                     text-decoration: none;
                     transition: opacity 0.2s;
-                    margin: 20px 0;
                   "
                   onmouseover="this.style.opacity='0.8'"
                   onmouseout="this.style.opacity='1'"
@@ -1957,18 +2035,18 @@
                     <span style="font-size: 0.9rem; color: #fff; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;">App Store</span>
                   </div>
                 </a>
+                </div>
 
               </div>
 
+              <!-- Foto -->
+              <div class="app-card-photo">
+                <img src="images/h-facial1-cut.webp" alt="Colaboradora usando o app Auvix de controle de ponto no celular" loading="lazy" />
+              </div>
+
               <!-- Carousel celular -->
-              <div style="flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="
-                  border-radius: 32px;
-                  border: 2px solid var(--border);
-                  overflow: hidden;
-                  box-shadow: 0 20px 44px rgba(14, 62, 100, 0.14);
-                  width: 240px;
-                ">
+              <div class="app-card-phone">
+                <div class="app-card-phone-frame">
                   <div class="carousel" id="carousel-mobile">
                     <div class="carousel-track">
                       <img src="images/carousel/app-BANCO DE HORAS.jpeg" alt="Banco de Horas Auvix" class="carousel-slide active" />
@@ -2065,7 +2143,7 @@
       </div>
     </section>
 
-<section class="how" style="padding:90px 5vw;background:#ffffff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+<section class="how" style="padding:90px 5vw;background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div style="max-width:1200px;margin:auto;text-align:center;">
     <span style="display:inline-block;padding:8px 18px;border-radius:999px;background:var(--blue);color:var(--teal);font-size:14px;margin-bottom:20px;">
       Empresas que confiam na Auvix para modernizar o RH
@@ -2081,17 +2159,17 @@
     </p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
-      <div style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
+      <div class="soft-card" style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
         <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:var(--teal);margin-bottom:8px;">+500</h3>
         <p style="color:var(--muted);">Clientes</p>
       </div>
 
-      <div style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
+      <div class="soft-card" style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
         <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:var(--teal);margin-bottom:8px;">+2000</h3>
         <p style="color:var(--muted);">Usuários ativos diariamente</p>
       </div>
 
-      <div style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
+      <div class="soft-card" style="padding:28px;background:#ffffff;border:1px solid var(--border);border-radius:20px;">
         <h3 style="font-size:clamp(1.6rem,4vw,2.25rem);color:var(--teal);margin-bottom:8px;">Agilidade</h3>
         <p style="color:var(--muted);">“Reduzimos significativamente o tempo gasto com conferências manuais após a implantação da Auvix.”</p>
       </div>
@@ -2116,7 +2194,7 @@
 
 <div style="display:flex;flex-direction:column;gap:20px;">
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">📱</span>
       O sistema funciona em celular e tablet?
@@ -2127,7 +2205,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">🧑‍💻</span>
       Possui reconhecimento facial?
@@ -2138,7 +2216,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">⏱️</span>
       É possível acompanhar banco de horas no celular?
@@ -2149,7 +2227,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">📄</span>
       O sistema Auvix está em conformidade com a Portaria 671?
@@ -2160,7 +2238,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">🚗</span>
       O sistema funciona para equipes externas e colaboradores em campo?
@@ -2171,7 +2249,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:18px;background:#ffffff;border:1px solid var(--border);">
     <h3 style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
       <span style="font-size:24px;">🚀</span>
       Como funciona a implantação do sistema?
@@ -2189,7 +2267,7 @@
 </section>
 
 
-<section class="how" style="padding:90px 5vw;background:var(--card);">
+<section class="how" style="padding:90px 5vw;background:var(--panel);">
   <div style="max-width:1200px;margin:auto;">
 
 
@@ -2210,7 +2288,7 @@
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
 
-  <div style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
     
     <div style="font-size:38px;margin-bottom:18px;">
       📊
@@ -2225,7 +2303,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
     
     <div style="font-size:38px;margin-bottom:18px;">
       🔒
@@ -2240,7 +2318,7 @@
     </p>
   </div>
 
-  <div style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
+  <div class="soft-card" style="padding:28px;border-radius:22px;background:#ffffff;border:1px solid var(--border);">
     
     <div style="font-size:38px;margin-bottom:18px;">
       ⚙️
@@ -2264,11 +2342,11 @@
 <!-- LOCAL SEO -->
     <section style="padding:64px 5vw 48px;background:var(--bg);border-top:1px solid var(--border);">
       <style>
-        .region-badge{background:#ffffff;border:1px solid var(--border);border:1px solid var(--border);border-radius:100px;padding:6px 18px;font-size:0.82rem;font-weight:600;color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s,background .2s;font-family:inherit;}
-        .region-badge:hover{border-color:var(--teal);color:#fff;}
-        .region-badge.active{background:var(--blue);border-color:var(--teal);color:#fff;}
-        .city-badge{background:#ffffff;border:1px solid var(--border);border:1px solid var(--border);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:var(--muted);text-decoration:none;transition:border-color .2s,color .2s;display:inline-block;}
-        .city-badge:hover{border-color:var(--teal);color:#fff;}
+        .region-badge{background:#ffffff;border:1px solid var(--border);border-radius:100px;padding:6px 18px;font-size:0.82rem;font-weight:600;color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s,background .2s;font-family:inherit;}
+        .region-badge:hover{border-color:var(--teal);color:var(--teal);background:var(--blue);}
+        .region-badge.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+        .city-badge{background:#ffffff;border:1px solid var(--border);border-radius:100px;padding:6px 16px;font-size:0.82rem;color:var(--muted);text-decoration:none;transition:border-color .2s,color .2s,background .2s;display:inline-block;}
+        .city-badge:hover{border-color:var(--teal);color:var(--teal);background:var(--blue);}
         .city-hint{color:var(--muted);font-size:0.85rem;}
         .region-group{display:none;flex-direction:column;gap:18px;}
         .region-group.show{display:flex;}
