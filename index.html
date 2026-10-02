@@ -1644,6 +1644,7 @@
         <h3 id="repModalTitle">Seja nosso representante</h3>
         <p>Quer representar a Auvix na sua região? Preencha o formulário e nossa equipe entrará em contato com você.</p>
         <form class="contact-form" id="rep-form">
+          <input type="hidden" name="to_email" value="contato@auvix.com.br" />
           <div class="form-row">
             <input type="text" name="name" placeholder="Seu nome" required />
             <input type="text" name="company" placeholder="Empresa (se possuir)" />
@@ -2839,6 +2840,7 @@
               });
             });</script>
           <form class="contact-form" id="contact-form">
+            <input type="hidden" name="to_email" value="contato@auvix.com.br" />
             <div class="form-row">
               <input type="text" name="name" placeholder="Seu nome" required />
               <input
