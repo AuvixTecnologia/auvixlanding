@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P6PGFMHW1T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P6PGFMHW1T");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soluções Auvix: Soluções de RH (ponto, férias, assinatura eletrônica, documentos da folha e SST) e Soluções de Cobrança e Pagamentos integradas a qualquer ERP e a mais de 25 bancos."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.auvix.com.br/solucoes/" />
+    <title>Soluções Auvix: RH, Cobrança e Pagamentos | Auvix Tecnologia</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.auvix.com.br/solucoes/" />
+    <meta property="og:title" content="Soluções Auvix: RH, Cobrança e Pagamentos" />
+    <meta
+      property="og:description"
+      content="Soluções Auvix: Soluções de RH (ponto, férias, assinatura eletrônica, documentos da folha e SST) e Soluções de Cobrança e Pagamentos integradas a qualquer ERP e a mais de 25 bancos."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../auvix.css?v=20261107b" />
+    <style>
+      /* Estilos exclusivos do hub de soluções (protótipo) */
+      .sol-group {
+        margin-bottom: 3.5rem;
+      }
+      .sol-group:last-child {
+        margin-bottom: 0;
+      }
+      .sol-group-head {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+      }
+      .sol-group-head h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 1.5rem;
+        color: var(--white);
+        margin: 0;
+      }
+      .sol-group-lead {
+        color: var(--muted);
+        max-width: 760px;
+        margin-bottom: 1.75rem;
+        line-height: 1.7;
+      }
+      .sol-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        background: var(--blue);
+        color: var(--teal);
+        border: 1px solid var(--border);
+      }
+      .sol-badge.new {
+        background: var(--teal);
+        color: var(--on-brand);
+        border-color: var(--teal);
+      }
+      .sol-badge.soon {
+        background: transparent;
+        color: var(--muted);
+        border-style: dashed;
+      }
+      .sol-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 1rem;
+      }
+      .sol-tags span {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        background: var(--blue);
+        color: var(--teal);
+      }
+      .sol-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 1rem;
+        color: var(--teal);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .sol-link:hover {
+        opacity: 0.75;
+      }
+      .info-card.is-soon {
+        opacity: 0.8;
+        border-style: dashed;
+      }
+      .sol-matrix {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+      }
+      .sol-matrix th,
+      .sol-matrix td {
+        padding: 0.9rem 1.1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.95rem;
+      }
+      .sol-matrix th {
+        background: var(--blue);
+        color: var(--white);
+        font-weight: 700;
+      }
+      .sol-matrix td {
+        color: var(--muted);
+      }
+      .sol-matrix td:first-child {
+        color: var(--white);
+        font-weight: 600;
+      }
+      .sol-matrix td.yes {
+        color: var(--teal);
+        font-weight: 700;
+        text-align: center;
+      }
+      .sol-matrix th.c,
+      .sol-matrix td.c {
+        text-align: center;
+      }
+      .sol-matrix tr:last-child td {
+        border-bottom: none;
+      }
+      .sol-scroll {
+        overflow-x: auto;
+      }
+      .sol-proto {
+        background: #fff7e0;
+        color: #7a5b00;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 0.5rem 5vw;
+        border-bottom: 1px solid #f0d98c;
+      }
+
+      /* ─── HERO COM IMAGEM ─── */
+      .hub-hero .page-hero-inner { max-width: 1200px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+      .hub-hero-visual { position: relative; justify-self: center; width: 100%; max-width: 400px; padding: 1.5rem 0; }
+      .hub-hero-photo { border-radius: 22px; overflow: hidden; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), 0 0 60px rgba(96, 203, 233, 0.1); }
+      .hub-hero-photo img { display: block; width: 100%; height: auto; }
+      .hub-float {
+        position: absolute; display: flex; align-items: center; gap: 0.7rem;
+        padding: 0.7rem 0.95rem; border-radius: 14px; min-width: 220px;
+        background: rgba(13, 37, 60, 0.92); border: 1px solid rgba(96, 203, 233, 0.35);
+        backdrop-filter: blur(10px); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        animation: hubFloat 6s ease-in-out infinite;
+      }
+      .hub-float strong { display: block; color: #ffffff; font-size: 0.88rem; font-weight: 700; }
+      .hub-float small { display: block; color: #c3d8e6; font-size: 0.74rem; }
+      .hub-float-ico { display: inline-flex; width: 34px; height: 34px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 10px; background: #0d5f9e; color: #ffffff; }
+      .hub-float-ico.ok { background: #2fbf71; }
+      .hub-float-ico.light { background: #60cbe9; color: #0a2337; }
+      .hub-float-1 { top: 14%; left: -18%; }
+      .hub-float-2 { top: 50%; right: -16%; animation-delay: -2s; }
+      .hub-float-3 { bottom: 8%; left: -12%; animation-delay: -4s; }
+      @keyframes hubFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @media (prefers-reduced-motion: reduce) { .hub-float { animation: none; } }
+      @media (max-width: 960px) {
+        .hub-hero .page-hero-inner { grid-template-columns: 1fr; }
+        .hub-hero-visual { max-width: 320px; }
+        .hub-float { min-width: 0; }
+        .hub-float-1 { left: -6%; }
+        .hub-float-2 { right: -6%; }
+        .hub-float-3 { left: -2%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="site-bg"
+      style="background-image: url(&quot;../images/background-hero-white.webp&quot;)"
+    ></div>
+
+    <nav>
+      <a
+        href="../index.html"
+        class="nav-logo"
+        aria-label="Auvix Tecnologia — início"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 36px; width: auto; display: block"
+        >
+          <polygon
+            fill="#60cbe9"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            fill="#ffffff"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            fill="#ffffff"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            fill="#ffffff"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            fill="#60cbe9"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <details class="nav-access nav-access-left">
+            <summary style="color:var(--teal)">Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
+            <div class="nav-access-menu">
+              <a href="../solucoes-de-rh.html">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                <span><strong>Soluções de RH</strong><small>Ponto, férias, assinatura, folha e SST</small></span>
+              </a>
+              <a href="../gestao-financeira.html">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
+              </a>
+              <a href="../solucoes/" class="nav-access-all">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+                <span><strong>Todas as soluções</strong><small>Visão geral das soluções Auvix</small></span>
+              </a>
+            </div>
+          </details>
+        </li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+        <li>
+          <details class="nav-access">
+            <summary>Acessar a Plataforma <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
+            <div class="nav-access-menu">
+              <a href="https://ponto.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                <span><strong>Ponto</strong><small>Soluções de RH</small></span>
+              </a>
+              <a href="https://cobranca.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span><strong>Cobrança e Pagamentos</strong><small>Soluções de Cobrança e Pagamentos</small></span>
+              </a>
+            </div>
+          </details>
+        </li>
+      </ul>
+      <div style="display: flex; gap: 1rem; align-items: center">
+        <a href="../index.html#contato" class="nav-cta">Fale conosco</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero hub-hero">
+      <div class="page-hero-inner">
+        <div class="hub-hero-text">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">Soluções</span>
+        </nav>
+        <h1>
+          Soluções Auvix para <em style="font-style: normal; color: var(--teal)">gestão de pessoas e finanças</em>
+        </h1>
+        <p>
+          Soluções de RH, para o departamento pessoal e a segurança do trabalho, e Soluções de Cobrança e Pagamentos, para o financeiro. Contrate o que precisa e cresça por módulos.
+        </p>
+        <div class="hero-actions">
+          <a href="../index.html#contato" class="btn-primary"
+            >Agendar demonstração</a
+          >
+          <a href="#jornada" class="btn-secondary">Ver soluções</a>
+        </div>
+        </div>
+        <div class="hub-hero-visual" aria-hidden="true">
+          <div class="hub-hero-photo">
+            <img src="../images/wo3-cut.webp" alt="" fetchpriority="high" />
+          </div>
+          <div class="hub-float hub-float-1">
+            <span class="hub-float-ico ok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="10" r="3"/><path d="M7 17c1-2 3-3 5-3s4 1 5 3"/></svg></span>
+            <span><strong>Ponto registrado</strong><small>Liveness passivo validado</small></span>
+          </div>
+          <div class="hub-float hub-float-2">
+            <span class="hub-float-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+            <span><strong>Holerite assinado</strong><small>Documentos da folha no app</small></span>
+          </div>
+          <div class="hub-float hub-float-3">
+            <span class="hub-float-ico light"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+            <span><strong>Boleto liquidado</strong><small>Baixa enviada ao ERP</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GESTÃO DE JORNADA -->
+    <section class="content-section fade-up" id="jornada">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Para o RH</span>
+          <h2>Soluções de RH</h2>
+          <p>
+            Engloba o controle de ponto da Auvix e os módulos que acompanham a
+            vida do colaborador: férias, assinatura, documentos da folha e SST.
+          </p>
+        </div>
+
+        <div class="sol-group">
+          <div class="sol-group-head">
+            <h3>Módulo Ponto</h3>
+          </div>
+          <p class="sol-group-lead">
+            Registro por reconhecimento facial com liveness passivo, QR Code, celular, tablet ou
+            navegador, com banco de horas, escalas e relatórios. Conforme
+            Portaria 671.
+          </p>
+          <div class="content-grid-3">
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span></div>
+              <h3>Controle de ponto</h3>
+              <p>Ponto digital com antifraude, geolocalização e auditoria.</p>
+              <a class="sol-link" href="../controle-de-ponto-digital.html"
+                >Conhecer →</a
+              >
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="10" r="3"/><path d="M7 17c1-2 3-3 5-3s4 1 5 3"/></svg></span></div>
+              <h3>Reconhecimento facial</h3>
+              <p>Reconhecimento passivo (liveness): bloqueia fotos e vídeos sem pedir que o colaborador pisque ou vire o rosto.</p>
+              <a class="sol-link" href="../reconhecimento-facial-ponto.html"
+                >Conhecer →</a
+              >
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"/><path d="M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></svg></span></div>
+              <h3>Banco de horas e jornada</h3>
+              <p>Escalas, horas extras e saldo calculados automaticamente.</p>
+              <a class="sol-link" href="../controle-de-jornada.html"
+                >Conhecer →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-group">
+          <div class="sol-group-head">
+            <h3>Módulos complementares</h3>
+          </div>
+          <div class="content-grid-3">
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span></div>
+              <h3>Gestão de Férias</h3>
+              <ul>
+                <li>Períodos aquisitivos e concessivos, com saldo</li>
+                <li>Venda de dias (abono), parcelamento e correções</li>
+                <li>Alertas de perda e de períodos vencendo</li>
+                <li>Implantação em lote a partir da admissão</li>
+                <li>Férias coletivas e histórico com justificativa</li>
+              </ul>
+              <div class="sol-tags"><span>Módulo Ponto</span></div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span></div>
+              <h3>Assinatura eletrônica</h3>
+              <ul>
+                <li>Envelopes com vários signatários e ordem de assinatura</li>
+                <li>CPF + código por e-mail, ou pelo app</li>
+                <li>Trilha com data, hora e IP, PDF carimbado e hash SHA-256</li>
+                <li>Verificação pública por código ou arrastando o PDF</li>
+                <li>Espelho de ponto, EPI, ASO, holerite e mais</li>
+              </ul>
+              <div class="sol-tags">
+                <span>Módulo Ponto</span><span>Módulo SST</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span></div>
+              <h3>Documentos da Folha</h3>
+              <ul>
+                <li>Importa o PDF do contador, de qualquer sistema de folha</li>
+                <li>Holerite, adiantamento, 13º, férias, rescisão e informe</li>
+                <li>Divisão automática por colaborador</li>
+                <li>Entrega no app, com aviso e assinatura</li>
+                <li>Prova trabalhista guardada por 5 anos</li>
+              </ul>
+              <div class="sol-tags">
+                <span>Módulo Ponto</span><span>Módulo SST</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 1.75rem"><a class="btn-primary" href="../solucoes-de-rh.html">Conhecer as Soluções de RH</a></p>
+      </div>
+    </section>
+
+    <!-- SST -->
+    <section class="content-section dark fade-up" id="sst">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Soluções de RH</span>
+          <h2>Segurança e Saúde no Trabalho (SST)</h2>
+          <p>
+            EPI, EPC, treinamentos, formulários e estoque no mesmo lugar, com
+            assinatura eletrônica e dashboards de conformidade.
+          </p>
+        </div>
+        <div class="content-grid-3">
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span></div>
+            <h3>EPI</h3>
+            <p>
+              EPI por colaborador, kits e obrigatoriedades, controle de CA e
+              validade, ficha NR-6, recibo assinado, recusas e devoluções.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14 0-5.5 3-7 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span></div>
+            <h3>EPC</h3>
+            <p>
+              Mapa de proteção por ambiente, agenda de inspeções, vencimentos,
+              interdições e histórico.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span></div>
+            <h3>Treinamentos</h3>
+            <p>
+              Catálogo, turmas com lista de presença assinada, matriz de
+              conformidade e requisitos de bloqueio.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span></div>
+            <h3>Formulários de SST</h3>
+            <p>
+              Mais de 20 modelos prontos (APR, PT, DDS, 5S, NR-1/PGR,
+              investigação de acidente, riscos psicossociais e mais), com link
+              público, resposta anônima, foto e versões.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span></div>
+            <h3>Estoque e uniformes</h3>
+            <p>
+              Catálogo único de itens, lotes e validade, estoque mínimo, entrega
+              e devolução, com bloqueio opcional da rescisão.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span></div>
+            <h3>Plano de ação e dashboards</h3>
+            <p>
+              Plano de ação NR-1, locais e ambientes em árvore e painéis de
+              EPI, EPC, treinamentos e estoque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EM BREVE -->
+    <section class="content-section fade-up" id="em-breve">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Soluções de RH · Em breve</span>
+          <h2>Próximos módulos</h2>
+        </div>
+        <div class="content-grid-2">
+          <div class="info-card is-soon">
+            <span class="sol-badge soon">Em breve</span>
+            <div class="info-card-icon"><span class="ico-tile ico-tile-ghost"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
+            <h3>Recrutamento e Seleção</h3>
+            <p>Módulo em desenvolvimento.</p>
+          </div>
+          <div class="info-card is-soon">
+            <span class="sol-badge soon">Em breve</span>
+            <div class="info-card-icon"><span class="ico-tile ico-tile-ghost"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></span></div>
+            <h3>Gestão de Documentos</h3>
+            <p>Módulo em definição.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COBRANÇA E PAGAMENTOS -->
+    <section class="content-section dark fade-up" id="financeiro">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Para o financeiro</span>
+          <h2>Soluções de Cobrança e Pagamentos</h2>
+          <p>
+            Cobrança e pagamentos: contas a receber e a pagar integradas a qualquer ERP e
+            a mais de 25 bancos.
+          </p>
+        </div>
+        <div class="content-grid-2">
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span></div>
+            <h3>Gestão de Cobrança</h3>
+            <ul>
+              <li>Boletos registrados em mais de 25 bancos integrados</li>
+              <li>Régua de cobrança por e-mail, WhatsApp e SMS</li>
+              <li>CRM de cobrança: contatos, promessas de pagamento e tarefas</li>
+              <li>Baixa automática no ERP</li>
+            </ul>
+            <a class="sol-link" href="../gestao-financeira.html">Saiba mais →</a>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span></div>
+            <h3>Gestão de Pagamentos</h3>
+            <ul>
+              <li>Pagamentos enviados direto ao banco</li>
+              <li>Comprovante de cada pagamento</li>
+              <li>Saldo e extrato das contas</li>
+              <li>Integração com qualquer ERP e autenticação multifator</li>
+            </ul>
+            <a class="sol-link" href="../gestao-financeira.html">Saiba mais →</a>
+          </div>
+        </div>
+        <p style="margin-top: 1.75rem"><a class="btn-primary" href="../gestao-financeira.html">Conhecer as Soluções de Cobrança e Pagamentos</a></p>
+      </div>
+    </section>
+
+    <!-- MATRIZ -->
+    <section class="content-section fade-up" id="matriz">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Comparativo</span>
+          <h2>Onde cada funcionalidade está</h2>
+        </div>
+        <div class="sol-scroll">
+          <table class="sol-matrix">
+            <thead>
+              <tr>
+                <th>Funcionalidade</th>
+                <th class="c">Módulo Ponto</th>
+                <th class="c">Módulo SST</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Controle de ponto e banco de horas</td><td class="yes">✓</td><td class="c">—</td></tr>
+              <tr><td>Gestão de Férias</td><td class="yes">✓</td><td class="c">—</td></tr>
+              <tr><td>Assinatura eletrônica</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Documentos da Folha</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>EPI, EPC, treinamentos e formulários</td><td class="c">—</td><td class="yes">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section fade-up">
+      <div class="cta-inner">
+        <h2>Monte a plataforma que sua empresa precisa</h2>
+        <p>
+          Fale com um especialista e veja quais módulos fazem sentido para o seu
+          momento.
+        </p>
+        <div class="cta-actions">
+          <a href="../index.html#contato" class="btn-primary"
+            >Falar com especialista</a
+          >
+          <a href="../blog/" class="btn-secondary">Ler o blog</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ft">
+      <div class="ft-inner">
+        <div class="ft-brand">
+          <a href="../index.html" class="footer-logo" aria-label="Auvix Tecnologia">
+            <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4749 643 11716 3600"
+          style="height: 30px; width: auto; display: block"
+        >
+          <defs>
+            <style>
+              .fn {
+                fill: #ffffff;
+              }
+              .ft {
+                fill: #60cbe9;
+              }
+            </style>
+          </defs>
+          <polygon
+            class="ft"
+            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+          />
+          <path
+            class="fn"
+            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+          />
+          <path
+            class="fn"
+            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+          />
+          <path
+            class="fn"
+            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+          />
+          <path
+            class="fn"
+            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+          />
+          <path
+            class="ft"
+            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+          />
+        </svg>
+          </a>
+          <p>Soluções de RH e de cobrança e pagamentos para empresas de todo o Brasil.</p>
+          <div class="ft-social">
+        <a href="https://www.instagram.com/auvix.tecnologia/" target="_blank" rel="noopener" title="Instagram Auvix" style="display:flex;align-items:center;color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/auvix-tecnologia" target="_blank" rel="noopener" title="LinkedIn Auvix" style="display:flex;align-items:center;color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR" target="_blank" rel="noopener" title="Baixar app Auvix no Google Play" style="display:flex;align-items:center;gap:0.45rem;color:var(--muted);transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586zm-3.595 2.116L7.583 8.68 1.03 14.755c.201 1.029 1.36 1.6 2.303 1.031l7.294-4.296zM1 13.396V2.604L6.846 8 1 13.396zM1.03 1.245l6.553 6.075 3.044-2.811L3.333.214C2.39-.355 1.231.216 1.03 1.245z"/>
+          </svg>
+          <span style="font-size:0.75rem;line-height:1;">Google Play</span>
+        </a>
+        <a href="https://apps.apple.com/br/app/auvix-ponto/id6784364342" target="_blank" rel="noopener" title="Baixar app Auvix na App Store" style="display:flex;align-items:center;gap:0.45rem;color:var(--muted);transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.898.319.232 1.219.665 2.056.646.626-.019 1.001-.427 1.929-.427.928 0 1.283.427 1.928.427.845 0 1.678-.671 2.253-1.658.373-.646.626-1.278.789-1.869-.013-.005-1.564-.606-1.578-2.401z"/>
+          </svg>
+          <span style="font-size:0.75rem;line-height:1;">App Store</span>
+        </a>
+      </div>
+        </div>
+
+        <div class="ft-cols">
+          <div class="ft-col">
+            <h4>Soluções de RH</h4>
+            <a href="../solucoes-de-rh.html">Visão geral</a>
+            <a href="../gestao-de-jornada.html">Gestão de Jornada</a>
+            <a href="../controle-de-ponto-digital.html">Controle de Ponto</a>
+            <a href="../reconhecimento-facial-ponto.html">Ponto Facial</a>
+            <a href="../controle-de-jornada.html">Controle de Jornada</a>
+            <a href="../banco-de-horas-online.html">Banco de Horas</a>
+            <a href="../controle-de-ponto-mobile.html">App Mobile</a>
+          </div>
+          <div class="ft-col">
+            <h4>Cobrança e Pagamentos</h4>
+            <a href="../gestao-financeira.html">Visão geral</a>
+            <a href="../gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+            <a href="../gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+          </div>
+          <div class="ft-col">
+            <h4>Auvix</h4>
+            <a href="../solucoes/">Todas as soluções</a>
+            <a href="../blog/">Blog</a>
+            <a href="../cidades/">Cidades atendidas</a>
+            <a href="../index.html" class="open-rep-modal">Seja nosso representante</a>
+            <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+          </div>
+          <div class="ft-col">
+            <h4>Contato</h4>
+            <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
+            <a href="tel:+554691153255">(46) 99115-3255</a>
+            <a href="../index.html#contato">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
+        <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      document.addEventListener("click", function (e) {
+        document.querySelectorAll("details.nav-access[open]").forEach(function (d) {
+          if (!d.contains(e.target)) d.removeAttribute("open");
+        });
+      });
+    </script>
+  </body>
+</html>

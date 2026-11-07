@@ -896,3 +896,76 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* ─── ÍCONES EM TILE (traço, monocromático) ─── */
+.ico-tile {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px;
+  background: #0d5f9e; color: #ffffff;
+  box-shadow: 0 6px 16px rgba(13, 95, 158, 0.25);
+}
+.ico-tile-light { background: #60cbe9; color: #0a2337; box-shadow: 0 6px 16px rgba(96, 203, 233, 0.25); }
+.ico-tile-ghost { background: transparent; color: #8fa6b5; border: 1px dashed rgba(143, 166, 181, 0.6); box-shadow: none; }
+
+/* ─── MENUS SUSPENSOS DO NAV (Soluções / Acessar a Plataforma) ─── */
+.nav-access { position: relative; }
+.nav-access summary {
+  list-style: none; cursor: pointer; color: var(--muted); font-size: 0.9rem; font-weight: 500;
+  padding: 0.4rem 0.8rem; border-radius: 20px; transition: all 0.2s ease; user-select: none;
+}
+.nav-access summary::-webkit-details-marker { display: none; }
+.nav-access summary:hover, .nav-access[open] summary { background: rgba(96, 203, 233, 0.15); color: var(--teal); }
+.nav-access-caret { font-size: 0.7rem; margin-left: 0.2rem; display: inline-block; transition: transform 0.2s; }
+.nav-access[open] .nav-access-caret { transform: rotate(180deg); }
+.nav-access-menu {
+  position: absolute; right: 0; top: calc(100% + 10px); min-width: 280px; z-index: 50;
+  display: grid; gap: 0.25rem; padding: 0.5rem; border-radius: 14px;
+  background: #0f2a43; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+.nav-access-left .nav-access-menu { right: auto; left: 0; min-width: 320px; }
+.nav-links .nav-access-menu a { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.75rem; border-radius: 10px; transform: none; }
+.nav-links .nav-access-menu a:hover { transform: none; }
+.nav-access-menu strong { display: block; color: #ffffff; font-size: 0.9rem; font-weight: 600; }
+.nav-access-menu small { display: block; color: #c3d8e6; font-size: 0.75rem; }
+.nav-access-ico { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex-shrink: 0; border-radius: 9px; background: #0d5f9e; color: #ffffff; }
+.nav-access-menu a + a .nav-access-ico { background: #60cbe9; color: #0a2337; }
+@media (max-width: 1024px) {
+  .nav-access-menu, .nav-access-left .nav-access-menu { position: static; min-width: 0; margin-top: 0.5rem; box-shadow: none; }
+}
+
+/* ─── RODAPÉ EM COLUNAS ─── */
+footer.ft { display: block; padding: 3.5rem 5vw 0; }
+.ft-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 2.9fr; gap: 3rem; }
+.ft-brand p { margin: 1rem 0 1.25rem; max-width: 280px; line-height: 1.6; }
+.ft-social { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
+.ft-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.ft-col { display: flex; flex-direction: column; gap: 0.55rem; }
+.ft-col h4 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; margin: 0 0 0.35rem; }
+footer.ft .ft-col a { font-size: 0.86rem; }
+.ft-bottom { max-width: 1200px; margin: 2.5rem auto 0; padding: 1.25rem 0 1.5rem; border-top: 1px solid rgba(96, 203, 233, 0.18); }
+@media (max-width: 960px) {
+  .ft-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .ft-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .ft-cols { grid-template-columns: 1fr; }
+}
+
+/* ─── ALINHAMENTO DO MENU ─── */
+.nav-links { align-items: center; }
+.nav-links > li { display: flex; align-items: center; }
+.nav-access summary { display: flex; align-items: center; gap: 0.25rem; line-height: normal; }
+.nav-links a { line-height: normal; }
+@media (max-width: 1024px) { .nav-links > li { display: block; } }
+.nav-access-menu a.nav-access-all .nav-access-ico { background: rgba(96, 203, 233, 0.15); color: #60cbe9; }
+
+/* ─── AJUSTES MOBILE ─── */
+@media (max-width: 1024px) {
+  .nav-links.open .nav-access summary { justify-content: center; }
+  .nav-links.open .nav-access-menu { text-align: left; }
+}
+@media (max-width: 480px) {
+  footer.ft { text-align: left; }
+  .ft-cols { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.25rem; }
+  .ft-col h4 { font-size: 0.72rem; }
+}
