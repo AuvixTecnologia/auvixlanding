@@ -896,3 +896,13 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* ─── ÍCONES EM TILE (traço, monocromático) ─── */
+.ico-tile {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px;
+  background: #0d5f9e; color: #ffffff;
+  box-shadow: 0 6px 16px rgba(13, 95, 158, 0.25);
+}
+.ico-tile-light { background: #60cbe9; color: #0a2337; box-shadow: 0 6px 16px rgba(96, 203, 233, 0.25); }
+.ico-tile-ghost { background: transparent; color: #8fa6b5; border: 1px dashed rgba(143, 166, 181, 0.6); box-shadow: none; }
