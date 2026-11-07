@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sistema de controle de ponto digital (cartão ponto) para empresas em Cariacica — ES. Reconhecimento facial, banco de horas automático e relatórios em tempo real. Implantação remota."
+      content="Sistema de controle de ponto digital (cartão ponto) para empresas em Cariacica — ES. Reconhecimento facial com liveness passivo, banco de horas, férias, assinatura eletrônica e SST. Implantação remota."
     />
     <meta name="robots" content="index, follow" />
     <link
@@ -151,7 +151,12 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../auvix.css" />
+    <link rel="stylesheet" href="../../auvix.css?v=20261107b" />
+    <style>
+      .city-rh-card { text-decoration: none; display: block; }
+      .city-rh-card h3 { color: var(--white); }
+    </style>
+
   </head>
   <body>
     <div
@@ -199,11 +204,144 @@
         </svg>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="../../gestao-de-jornada.html#problemas">Desafios</a></li>
-        <li><a href="../../gestao-de-jornada.html#funcionalidades">Funcionalidades</a></li>
-        <li><a href="../../gestao-de-jornada.html#como-funciona">Como funciona</a></li>
+        <li>
+          <details class="nav-access nav-access-left">
+            <summary style="color: var(--teal)">
+              Soluções
+              <span class="nav-access-caret" aria-hidden="true">▾</span>
+            </summary>
+            <div class="nav-access-menu">
+              <a href="../../solucoes-de-rh.html">
+                <span class="nav-access-ico"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg
+                ></span>
+                <span
+                  ><strong>Soluções de RH</strong
+                  ><small>Ponto, férias, assinatura, folha e SST</small></span
+                >
+              </a>
+              <a href="../../gestao-financeira.html">
+                <span class="nav-access-ico"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"
+                    />
+                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                    <path d="M12 17.5v-11" /></svg
+                ></span>
+                <span
+                  ><strong>Soluções de Cobrança e Pagamentos</strong
+                  ><small>Boletos, régua de cobrança e pagamentos</small></span
+                >
+              </a>
+              <a href="../../solucoes/" class="nav-access-all">
+                <span class="nav-access-ico"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                    <polyline points="2 17 12 22 22 17" />
+                    <polyline points="2 12 12 17 22 12" /></svg
+                ></span>
+                <span
+                  ><strong>Todas as soluções</strong
+                  ><small>Visão geral das soluções Auvix</small></span
+                >
+              </a>
+            </div>
+          </details>
+        </li>
         <li><a href="../../blog/">Blog</a></li>
         <li><a href="../../index.html#contato">Contato</a></li>
+        <li>
+          <details class="nav-access">
+            <summary>
+              Acessar a Plataforma
+              <span class="nav-access-caret" aria-hidden="true">▾</span>
+            </summary>
+            <div class="nav-access-menu">
+              <a href="https://ponto.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" /></svg
+                ></span>
+                <span><strong>Ponto</strong><small>Soluções de RH</small></span>
+              </a>
+              <a href="https://cobranca.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"
+                    />
+                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                    <path d="M12 17.5v-11" /></svg
+                ></span>
+                <span
+                  ><strong>Cobrança e Pagamentos</strong
+                  ><small>Soluções de Cobrança e Pagamentos</small></span
+                >
+              </a>
+            </div>
+          </details>
+        </li>
       </ul>
       <div style="display: flex; gap: 1rem; align-items: center">
         <a href="../../index.html#contato" class="nav-cta">Fale conosco</a>
@@ -223,9 +361,6 @@
           <span class="breadcrumb-sep">›</span>
           <span class="breadcrumb-current">Cariacica</span>
         </nav>
-        <span class="hero-badge"
-          >✦ Portaria 671 · 100% Online · Implantação Remota</span
-        >
         <h1>
           Sistema de Controle de Ponto Digital em
           <em style="font-style: normal; color: var(--teal)">Cariacica</em>
@@ -425,6 +560,42 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES DE RH -->
+    <section class="content-section fade-up" id="solucoes-rh">
+      <div class="content-inner">
+        <div class="section-head">
+          <span class="section-tag">Soluções de RH</span>
+          <h2>Além do ponto: Soluções de RH completas para empresas em Cariacica</h2>
+          <p>Na mesma plataforma do controle de ponto, sua empresa em Cariacica também gerencia férias, documentos, assinaturas e segurança do trabalho.</p>
+        </div>
+        <div class="content-grid-4">
+          <a class="info-card city-rh-card fade-up" href="../../solucoes-de-rh.html#jornada">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span></div>
+            <h3>Gestão de Férias</h3>
+            <p>Períodos aquisitivos e concessivos, venda de dias, alertas de perda e férias coletivas.</p>
+          </a>
+          <a class="info-card city-rh-card fade-up" href="../../solucoes-de-rh.html#jornada">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span></div>
+            <h3>Assinatura eletrônica</h3>
+            <p>Espelho de ponto, EPI, ASO e holerite assinados com trilha de auditoria e verificação pública.</p>
+          </a>
+          <a class="info-card city-rh-card fade-up" href="../../solucoes-de-rh.html#jornada">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span></div>
+            <h3>Documentos da Folha</h3>
+            <p>Importe o PDF do contador e entregue holerites e informes no app, com assinatura.</p>
+          </a>
+          <a class="info-card city-rh-card fade-up" href="../../solucoes-de-rh.html#sst">
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span></div>
+            <h3>Segurança e Saúde (SST)</h3>
+            <p>EPI, EPC, treinamentos, formulários de SST, estoque e dashboards de conformidade.</p>
+          </a>
+        </div>
+        <p style="margin-top: 1.75rem; text-align: center">
+          <a class="btn-primary" href="../../solucoes-de-rh.html">Conhecer as Soluções de RH</a>
+        </p>
       </div>
     </section>
 
@@ -751,50 +922,229 @@
       </div>
     </section>
 
-    <footer>
-      <a href="../../index.html" class="footer-logo">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="4749 643 11716 3600"
-          style="height: 30px; width: auto; display: block"
-        >
-          <polygon
-            fill="#60cbe9"
-            points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
-          />
-          <path
-            fill="#ffffff"
-            d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
-          />
-          <path
-            fill="#ffffff"
-            d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
-          />
-          <path
-            fill="#ffffff"
-            d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
-          />
-          <path
-            fill="#ffffff"
-            d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
-          />
-          <path
-            fill="#60cbe9"
-            d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
-          />
-        </svg>
-      </a>
-      <p>
-        © <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos
-        reservados.
-      </p>
-      <div class="footer-links">
-        <a href="../../blog/">Blog</a>
-        <a href="../../controle-de-ponto-digital.html">Controle de Ponto</a>
-        <a href="../../reconhecimento-facial-ponto.html">Ponto Facial</a>
-        <a href="../../banco-de-horas-online.html">Banco de Horas</a>
-        <a href="../../index.html#contato">Contato</a>
-        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+    <footer class="ft">
+      <div class="ft-inner">
+        <div class="ft-brand">
+          <a
+            href="../../index.html"
+            class="footer-logo"
+            aria-label="Auvix Tecnologia"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="4749 643 11716 3600"
+              style="height: 30px; width: auto; display: block"
+            >
+              <defs>
+                <style>
+                  .fn {
+                    fill: #ffffff;
+                  }
+                  .ft {
+                    fill: #60cbe9;
+                  }
+                </style>
+              </defs>
+              <polygon
+                class="ft"
+                points="4998,3569 6188,2895 7382,3566 7620,3129 6193,643 5975,1019 7064,2930 6195,2450 5295,2954 6026,1647 5819,1287 4749,3127"
+              />
+              <path
+                class="fn"
+                d="M7705 1083l0 1531c0,74 22,152 48,218 51,121 130,219 238,294 101,70 213,110 336,110l994 0c73,0 151,-22 219,-48 238,-103 403,-309 403,-574l0 -1637 -405 0 0 1534c0,173 -120,320 -300,320l-829 0c-184,0 -300,-141 -300,-320l0 -1534 -301 0c-65,0 -99,44 -104,106z"
+              />
+              <path
+                class="fn"
+                d="M10144 976c1,3 3,6 4,9 8,15 13,30 21,44l1 1 0 1c235,528 471,1056 710,1582 67,148 134,295 203,442 28,59 56,122 86,180l414 0c76,-155 147,-316 218,-472 130,-287 258,-575 388,-862 120,-264 240,-527 357,-792 20,-44 40,-89 60,-133l-432 0c-79,167 -156,335 -232,503 -172,380 -341,762 -510,1144l-58 106 -56 -106c-143,-330 -288,-660 -435,-989 -50,-112 -100,-225 -150,-338 -22,-50 -45,-106 -71,-154 -39,-73 -106,-167 -198,-167l-321 0z"
+              />
+              <path
+                class="fn"
+                d="M12840 976l0 2259 395 0 0 -2123c-2,-71 -50,-137 -125,-137l-270 0z"
+              />
+              <path
+                class="fn"
+                d="M13443 976c208,254 416,508 626,760 63,76 126,151 189,226 27,31 56,68 85,97l33 33 -933 1143 543 0c14,-15 29,-33 40,-46 42,-49 83,-98 124,-148 151,-183 300,-368 448,-553l15 -19 25 0c33,0 63,43 82,66 41,48 82,96 122,144 155,185 309,370 462,556l546 0 -888 -1083 -353 -428 -627 -748 -540 0z"
+              />
+              <path
+                class="ft"
+                d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
+              />
+            </svg>
+          </a>
+          <p>
+            Soluções de RH e de cobrança e pagamentos para empresas de todo o
+            Brasil.
+          </p>
+          <div class="ft-social">
+            <a
+              href="https://www.instagram.com/auvix.tecnologia/"
+              target="_blank"
+              rel="noopener"
+              title="Instagram Auvix"
+              style="
+                display: flex;
+                align-items: center;
+                color: var(--muted);
+                transition: color 0.2s;
+              "
+              onmouseover="this.style.color = '#60cbe9'"
+              onmouseout="this.style.color = ''"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/auvix-tecnologia"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn Auvix"
+              style="
+                display: flex;
+                align-items: center;
+                color: var(--muted);
+                transition: color 0.2s;
+              "
+              onmouseover="this.style.color = '#60cbe9'"
+              onmouseout="this.style.color = ''"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.auvix.ponto&hl=pt_BR"
+              target="_blank"
+              rel="noopener"
+              title="Baixar app Auvix no Google Play"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 0.45rem;
+                color: var(--muted);
+                transition: color 0.2s;
+                text-decoration: none;
+              "
+              onmouseover="this.style.color = '#60cbe9'"
+              onmouseout="this.style.color = ''"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586zm-3.595 2.116L7.583 8.68 1.03 14.755c.201 1.029 1.36 1.6 2.303 1.031l7.294-4.296zM1 13.396V2.604L6.846 8 1 13.396zM1.03 1.245l6.553 6.075 3.044-2.811L3.333.214C2.39-.355 1.231.216 1.03 1.245z"
+                />
+              </svg>
+              <span style="font-size: 0.75rem; line-height: 1"
+                >Google Play</span
+              >
+            </a>
+            <a
+              href="https://apps.apple.com/br/app/auvix-ponto/id6784364342"
+              target="_blank"
+              rel="noopener"
+              title="Baixar app Auvix na App Store"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 0.45rem;
+                color: var(--muted);
+                transition: color 0.2s;
+                text-decoration: none;
+              "
+              onmouseover="this.style.color = '#60cbe9'"
+              onmouseout="this.style.color = ''"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.898.319.232 1.219.665 2.056.646.626-.019 1.001-.427 1.929-.427.928 0 1.283.427 1.928.427.845 0 1.678-.671 2.253-1.658.373-.646.626-1.278.789-1.869-.013-.005-1.564-.606-1.578-2.401z"
+                />
+              </svg>
+              <span style="font-size: 0.75rem; line-height: 1">App Store</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ft-cols">
+          <div class="ft-col">
+            <h4>Soluções de RH</h4>
+            <a href="../../solucoes-de-rh.html">Visão geral</a>
+            <a href="../../gestao-de-jornada.html">Gestão de Jornada</a>
+            <a href="../../controle-de-ponto-digital.html">Controle de Ponto</a>
+            <a href="../../reconhecimento-facial-ponto.html">Ponto Facial</a>
+            <a href="../../controle-de-jornada.html">Controle de Jornada</a>
+            <a href="../../banco-de-horas-online.html">Banco de Horas</a>
+            <a href="../../controle-de-ponto-mobile.html">App Mobile</a>
+          </div>
+          <div class="ft-col">
+            <h4>Cobrança e Pagamentos</h4>
+            <a href="../../gestao-financeira.html">Visão geral</a>
+            <a href="../../gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+            <a href="../../gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+          </div>
+          <div class="ft-col">
+            <h4>Auvix</h4>
+            <a href="../../solucoes/">Todas as soluções</a>
+            <a href="../../blog/">Blog</a>
+            <a href="../../cidades/">Cidades atendidas</a>
+            <a href="../../index.html" class="open-rep-modal"
+              >Seja nosso representante</a
+            >
+            <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+          </div>
+          <div class="ft-col">
+            <h4>Contato</h4>
+            <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
+            <a href="tel:+554691153255">(46) 99115-3255</a>
+            <a href="../../index.html#contato">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>
+          © <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos
+          reservados.
+        </p>
+        <script>
+          document.getElementById("footer-year").textContent =
+            new Date().getFullYear();
+        </script>
       </div>
     </footer>
 
@@ -817,6 +1167,13 @@
         .forEach((el) => observer.observe(el));
       document.getElementById("footer-year").textContent =
         new Date().getFullYear();
+    </script>
+    <script>
+      document.addEventListener("click", function (e) {
+        document.querySelectorAll("details.nav-access[open]").forEach(function (d) {
+          if (!d.contains(e.target)) d.removeAttribute("open");
+        });
+      });
     </script>
   </body>
 </html>

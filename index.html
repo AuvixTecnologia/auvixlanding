@@ -379,17 +379,20 @@
         line-height: 1.1;
         letter-spacing: -0.02em;
         margin-bottom: 1.2rem;
+        text-shadow: 0 2px 24px rgba(5, 20, 35, 0.5);
       }
       .hero h1 em {
         font-style: normal;
-        color: var(--teal);
+        color: #3fd0ff;
       }
       .hero-text-p {
-        font-size: 1.05rem;
-        color: var(--muted);
+        font-size: 1.12rem;
+        color: #eaf6fc;
         line-height: 1.75;
-        max-width: 480px;
+        max-width: 500px;
         margin-bottom: 2rem;
+        border-left: 3px solid #3fd0ff;
+        padding-left: 1rem;
       }
       .hero-actions {
         display: flex;
@@ -442,14 +445,9 @@
         display: flex;
         align-items: center;
         gap: 2.5rem;
-        background: rgba(14, 34, 54, 0.55);
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 2.5rem;
-        backdrop-filter: blur(10px);
-        box-shadow:
-          0 30px 60px rgba(0, 0, 0, 0.4),
-          0 0 60px rgba(96, 203, 233, 0.06);
+        background: none;
+        border: none;
+        padding: 0;
       }
       .hero-card-text {
         flex: 1;
@@ -469,12 +467,17 @@
       .hero-person {
         width: 340px;
         max-width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid var(--border);
-        box-shadow:
-          0 30px 60px rgba(0, 0, 0, 0.55),
-          0 0 60px rgba(96, 203, 233, 0.08);
+        border: none;
+        box-shadow: none;
+        /* esmaece as bordas da foto para fundir com o fundo */
+        -webkit-mask-image:
+          linear-gradient(to right, transparent 0%, #000 12%, #000 78%, transparent 100%),
+          linear-gradient(to bottom, transparent 0%, #000 12%, #000 70%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+          linear-gradient(to right, transparent 0%, #000 12%, #000 80%, transparent 100%),
+          linear-gradient(to bottom, transparent 0%, #000 12%, #000 80%, transparent 100%);
+        mask-composite: intersect;
       }
       .hero-person img {
         width: 100%;
@@ -484,7 +487,6 @@
       @media (max-width: 800px) {
         .hero-card {
           flex-direction: column;
-          padding: 2rem;
         }
         .hero-media {
           flex: none;
@@ -1061,13 +1063,19 @@
       .contact-form textarea:focus {
         border-color: var(--teal);
       }
-      .contact-form select {
-        appearance: none; -webkit-appearance: none; cursor: pointer;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2356707f' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
-        background-repeat: no-repeat; background-position: right 1.1rem center; padding-right: 2.5rem;
-      }
-      .contact-form select:invalid { color: var(--muted); }
-      .contact-form select option { color: #0d1e2c; }
+      .interest-group { border: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .interest-group legend { grid-column: 1 / -1; font-size: 0.88rem; color: var(--muted); margin-bottom: 0.5rem; padding: 0; }
+      .interest-option { position: relative; display: flex; align-items: center; gap: 0.6rem; cursor: pointer;
+        background: #ffffff; border: 1px solid #cbdcea; border-radius: 10px; padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--white);
+        transition: border-color 0.2s, box-shadow 0.2s; }
+      .interest-option input { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; margin: 0; flex-shrink: 0;
+        border: 2px solid #9fb6c6; border-radius: 50%; display: grid; place-content: center; padding: 0; background: #fff; }
+      .interest-option input::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #0d5f9e; transform: scale(0); transition: transform 0.15s; }
+      .interest-option input:checked { border-color: #0d5f9e; }
+      .interest-option input:checked::before { transform: scale(1); }
+      .interest-option:has(input:checked) { border-color: #0d5f9e; box-shadow: 0 0 0 3px rgba(13, 95, 158, 0.12); }
+      .interest-option input:focus-visible { outline: 2px solid #60cbe9; outline-offset: 2px; }
+      @media (max-width: 560px) { .interest-group { grid-template-columns: 1fr; } }
       .contact-form textarea {
         resize: vertical;
         min-height: 120px;
@@ -1285,11 +1293,20 @@
         display: flex;
         align-items: center;
         gap: 0.55rem;
-        font-size: 0.88rem;
-        color: var(--muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #f2fafd;
       }
       .check-mark {
-        color: var(--teal);
+        color: #0a2337;
+        background: #3fd0ff;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
         font-style: normal;
         font-weight: 700;
         flex-shrink: 0;
@@ -1450,7 +1467,12 @@
       .hero-split-top .hero-split-head { text-align: left; margin: 0; max-width: none; }
       .hero-split-top .hero-split-head .hero-text-p { margin-left: 0; }
       .hero-split-top .hero-split-head .hero-actions { justify-content: flex-start; }
-      .hero-split-photo { justify-self: end; width: 100%; max-width: 360px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 60px rgba(96, 203, 233, 0.08); }
+      .hero-split-photo { justify-self: end; width: 100%; max-width: 360px;
+        /* mesmo esmaecimento de bordas da foto do hero de Gestão de Jornada */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 12%, #000 70%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 12%, #000 80%, transparent 100%);
+        mask-composite: intersect; }
       .hero-split-photo img { display: block; width: 100%; height: auto; }
       .hero-area h2 { display: flex; align-items: center; gap: 0.75rem; }
       .mod-card .ico-tile { margin: 0.25rem 0 0.5rem; }
@@ -1592,6 +1614,44 @@
       }
       .nav-access-left .nav-access-menu { right: auto; left: 0; min-width: 320px; }
       @media (max-width: 1024px) { .nav-access-left .nav-access-menu { position: static; min-width: 0; } }
+      /* ─── RODAPÉ EM COLUNAS ─── */
+      footer.ft { display: block; padding: 3.5rem 5vw 0; }
+      .ft-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 2.9fr; gap: 3rem; }
+      .ft-brand p { margin: 1rem 0 1.25rem; max-width: 280px; line-height: 1.6; }
+      .ft-social { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
+      .ft-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+      .ft-col { display: flex; flex-direction: column; gap: 0.55rem; }
+      .ft-col h4 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; margin: 0 0 0.35rem; }
+      footer.ft .ft-col a { font-size: 0.86rem; }
+      .ft-bottom { max-width: 1200px; margin: 2.5rem auto 0; padding: 1.25rem 0 1.5rem; border-top: 1px solid rgba(96, 203, 233, 0.18); }
+      @media (max-width: 960px) {
+        .ft-inner { grid-template-columns: 1fr; gap: 2rem; }
+        .ft-cols { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 480px) {
+        .ft-cols { grid-template-columns: 1fr; }
+      }
+      /* ─── ALINHAMENTO DO MENU ─── */
+      .nav-links { align-items: center; }
+      .nav-links > li { display: flex; align-items: center; }
+      .nav-access summary { display: flex; align-items: center; gap: 0.25rem; line-height: normal; }
+      .nav-links a { line-height: normal; }
+      @media (max-width: 1024px) { .nav-links > li { display: block; } }
+      .nav-access-menu a.nav-access-all .nav-access-ico { background: rgba(96, 203, 233, 0.15); color: #60cbe9; }
+      /* ─── AJUSTES MOBILE ─── */
+      @media (max-width: 1024px) {
+        .nav-links.open .nav-access summary { justify-content: center; }
+        .nav-links.open .nav-access-menu { text-align: left; }
+      }
+      @media (max-width: 480px) {
+        footer.ft { text-align: left; }
+        .ft-cols { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.25rem; }
+        .ft-col h4 { font-size: 0.72rem; }
+      }
+      @media (max-width: 860px) {
+        .hero-split-top .hero-split-head { text-align: left; }
+        .hero-split-top .hero-split-head .hero-actions { justify-content: flex-start; }
+      }
       /* ─── MODAL ─── */
       .modal-overlay {
         position: fixed;
@@ -1719,6 +1779,7 @@
         <h3 id="repModalTitle">Seja nosso representante</h3>
         <p>Quer representar a Auvix na sua região? Preencha o formulário e nossa equipe entrará em contato com você.</p>
         <form class="contact-form" id="rep-form">
+          <input type="hidden" name="to_email" value="contato@auvix.com.br" />
           <div class="form-row">
             <input type="text" name="name" placeholder="Seu nome" required />
             <input type="text" name="company" placeholder="Empresa (se possuir)" />
@@ -1785,13 +1846,17 @@
           <details class="nav-access nav-access-left">
             <summary>Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
             <div class="nav-access-menu">
-              <a href="solucoes/#jornada">
+              <a href="solucoes-de-rh.html">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
                 <span><strong>Soluções de RH</strong><small>Ponto, férias, assinatura, folha e SST</small></span>
               </a>
               <a href="gestao-financeira.html">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
                 <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
+              </a>
+              <a href="solucoes/" class="nav-access-all">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+                <span><strong>Todas as soluções</strong><small>Visão geral das soluções Auvix</small></span>
               </a>
             </div>
           </details>
@@ -1849,14 +1914,14 @@
             <p>Ponto, documentos e segurança do trabalho do colaborador em um só lugar.</p>
             <ul class="hero-area-list">
               <li><a href="gestao-de-jornada.html">Controle de ponto e jornada</a></li>
-              <li><a href="solucoes/#jornada">Gestão de férias</a></li>
-              <li><a href="solucoes/#jornada">Assinatura eletrônica</a></li>
-              <li><a href="solucoes/#jornada">Documentos da folha</a></li>
-              <li><a href="solucoes/#sst">Segurança e Saúde no Trabalho (SST)</a></li>
+              <li><a href="solucoes-de-rh.html">Gestão de férias</a></li>
+              <li><a href="solucoes-de-rh.html">Assinatura eletrônica</a></li>
+              <li><a href="solucoes-de-rh.html">Documentos da folha</a></li>
+              <li><a href="solucoes-de-rh.html#sst">Segurança e Saúde no Trabalho (SST)</a></li>
               <li class="soon">Recrutamento e seleção <em>em breve</em></li>
               <li class="soon">Gestão de documentos <em>em breve</em></li>
             </ul>
-            <a href="solucoes/#jornada" class="hero-area-more">Ver mais →</a>
+            <a href="solucoes-de-rh.html" class="hero-area-more">Ver mais →</a>
           </article>
 
           <article class="hero-area">
@@ -1869,6 +1934,7 @@
             </ul>
             <div class="hero-area-chips">
               <span>+25 bancos integrados</span>
+              <span>CRM de cobrança</span>
               <span>Boletos registrados</span>
               <span>Régua por e-mail, WhatsApp e SMS</span>
               <span>Pagamentos direto no banco</span>
@@ -1898,25 +1964,25 @@
             <span class="mod-desc">Ponto digital com reconhecimento facial e liveness passivo, banco de horas, escalas e relatórios. Portaria 671.</span>
             <span class="mod-more">Conhecer →</span>
           </a>
-          <a href="solucoes/#jornada" class="mod-card">
+          <a href="solucoes-de-rh.html" class="mod-card">
             <span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
             <strong class="mod-title">Gestão de Férias</strong>
             <span class="mod-desc">Períodos aquisitivos e concessivos, venda de dias, alertas de perda e férias coletivas.</span>
             <span class="mod-more">Conhecer →</span>
           </a>
-          <a href="solucoes/#jornada" class="mod-card">
+          <a href="solucoes-de-rh.html" class="mod-card">
             <span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
             <strong class="mod-title">Assinatura eletrônica</strong>
             <span class="mod-desc">Envelopes com vários signatários, trilha de auditoria, hash SHA-256 e verificação pública.</span>
             <span class="mod-more">Conhecer →</span>
           </a>
-          <a href="solucoes/#jornada" class="mod-card">
+          <a href="solucoes-de-rh.html" class="mod-card">
             <span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
             <strong class="mod-title">Documentos da Folha</strong>
             <span class="mod-desc">Importe o PDF do contador e entregue holerites e informes no app, com assinatura.</span>
             <span class="mod-more">Conhecer →</span>
           </a>
-          <a href="solucoes/#sst" class="mod-card">
+          <a href="solucoes-de-rh.html#sst" class="mod-card">
             <span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
             <strong class="mod-title">Segurança e Saúde (SST)</strong>
             <span class="mod-desc">EPI, EPC, treinamentos, mais de 20 formulários, estoque e dashboards de conformidade.</span>
@@ -1940,7 +2006,7 @@
           <a href="gestao-financeira.html" class="mod-card">
             <span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
             <strong class="mod-title">Gestão de Cobrança</strong>
-            <span class="mod-desc">Boletos registrados, régua por e-mail, WhatsApp e SMS e baixa automática no ERP.</span>
+            <span class="mod-desc">Boletos registrados, régua por e-mail, WhatsApp e SMS, CRM de cobrança e baixa automática no ERP.</span>
             <span class="mod-more">Conhecer →</span>
           </a>
           <a href="gestao-financeira.html" class="mod-card">
@@ -2488,12 +2554,14 @@
                 btn.textContent = "Enviando...";
                 // O template do EmailJS só lê "message": o assunto vai no início da mensagem
                 const msg = form.querySelector('textarea[name="message"]');
-                const interest = form.querySelector('select[name="interest"]').value;
+                const checked = form.querySelector('input[name="interest"]:checked');
+                const interest = checked ? checked.value : "";
                 const originalMsg = msg.value;
                 msg.value = "[Interesse: " + interest + "]\n\n" + originalMsg;
                 emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
                   .then(function(){
                     form.reset();
+                    autoMsg = "";
                     btn.disabled = false;
                     btn.textContent = "Enviar mensagem";
                     openModal();
@@ -2506,13 +2574,29 @@
                   });
               });
 
+              // Texto sugerido na mensagem conforme a solução escolhida
+              const msgBox = form && form.querySelector('textarea[name="message"]');
+              let autoMsg = "";
+              function suggest(value) {
+                if (!msgBox || !value) return;
+                const text = "Olá, gostaria de mais informações sobre as " + value + ".";
+                if (msgBox.value.trim() === "" || msgBox.value === autoMsg) {
+                  msgBox.value = text;
+                  autoMsg = text;
+                }
+              }
+              form && form.querySelectorAll('input[name="interest"]').forEach(function (r) {
+                r.addEventListener("change", function () { suggest(r.value); });
+              });
+
               // Pré-seleciona o assunto via ?interesse=rh|cobranca
               const pre = new URLSearchParams(location.search).get("interesse");
-              const sel = form && form.querySelector('select[name="interest"]');
-              if (sel && pre === "rh") sel.value = "Soluções de RH";
-              if (sel && pre === "cobranca") sel.value = "Soluções de Cobrança e Pagamentos";
+              const opt = form && form.querySelector('input[name="interest"][value="' +
+                (pre === "rh" ? "Soluções de RH" : pre === "cobranca" ? "Soluções de Cobrança e Pagamentos" : "") + '"]');
+              if (opt) { opt.checked = true; suggest(opt.value); }
             });</script>
           <form class="contact-form" id="contact-form">
+            <input type="hidden" name="to_email" value="contato@auvix.com.br" />
             <div class="form-row">
               <input type="text" name="name" placeholder="Seu nome" required />
               <input
@@ -2524,11 +2608,17 @@
             </div>
             <input type="email" name="email" placeholder="E-mail" required />
             <input type="tel" name="phone" placeholder="Telefone" required />
-            <select name="interest" aria-label="Assunto" required>
-              <option value="" disabled selected>Sobre qual solução deseja falar?</option>
-              <option value="Soluções de RH">Soluções de RH</option>
-              <option value="Soluções de Cobrança e Pagamentos">Soluções de Cobrança e Pagamentos</option>
-            </select>
+            <fieldset class="interest-group">
+              <legend>Sobre qual solução deseja falar?</legend>
+              <label class="interest-option">
+                <input type="radio" name="interest" value="Soluções de RH" required />
+                <span>Soluções de RH</span>
+              </label>
+              <label class="interest-option">
+                <input type="radio" name="interest" value="Soluções de Cobrança e Pagamentos" />
+                <span>Soluções de Cobrança e Pagamentos</span>
+              </label>
+            </fieldset>
             <textarea
               name="message"
               placeholder="Como podemos ajudar sua empresa?"
@@ -2543,9 +2633,11 @@
     
 
     <!-- FOOTER -->
-    <footer>
-      <a href="#" class="footer-logo">
-        <svg
+    <footer class="ft">
+      <div class="ft-inner">
+        <div class="ft-brand">
+          <a href="index.html" class="footer-logo" aria-label="Auvix Tecnologia">
+            <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="4749 643 11716 3600"
           style="height: 30px; width: auto; display: block"
@@ -2585,24 +2677,9 @@
             d="M15214 1752l630 -776 -540 0c-132,157 -264,314 -394,472 -52,64 -195,239 -246,304l550 0z"
           />
         </svg>
-      </a>
-      <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
-      <div style="display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;">
-        <a href="solucoes/#jornada">Soluções de RH</a>
-        <a href="gestao-financeira.html">Soluções de Cobrança e Pagamentos</a>
-        <a href="blog/">Blog</a>
-        <a href="gestao-de-jornada.html">Gestão de Jornada</a>
-        <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
-        <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
-        <a href="controle-de-jornada.html">Gestão de Jornada</a>
-        <a href="banco-de-horas-online.html">Banco de Horas</a>
-        <a href="controle-de-ponto-mobile.html">App Mobile</a>
-        <a href="#" class="open-rep-modal">Seja nosso representante</a>
-        <a href="https://www.auvix.com.br/privacy">Privacidade</a>
-        <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
-      </div>
-      <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
-      <div style="display:flex;gap:0.75rem;align-items:center;">
+          </a>
+          <p>Soluções de RH e de cobrança e pagamentos para empresas de todo o Brasil.</p>
+          <div class="ft-social">
         <a href="https://www.instagram.com/auvix.tecnologia/" target="_blank" rel="noopener" title="Instagram Auvix" style="display:flex;align-items:center;color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='#60cbe9'" onmouseout="this.style.color=''">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
@@ -2625,6 +2702,45 @@
           </svg>
           <span style="font-size:0.75rem;line-height:1;">App Store</span>
         </a>
+      </div>
+        </div>
+
+        <div class="ft-cols">
+          <div class="ft-col">
+            <h4>Soluções de RH</h4>
+            <a href="solucoes-de-rh.html">Visão geral</a>
+            <a href="gestao-de-jornada.html">Gestão de Jornada</a>
+            <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
+            <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
+            <a href="controle-de-jornada.html">Controle de Jornada</a>
+            <a href="banco-de-horas-online.html">Banco de Horas</a>
+            <a href="controle-de-ponto-mobile.html">App Mobile</a>
+          </div>
+          <div class="ft-col">
+            <h4>Cobrança e Pagamentos</h4>
+            <a href="gestao-financeira.html">Visão geral</a>
+            <a href="gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+            <a href="gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+          </div>
+          <div class="ft-col">
+            <h4>Auvix</h4>
+            <a href="solucoes/">Todas as soluções</a>
+            <a href="blog/">Blog</a>
+            <a href="cidades/">Cidades atendidas</a>
+            <a href="index.html" class="open-rep-modal">Seja nosso representante</a>
+            <a href="https://www.auvix.com.br/privacy">Privacidade</a>
+          </div>
+          <div class="ft-col">
+            <h4>Contato</h4>
+            <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
+            <a href="tel:+554691153255">(46) 99115-3255</a>
+            <a href="#contato">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>© <span id="footer-year"></span> Auvix Tecnologia. Todos os direitos reservados.</p>
+        <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
       </div>
     </footer>
 
