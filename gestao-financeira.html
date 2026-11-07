@@ -17,15 +17,15 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos via API, saldo e extrato." />
+    <meta name="description" content="Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos direto no banco, saldo e extrato. Integra com qualquer ERP e mais de 25 bancos." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.auvix.com.br/gestao-financeira.html" />
-    <title>Gestão Financeira: Cobrança e Pagamentos Integrados aos Bancos | Auvix</title>
+    <title>Soluções de Cobrança e Pagamentos Integradas aos Bancos | Auvix</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.auvix.com.br/gestao-financeira.html" />
-    <meta property="og:title" content="Gestão Financeira: Cobrança e Pagamentos Integrados aos Bancos | Auvix" />
-    <meta property="og:description" content="Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos via API, saldo e extrato." />
+    <meta property="og:title" content="Soluções de Cobrança e Pagamentos Integradas aos Bancos | Auvix" />
+    <meta property="og:description" content="Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos direto no banco, saldo e extrato. Integra com qualquer ERP e mais de 25 bancos." />
     <meta property="og:locale" content="pt_BR" />
     <script type="application/ld+json">
 {
@@ -33,9 +33,9 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Gestão Financeira: Cobrança e Pagamentos Integrados aos Bancos | Auvix",
+      "name": "Soluções de Cobrança e Pagamentos Integradas aos Bancos | Auvix",
       "url": "https://www.auvix.com.br/gestao-financeira.html",
-      "description": "Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos via API, saldo e extrato.",
+      "description": "Cobrança e pagamentos integrados ao ERP e direto com os bancos: boletos registrados, régua de cobrança por e-mail, WhatsApp e SMS, CRM de cobrança, pagamentos direto no banco, saldo e extrato. Integra com qualquer ERP e mais de 25 bancos.",
       "publisher": {
         "@type": "Organization",
         "name": "Auvix Tecnologia",
@@ -54,7 +54,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Gestão Financeira",
+          "name": "Soluções de Cobrança e Pagamentos",
           "item": "https://www.auvix.com.br/gestao-financeira.html"
         }
       ]
@@ -64,10 +64,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Preciso gerar arquivo de remessa e ler retorno?",
+          "name": "Como funciona a integração com os bancos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não. A Auvix se conecta à API oficial de cada banco. O boleto é registrado online e a liquidação volta automaticamente, sem arquivo de remessa ou retorno."
+            "text": "A Auvix tem integração direta com cada banco. O boleto é registrado online e a liquidação volta automaticamente para a plataforma e para o seu ERP."
           }
         },
         {
@@ -75,7 +75,7 @@
           "name": "Quais bancos são atendidos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Na cobrança: Banco do Brasil, Sicoob, Caixa, Itaú, Santander, Sicredi, Cresol, Bradesco e Safra. Nos pagamentos: Banco do Brasil, Sicredi, Sicoob e Bradesco. Novos bancos são adicionados conforme a demanda."
+            "text": "São mais de 25 bancos com integração, entre eles Banco do Brasil, Sicoob, Caixa, Itaú, Santander, Sicredi, Cresol, Bradesco e Safra. Novos bancos são adicionados conforme a demanda."
           }
         },
         {
@@ -83,7 +83,7 @@
           "name": "Funciona com o meu ERP?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O Linx ERP já tem conector pronto. Outros sistemas integram pela API REST aberta e documentada. Também é possível começar cadastrando os títulos direto na plataforma e integrar depois, sem perder o histórico."
+            "text": "Sim. A Auvix integra com qualquer ERP: os títulos a receber e a pagar chegam automaticamente e boletos, liquidações e baixas voltam para o seu sistema, sem digitação. Também é possível começar cadastrando os títulos direto na plataforma e integrar depois, sem perder o histórico."
           }
         },
         {
@@ -100,6 +100,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. E-mail já vem pronto, com o remetente da sua empresa. WhatsApp e SMS funcionam na plataforma e dependem da contratação de um provedor de envio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é protegido o acesso à plataforma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O acesso usa autenticação em múltiplos fatores (MFA). Além disso, cada conta de débito pode exigir senha de pagamento e toda ação fica registrada com quem fez e quando."
           }
         }
       ]
@@ -168,6 +176,36 @@
       @media (max-width: 560px) {
         .fin-flow, .fin-ruler { grid-template-columns: 1fr; }
       }
+
+      /* ─── HERO COM IMAGEM ─── */
+      .fin-hero .page-hero-inner { max-width: 1200px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+      .fin-hero-visual { position: relative; justify-self: center; width: 100%; max-width: 420px; padding: 1.5rem 0; }
+      .fin-hero-photo { border-radius: 22px; overflow: hidden; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), 0 0 60px rgba(96, 203, 233, 0.1); }
+      .fin-hero-photo img { display: block; width: 100%; height: auto; }
+      .fin-float {
+        position: absolute; display: flex; align-items: center; gap: 0.7rem;
+        padding: 0.7rem 0.95rem; border-radius: 14px; min-width: 230px;
+        background: rgba(13, 37, 60, 0.92); border: 1px solid rgba(96, 203, 233, 0.35);
+        backdrop-filter: blur(10px); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        animation: finFloat 6s ease-in-out infinite;
+      }
+      .fin-float strong { display: block; color: #ffffff; font-size: 0.88rem; font-weight: 700; }
+      .fin-float small { display: block; color: #c3d8e6; font-size: 0.74rem; }
+      .fin-float-ico { display: inline-flex; width: 34px; height: 34px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 10px; background: #60cbe9; color: #0a2337; }
+      .fin-float-ico.ok { background: #2fbf71; color: #ffffff; }
+      .fin-float-1 { top: 12%; left: -18%; }
+      .fin-float-2 { top: 46%; right: -16%; animation-delay: -2s; }
+      .fin-float-3 { bottom: 6%; left: -10%; animation-delay: -4s; }
+      @keyframes finFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @media (prefers-reduced-motion: reduce) { .fin-float { animation: none; } }
+      @media (max-width: 960px) {
+        .fin-hero .page-hero-inner { grid-template-columns: 1fr; }
+        .fin-hero-visual { max-width: 340px; }
+        .fin-float { min-width: 0; }
+        .fin-float-1 { left: -6%; }
+        .fin-float-2 { right: -6%; }
+        .fin-float-3 { left: -2%; }
+      }
     </style>
   </head>
   <body>
@@ -211,14 +249,26 @@
         </svg>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="solucoes/">Soluções</a></li>
-        <li><a href="gestao-de-jornada.html">Gestão de Jornada</a></li>
-        <li><a href="gestao-financeira.html" aria-current="page" style="color:var(--teal)">Gestão Financeira</a></li>
+        <li>
+          <details class="nav-access nav-access-left">
+            <summary style="color:var(--teal)">Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
+            <div class="nav-access-menu">
+              <a href="solucoes/#jornada">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                <span><strong>Soluções de RH</strong><small>Ponto, férias, assinatura, folha e SST</small></span>
+              </a>
+              <a href="gestao-financeira.html">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
+              </a>
+            </div>
+          </details>
+        </li>
         <li><a href="blog/">Blog</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html?interesse=cobranca#contato">Contato</a></li>
       </ul>
       <div style="display: flex; gap: 1rem; align-items: center">
-        <a href="index.html#contato" class="nav-cta">Fale conosco</a>
+        <a href="index.html?interesse=cobranca#contato" class="nav-cta">Fale conosco</a>
         <div class="hamburger" id="hamburger">
           <span></span><span></span><span></span>
         </div>
@@ -226,31 +276,51 @@
     </nav>
 
     <!-- HERO -->
-    <section class="page-hero">
+    <section class="page-hero fin-hero">
       <div class="page-hero-inner">
+        <div class="fin-hero-text">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Início</a>
           <span class="breadcrumb-sep">›</span>
           <a href="solucoes/">Soluções</a>
           <span class="breadcrumb-sep">›</span>
-          <span class="breadcrumb-current">Gestão Financeira</span>
+          <span class="breadcrumb-current">Cobrança e Pagamentos</span>
         </nav>
-        <span class="hero-badge">✦ Plataforma Auvix Gestão Financeira</span>
+        <span class="hero-badge">✦ Soluções de Cobrança e Pagamentos</span>
         <h1>Cobrança e pagamentos no <em style="font-style: normal; color: var(--teal)">piloto automático</em></h1>
         <p>
-          Contas a receber e a pagar integradas ao seu ERP e direto com os bancos.
-          Boletos registrados, régua de cobrança e pagamentos pela API, numa plataforma só.
+          Contas a receber e a pagar integradas a qualquer ERP e a mais de 25 bancos.
+          Boletos registrados, régua de cobrança e pagamentos direto no banco, num só lugar.
           Sua equipe financeira atua só nas exceções.
         </p>
         <div class="fin-hero-points">
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Sem arquivo de remessa</span>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Integração direta com o banco</span>
           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Baixa automática no ERP</span>
           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> E-mail, WhatsApp e SMS</span>
           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Saldo e extrato em tempo real</span>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Autenticação em múltiplos fatores</span>
         </div>
         <div class="hero-actions">
-          <a href="index.html#contato" class="btn-primary">Agendar demonstração</a>
+          <a href="index.html?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
           <a href="#cobranca" class="btn-secondary">Ver como funciona</a>
+        </div>
+        </div>
+        <div class="fin-hero-visual" aria-hidden="true">
+          <div class="fin-hero-photo">
+            <img src="images/wo-call-cut.webp" alt="" fetchpriority="high" />
+          </div>
+          <div class="fin-float fin-float-1">
+            <span class="fin-float-ico ok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+            <span><strong>Boleto liquidado</strong><small>Baixa enviada ao ERP automaticamente</small></span>
+          </div>
+          <div class="fin-float fin-float-2">
+            <span class="fin-float-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+            <span><strong>Lembrete enviado</strong><small>WhatsApp · vence amanhã</small></span>
+          </div>
+          <div class="fin-float fin-float-3">
+            <span class="fin-float-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span>
+            <span><strong>Pagamento agendado</strong><small>Comprovante disponível no título</small></span>
+          </div>
         </div>
       </div>
     </section>
@@ -258,10 +328,10 @@
     <!-- NÚMEROS -->
     <div class="stats-band fade-up">
       <div class="stats-band-inner">
-        <div><div class="stat-num">9</div><div class="stat-label">Bancos de cobrança com integração direta</div></div>
-        <div><div class="stat-num">4</div><div class="stat-label">Bancos de pagamento via API</div></div>
+        <div><div class="stat-num">+25</div><div class="stat-label">Bancos com integração</div></div>
+        <div><div class="stat-num">MFA</div><div class="stat-label">Autenticação em múltiplos fatores</div></div>
         <div><div class="stat-num">3</div><div class="stat-label">Canais de cobrança: e-mail, WhatsApp e SMS</div></div>
-        <div><div class="stat-num">0</div><div class="stat-label">Arquivos de remessa e retorno</div></div>
+        <div><div class="stat-num">Direta</div><div class="stat-label">Integração com o banco</div></div>
       </div>
     </div>
 
@@ -269,7 +339,7 @@
     <section class="content-section fade-up">
       <div class="content-inner">
         <div class="section-head">
-          <span class="section-tag">Uma plataforma, dois lados do caixa</span>
+          <span class="section-tag">Receber e pagar, num só lugar</span>
           <h2>Receber e pagar sem digitar nada</h2>
         </div>
         <div class="fin-split">
@@ -286,7 +356,7 @@
           </div>
           <div class="fin-split-card">
             <h3><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span> Gestão de Pagamentos</h3>
-            <p>Os títulos a pagar aprovados no ERP chegam à Auvix, o financeiro escolhe o que enviar e a plataforma manda ao banco pela API oficial.</p>
+            <p>Os títulos a pagar aprovados no ERP chegam à Auvix, o financeiro escolhe o que enviar e a plataforma envia direto ao banco.</p>
             <ul>
               <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Boleto, guias, Pix, TED e crédito em conta</li>
               <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Envio com senha e registro de quem autorizou</li>
@@ -337,8 +407,8 @@
       <div class="content-inner">
         <div class="section-head">
           <span class="section-tag">Integração bancária</span>
-          <h2>Conexão direta com os principais bancos</h2>
-          <p>API oficial de cada banco, sem arquivo de remessa. Cada empresa do grupo usa as próprias credenciais e convênios.</p>
+          <h2>Mais de 25 bancos com integração</h2>
+          <p>Integração direta com cada banco. Cada empresa do grupo usa as próprias credenciais e convênios. Entre os bancos integrados:</p>
         </div>
         <div class="fin-banks">
           <span>Banco do Brasil</span><span>Sicoob</span><span>Caixa</span><span>Itaú</span><span>Santander</span><span>Sicredi</span><span>Cresol</span><span>Bradesco</span><span>Safra</span>
@@ -349,201 +419,9 @@
         <p class="fin-note">Liquidação identificada pelo aviso do banco em tempo real (webhook) e por sincronização periódica, para nenhum título ficar sem baixa. Se a emissão falhar, a plataforma informa o motivo e tenta de novo sozinha.</p>
         <div class="content-grid-3" style="margin-top: 2.5rem">
           <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span></div>
-            <h3>Boleto completo</h3>
-            <p>PDF gerado na hora com link para o cliente, alteração de vencimento, abatimento, protesto, multa, juros e desconto conforme o convênio.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span></div>
-            <h3>Todos os boletos numa lista</h3>
-            <p>Filtros por período, situação, sacado, banco, cedente e nosso número. Registre, imprima, envie ou baixe em lote.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span></div>
-            <h3>Painel de gestão</h3>
-            <p>Boletos por situação em valor, totais por empresa e convênio e o volume de cobranças do período.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RÉGUA -->
-    <section class="content-section dark fade-up">
-      <div class="content-inner">
-        <div class="section-head">
-          <span class="section-tag">Régua de cobrança</span>
-          <h2>Cobrar bem começa antes do vencimento</h2>
-          <p>Boa parte dos atrasos vem de esquecimento ou boleto perdido na caixa de entrada. A régua resolve isso com método, sem esforço extra da equipe.</p>
-        </div>
-        <div class="fin-ruler">
-          <div class="fin-ruler-step"><span class="fin-ruler-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="fin-ruler-when">Antes do vencimento</span><h3>PREVENIR</h3><p>O boleto chega na hora certa e o cliente é lembrado dias antes.</p></div>
-          <div class="fin-ruler-step"><span class="fin-ruler-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span><span class="fin-ruler-when">No vencimento</span><h3>LEMBRAR</h3><p>Aviso no próprio dia, com linha digitável e boleto à mão.</p></div>
-          <div class="fin-ruler-step"><span class="fin-ruler-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span class="fin-ruler-when">Após o vencimento</span><h3>COBRAR</h3><p>Avisos em intervalos definidos, com tom que sobe conforme o atraso.</p></div>
-          <div class="fin-ruler-step"><span class="fin-ruler-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></span><span class="fin-ruler-when">Negociação</span><h3>RECUPERAR</h3><p>A equipe entra pelo CRM: contato, promessa e acompanhamento.</p></div>
-        </div>
-        <div class="fin-profiles">
-          <span>Novo cliente</span><span>Pontual</span><span>Em atenção</span><span>Crítico</span>
-        </div>
-        <p class="fin-note">Quatro perfis de cliente, cada um com sua linha do tempo de etapas e canais. Quem sempre paga em dia não é tratado como inadimplente.</p>
-        <div class="fin-channels">
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> E-mail com a sua marca</span>
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp</span>
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> SMS</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- CRM -->
-    <section class="content-section fade-up">
-      <div class="content-inner">
-        <div class="section-head">
-          <span class="section-tag">Atendimento de cobrança</span>
-          <h2>Um CRM feito para quem cobra</h2>
-          <p>Cada conversa com o cliente vira registro, promessa e próximo passo. Nada depende da memória do operador.</p>
-        </div>
-        <div class="content-grid-3">
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span></div>
-            <h3>Registro de contato</h3>
-            <p>Ligação, WhatsApp, e-mail, visita ou anotação, com o resultado, os boletos envolvidos e anexos.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span></div>
-            <h3>Promessa de pagamento</h3>
-            <p>Data e valor combinados. A plataforma confere todo dia e marca a promessa como cumprida ou quebrada.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span></div>
-            <h3>Próximo contato</h3>
-            <p>Tarefas com data, hora e responsável, separadas em atrasadas, para hoje e próximas.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
-            <h3>Sabe se o cliente viu</h3>
-            <p>Mostra se o e-mail foi enviado e se o cliente abriu o PDF do boleto.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span></div>
-            <h3>Pronto para negociar</h3>
-            <p>Linha digitável, Pix copia e cola e 2ª via à mão, sem sair do atendimento.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div>
-            <h3>Histórico unificado</h3>
-            <p>Contatos, promessas, tarefas, e-mails e eventos do banco numa linha do tempo só.</p>
-          </div>
-        </div>
-        <div class="callout" style="margin-top: 2rem">
-          <strong>Crediário próprio também:</strong> títulos da carteira interna (crediário, carnê, cheque, promissória) usam a mesma régua e o mesmo CRM, só que sem boleto anexo.
-        </div>
-      </div>
-    </section>
-
-    <!-- PAGAMENTOS -->
-    <section class="content-section dark fade-up" id="pagamentos">
-      <div class="content-inner">
-        <div class="section-head">
-          <span class="section-tag">Gestão de Pagamentos</span>
-          <h2>Contas a pagar direto no banco, sem digitar nada</h2>
-          <p>A plataforma envia ao banco pela API oficial, acompanha até o débito e devolve o resultado ao ERP.</p>
-        </div>
-        <div class="fin-flow">
-          <div class="fin-flow-step">
-            <span class="fin-flow-num">1</span>
-            <h3>Recebe</h3>
-            <p>Títulos a pagar aprovados chegam do ERP com favorecido, valor, data e borderô.</p>
-          </div>
-          <div class="fin-flow-step">
-            <span class="fin-flow-num">2</span>
-            <h3>Seleciona</h3>
-            <p>O financeiro escolhe os títulos ou o borderô inteiro e confirma com a senha de pagamento.</p>
-          </div>
-          <div class="fin-flow-step">
-            <span class="fin-flow-num">3</span>
-            <h3>Envia</h3>
-            <p>A plataforma agrupa por conta e data e manda ao banco pela API, sem arquivo de remessa.</p>
-          </div>
-          <div class="fin-flow-step">
-            <span class="fin-flow-num">4</span>
-            <h3>Concilia</h3>
-            <p>Pagamento efetivado, comprovante e motivo de recusa voltam para o ERP.</p>
-          </div>
-        </div>
-        <div class="fin-pipe" aria-label="Ciclo do pagamento">
-          <span>Pendente</span><i>→</i><span>Enviado</span><i>→</i><span>Aguardando liberação</span><i>→</i><span>Agendado</span><i>→</i><span class="ok">Pago</span>
-        </div>
-        <p class="fin-note">Recusado, sem saldo ou cancelado? O título mostra o motivo informado pelo banco e o ERP é avisado.</p>
-        <div class="fin-guard">
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Nada sai sozinho: o envio é sempre uma ação do usuário, com senha por conta de débito.</div>
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Bloqueio do mesmo código de barras em dois pagamentos ativos.</div>
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> Falha de comunicação nunca gera reenvio automático: a plataforma consulta o banco antes.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PAGAMENTOS: RECURSOS -->
-    <section class="content-section fade-up">
-      <div class="content-inner">
-        <div class="section-head">
-          <span class="section-tag">Pagamentos e conta corrente</span>
-          <h2>Tudo o que vai sair da conta, numa lista só</h2>
-        </div>
-        <div class="content-grid-3">
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span></div>
-            <h3>Indicadores do dia</h3>
-            <p>Quanto falta enviar, quanto está agendado ou aguardando liberação, quanto foi pago hoje e o que precisa de atenção.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span></div>
-            <h3>Comprovante do banco</h3>
-            <p>Depois do pagamento, o comprovante oficial fica no título, com valor, data e autenticação.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div>
-            <h3>Borderôs acompanhados</h3>
-            <p>Envie o borderô inteiro de uma vez e veja na hora quanto foi pago, agendado ou recusado.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span></div>
-            <h3>Saldo em tempo real</h3>
-            <p>Consulte o saldo de todas as contas, de todas as empresas, sem abrir vários internet bankings.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span></div>
-            <h3>Extrato do período</h3>
-            <p>Créditos, débitos e saldo lançamento a lançamento, nos bancos que oferecem a consulta.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span></div>
-            <h3>Dado sensível, protegido</h3>
-            <p>Valores só aparecem após confirmar a senha, e cada consulta fica registrada.</p>
-          </div>
-        </div>
-        <div class="fin-banks" style="margin-top: 2rem">
-          <span>Banco do Brasil</span><span>Sicredi</span><span>Sicoob</span><span>Bradesco</span>
-        </div>
-        <p class="fin-note">Bancos com pagamentos via API. Boleto, guias com código de barras, Pix, TED e crédito em conta, conforme o banco.</p>
-      </div>
-    </section>
-
-    <!-- INTEGRAÇÃO E SEGURANÇA -->
-    <section class="content-section dark fade-up">
-      <div class="content-inner">
-        <div class="section-head">
-          <span class="section-tag">Integração e segurança</span>
-          <h2>Integrado ao seu ERP, seguro de ponta a ponta</h2>
-        </div>
-        <div class="content-grid-3">
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg></span></div>
-            <h3>Conector pronto para o Linx ERP</h3>
-            <p>Lê os títulos a receber e a pagar e grava de volta boletos, liquidações e baixas, sem desenvolvimento.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div>
-            <h3>API REST aberta</h3>
-            <p>Qualquer sistema capaz de fazer uma chamada HTTP envia títulos e consulta boletos e pagamentos.</p>
+            <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></span></div>
+            <h3>Autenticação em múltiplos fatores</h3>
+            <p>Acesso protegido por MFA, senha de pagamento por conta de débito e registro de quem fez cada ação.</p>
           </div>
           <div class="info-card">
             <div class="info-card-icon"><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span></div>
@@ -610,16 +488,16 @@
         </div>
         <div class="faq-list">
           <div class="faq-item">
-            <h3>Preciso gerar arquivo de remessa e ler retorno?</h3>
-            <p>Não. A Auvix se conecta à API oficial de cada banco. O boleto é registrado online e a liquidação volta automaticamente, sem arquivo de remessa ou retorno.</p>
+            <h3>Como funciona a integração com os bancos?</h3>
+            <p>A Auvix tem integração direta com cada banco. O boleto é registrado online e a liquidação volta automaticamente para a plataforma e para o seu ERP.</p>
           </div>
           <div class="faq-item">
             <h3>Quais bancos são atendidos?</h3>
-            <p>Na cobrança: Banco do Brasil, Sicoob, Caixa, Itaú, Santander, Sicredi, Cresol, Bradesco e Safra. Nos pagamentos: Banco do Brasil, Sicredi, Sicoob e Bradesco. Novos bancos são adicionados conforme a demanda.</p>
+            <p>São mais de 25 bancos com integração, entre eles Banco do Brasil, Sicoob, Caixa, Itaú, Santander, Sicredi, Cresol, Bradesco e Safra. Novos bancos são adicionados conforme a demanda.</p>
           </div>
           <div class="faq-item">
             <h3>Funciona com o meu ERP?</h3>
-            <p>O Linx ERP já tem conector pronto. Outros sistemas integram pela API REST aberta e documentada. Também é possível começar cadastrando os títulos direto na plataforma e integrar depois, sem perder o histórico.</p>
+            <p>Sim. A Auvix integra com qualquer ERP: os títulos a receber e a pagar chegam automaticamente e boletos, liquidações e baixas voltam para o seu sistema, sem digitação. Também é possível começar cadastrando os títulos direto na plataforma e integrar depois, sem perder o histórico.</p>
           </div>
           <div class="faq-item">
             <h3>Um pagamento pode ser enviado sem autorização?</h3>
@@ -629,6 +507,10 @@
             <h3>A régua de cobrança envia WhatsApp e SMS?</h3>
             <p>Sim. E-mail já vem pronto, com o remetente da sua empresa. WhatsApp e SMS funcionam na plataforma e dependem da contratação de um provedor de envio.</p>
           </div>
+          <div class="faq-item">
+            <h3>Como é protegido o acesso à plataforma?</h3>
+            <p>O acesso usa autenticação em múltiplos fatores (MFA). Além disso, cada conta de débito pode exigir senha de pagamento e toda ação fica registrada com quem fez e quando.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -637,10 +519,10 @@
     <section class="cta-section fade-up">
       <div class="cta-inner">
         <h2>Vamos colocar seu financeiro no piloto automático?</h2>
-        <p>Cobrança e pagamentos integrados ao seu ERP e aos principais bancos do país, numa plataforma só.</p>
+        <p>Cobrança e pagamentos integrados a qualquer ERP e a mais de 25 bancos, num só lugar.</p>
         <div class="cta-actions">
-          <a href="index.html#contato" class="btn-primary">Agendar demonstração</a>
-          <a href="gestao-de-jornada.html" class="btn-secondary">Conheça a Gestão de Jornada</a>
+          <a href="index.html?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
+          <a href="solucoes/#jornada" class="btn-secondary">Conheça as Soluções de RH</a>
         </div>
       </div>
     </section>
@@ -684,13 +566,13 @@
       </p>
       <div class="footer-links">
         <a href="solucoes/">Soluções</a>
-        <a href="gestao-de-jornada.html">Gestão de Jornada</a>
-        <a href="gestao-financeira.html">Gestão Financeira</a>
+        <a href="solucoes/#jornada">Soluções de RH</a>
+        <a href="gestao-financeira.html">Soluções de Cobrança e Pagamentos</a>
         <a href="blog/">Blog</a>
         <a href="controle-de-ponto-digital.html">Controle de Ponto</a>
         <a href="reconhecimento-facial-ponto.html">Ponto Facial</a>
         <a href="banco-de-horas-online.html">Banco de Horas</a>
-        <a href="index.html#contato">Contato</a>
+        <a href="index.html?interesse=cobranca#contato">Contato</a>
         <a href="https://www.auvix.com.br/privacy">Privacidade</a>
       </div>
     </footer>
@@ -705,6 +587,13 @@
       );
       document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
       document.getElementById("footer-year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      document.addEventListener("click", function (e) {
+        document.querySelectorAll("details.nav-access[open]").forEach(function (d) {
+          if (!d.contains(e.target)) d.removeAttribute("open");
+        });
+      });
     </script>
   </body>
 </html>

@@ -106,7 +106,7 @@
           "name": "O sistema Auvix possui reconhecimento facial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. A plataforma conta com validação facial integrada e recursos antifraude para garantir a segurança e autenticidade dos registros."
+            "text": "Sim. O app usa reconhecimento facial com detecção de vivacidade passiva (liveness), que identifica fotos, vídeos e máscaras sem pedir que o colaborador pisque ou vire o rosto, além de outros recursos antifraude."
           }
         },
         {
@@ -1112,6 +1112,7 @@
         gap: 1rem;
       }
       .contact-form input,
+      .contact-form select,
       .contact-form textarea {
         background: #ffffff;
         border: 1px solid #cbdcea;
@@ -1129,9 +1130,17 @@
         color: var(--muted);
       }
       .contact-form input:focus,
+      .contact-form select:focus,
       .contact-form textarea:focus {
         border-color: var(--teal);
       }
+      .contact-form select {
+        appearance: none; -webkit-appearance: none; cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2356707f' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat; background-position: right 1.1rem center; padding-right: 2.5rem;
+      }
+      .contact-form select:invalid { color: var(--muted); }
+      .contact-form select option { color: #0d1e2c; }
       .contact-form textarea {
         resize: vertical;
         min-height: 120px;
@@ -1501,6 +1510,37 @@
         bottom: 8px;
       }
 
+      /* ─── MENU "ACESSAR A PLATAFORMA" ─── */
+      .nav-access { position: relative; }
+      .nav-access summary {
+        list-style: none; cursor: pointer; color: var(--muted); font-size: 0.9rem; font-weight: 500;
+        padding: 0.4rem 0.8rem; border-radius: 20px; transition: all 0.2s ease; user-select: none;
+      }
+      .nav-access summary::-webkit-details-marker { display: none; }
+      .nav-access summary:hover, .nav-access[open] summary { background: rgba(96, 203, 233, 0.15); color: var(--teal); }
+      .nav-access-caret { font-size: 0.7rem; margin-left: 0.2rem; display: inline-block; transition: transform 0.2s; }
+      .nav-access[open] .nav-access-caret { transform: rotate(180deg); }
+      .nav-access-menu {
+        position: absolute; right: 0; top: calc(100% + 10px); min-width: 280px; z-index: 50;
+        display: grid; gap: 0.25rem; padding: 0.5rem; border-radius: 14px;
+        background: #0f2a43; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+      .nav-links .nav-access-menu a {
+        display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.75rem; border-radius: 10px; transform: none;
+      }
+      .nav-links .nav-access-menu a:hover { transform: none; }
+      .nav-access-menu strong { display: block; color: #ffffff; font-size: 0.9rem; font-weight: 600; }
+      .nav-access-menu small { display: block; color: #c3d8e6; font-size: 0.75rem; }
+      .nav-access-ico {
+        display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex-shrink: 0;
+        border-radius: 9px; background: #0d5f9e; color: #ffffff;
+      }
+      .nav-access-menu a + a .nav-access-ico { background: #60cbe9; color: #0a2337; }
+      @media (max-width: 1024px) {
+        .nav-access-menu { position: static; min-width: 0; margin-top: 0.5rem; box-shadow: none; }
+      }
+      .nav-access-left .nav-access-menu { right: auto; left: 0; min-width: 320px; }
+      @media (max-width: 1024px) { .nav-access-left .nav-access-menu { position: static; min-width: 0; } }
       /* ─── MODAL ─── */
       .modal-overlay {
         position: fixed;
@@ -1690,14 +1730,42 @@
         </svg>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="solucoes/">Soluções</a></li>
+        <li>
+          <details class="nav-access nav-access-left">
+            <summary>Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
+            <div class="nav-access-menu">
+              <a href="solucoes/#jornada">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                <span><strong>Soluções de RH</strong><small>Ponto, férias, assinatura, folha e SST</small></span>
+              </a>
+              <a href="gestao-financeira.html">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
+              </a>
+            </div>
+          </details>
+        </li>
         <li><a href="#problemas">Desafios</a></li>
         <li><a href="#funcionalidades">Funcionalidades</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="#" class="open-rep-modal">Seja um representante</a></li>
-        <li><a href="https://ponto.auvix.com.br/" >Acessar a Plataforma</a></li>
+        <li>
+          <details class="nav-access">
+            <summary>Acessar a Plataforma <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
+            <div class="nav-access-menu">
+              <a href="https://ponto.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                <span><strong>Ponto</strong><small>Soluções de RH</small></span>
+              </a>
+              <a href="https://cobranca.auvix.com.br/" rel="noopener">
+                <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span><strong>Cobrança e Pagamentos</strong><small>Soluções de Cobrança e Pagamentos</small></span>
+              </a>
+            </div>
+          </details>
+        </li>
       </ul>
       <div style="display: flex; gap: 1rem; align-items: center">
         <a href="#contato" class="nav-cta">Fale conosco</a>
@@ -1719,7 +1787,7 @@
           </p>
           <div class="hero-checks">
             <span><em class="check-mark">✔</em> Registro via celular, tablet e web</span>
-            <span><em class="check-mark">✔</em> Reconhecimento facial integrado</span>
+            <span><em class="check-mark">✔</em> Reconhecimento facial com liveness passivo</span>
             <span><em class="check-mark">✔</em> Relatórios automáticos em tempo real</span>
             <span><em class="check-mark">✔</em> Integração com folha de pagamento</span>
             <span><em class="check-mark">✔</em> Solução fácil de usar</span>
@@ -1882,7 +1950,7 @@
             <div class="feat-group-icon">📱</div>
             <h3>Registro de Ponto</h3>
             <ul>
-              <li>Reconhecimento facial</li>
+              <li>Reconhecimento facial com liveness passivo</li>
               <li>QR Code</li>
               <li>Crachá</li>
               <li>Celular e tablet</li>
@@ -2197,7 +2265,7 @@
     </h3>
 
     <p style="color:var(--muted);line-height:1.7;">
-      Sim. A plataforma conta com validação facial integrada e recursos antifraude.
+      Sim. O app usa reconhecimento facial com detecção de vivacidade passiva (liveness): identifica fotos, vídeos e máscaras sem pedir que o colaborador pisque ou vire o rosto, além de outros recursos antifraude.
     </p>
   </div>
 
@@ -2496,6 +2564,11 @@
                 const btn = form.querySelector('button[type="submit"]');
                 btn.disabled = true;
                 btn.textContent = "Enviando...";
+                // O template do EmailJS só lê "message": o assunto vai no início da mensagem
+                const msg = form.querySelector('textarea[name="message"]');
+                const interest = form.querySelector('select[name="interest"]').value;
+                const originalMsg = msg.value;
+                msg.value = "[Interesse: " + interest + "]\n\n" + originalMsg;
                 emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
                   .then(function(){
                     form.reset();
@@ -2504,11 +2577,18 @@
                     openModal();
                   })
                   .catch(function(err){
+                    msg.value = originalMsg;
                     alert("Erro ao enviar: " + JSON.stringify(err));
                     btn.disabled = false;
                     btn.textContent = "Enviar mensagem";
                   });
               });
+
+              // Pré-seleciona o assunto via ?interesse=rh|cobranca
+              const pre = new URLSearchParams(location.search).get("interesse");
+              const sel = form && form.querySelector('select[name="interest"]');
+              if (sel && pre === "rh") sel.value = "Soluções de RH";
+              if (sel && pre === "cobranca") sel.value = "Soluções de Cobrança e Pagamentos";
             });</script>
           <form class="contact-form" id="contact-form">
             <div class="form-row">
@@ -2522,6 +2602,11 @@
             </div>
             <input type="email" name="email" placeholder="E-mail" required />
             <input type="tel" name="phone" placeholder="Telefone" required />
+            <select name="interest" aria-label="Assunto" required>
+              <option value="" disabled selected>Sobre qual solução deseja falar?</option>
+              <option value="Soluções de RH">Soluções de RH</option>
+              <option value="Soluções de Cobrança e Pagamentos">Soluções de Cobrança e Pagamentos</option>
+            </select>
             <textarea
               name="message"
               placeholder="Como podemos ajudar sua empresa?"
@@ -2689,5 +2774,12 @@
       />
     </a>
 
-</body>
+    <script>
+      document.addEventListener("click", function (e) {
+        document.querySelectorAll("details.nav-access[open]").forEach(function (d) {
+          if (!d.contains(e.target)) d.removeAttribute("open");
+        });
+      });
+    </script>
+  </body>
 </html>

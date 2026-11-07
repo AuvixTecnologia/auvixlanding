@@ -906,3 +906,29 @@ footer a:hover {
 }
 .ico-tile-light { background: #60cbe9; color: #0a2337; box-shadow: 0 6px 16px rgba(96, 203, 233, 0.25); }
 .ico-tile-ghost { background: transparent; color: #8fa6b5; border: 1px dashed rgba(143, 166, 181, 0.6); box-shadow: none; }
+
+/* ─── MENUS SUSPENSOS DO NAV (Soluções / Acessar a Plataforma) ─── */
+.nav-access { position: relative; }
+.nav-access summary {
+  list-style: none; cursor: pointer; color: var(--muted); font-size: 0.9rem; font-weight: 500;
+  padding: 0.4rem 0.8rem; border-radius: 20px; transition: all 0.2s ease; user-select: none;
+}
+.nav-access summary::-webkit-details-marker { display: none; }
+.nav-access summary:hover, .nav-access[open] summary { background: rgba(96, 203, 233, 0.15); color: var(--teal); }
+.nav-access-caret { font-size: 0.7rem; margin-left: 0.2rem; display: inline-block; transition: transform 0.2s; }
+.nav-access[open] .nav-access-caret { transform: rotate(180deg); }
+.nav-access-menu {
+  position: absolute; right: 0; top: calc(100% + 10px); min-width: 280px; z-index: 50;
+  display: grid; gap: 0.25rem; padding: 0.5rem; border-radius: 14px;
+  background: #0f2a43; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+.nav-access-left .nav-access-menu { right: auto; left: 0; min-width: 320px; }
+.nav-links .nav-access-menu a { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.75rem; border-radius: 10px; transform: none; }
+.nav-links .nav-access-menu a:hover { transform: none; }
+.nav-access-menu strong { display: block; color: #ffffff; font-size: 0.9rem; font-weight: 600; }
+.nav-access-menu small { display: block; color: #c3d8e6; font-size: 0.75rem; }
+.nav-access-ico { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex-shrink: 0; border-radius: 9px; background: #0d5f9e; color: #ffffff; }
+.nav-access-menu a + a .nav-access-ico { background: #60cbe9; color: #0a2337; }
+@media (max-width: 1024px) {
+  .nav-access-menu, .nav-access-left .nav-access-menu { position: static; min-width: 0; margin-top: 0.5rem; box-shadow: none; }
+}
