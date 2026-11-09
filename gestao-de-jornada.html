@@ -1489,8 +1489,8 @@
       }
       .nav-access summary::-webkit-details-marker { display: none; }
       .nav-access summary:hover, .nav-access[open] summary { background: rgba(96, 203, 233, 0.15); color: var(--teal); }
-      .nav-access-caret { font-size: 0.7rem; margin-left: 0.2rem; display: inline-block; transition: transform 0.2s; }
-      .nav-access[open] .nav-access-caret { transform: rotate(180deg); }
+      .nav-access-caret { font-size: 0; display: inline-block; width: 7px; height: 7px; margin: -3px 0 0 0.45rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.2s; vertical-align: middle; }
+      .nav-access[open] .nav-access-caret { transform: translateY(3px) rotate(225deg); }
       .nav-access-menu {
         position: absolute; right: 0; top: calc(100% + 10px); min-width: 280px; z-index: 50;
         display: grid; gap: 0.25rem; padding: 0.5rem; border-radius: 14px;
