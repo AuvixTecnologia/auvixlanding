@@ -117,14 +117,14 @@
 }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../auvix.css?v=20261109a" />
+    <link rel="stylesheet" href="../auvix.css?v=20261109c" />
   </head>
   <body>
     <div class="site-bg" style="background-image: url(&quot;../images/background-hero-white.webp&quot;)"></div>
 
     <nav>
       <a
-        href="../index.html"
+        href="../"
         class="nav-logo"
         aria-label="Auvix Tecnologia — início"
       >
@@ -167,7 +167,8 @@
               <span class="nav-access-caret" aria-hidden="true">▾</span>
             </summary>
             <div class="nav-access-menu">
-              <a href="../solucoes-de-rh.html">
+              <div class="nav-sol nav-sol--rh">
+                <a href="../solucoes-de-rh.html" class="nav-sol-main">
                 <span class="nav-access-ico"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -190,8 +191,17 @@
                   ><strong>Soluções de RH</strong
                   ><small>Jornada, SST e gestão de documentos</small></span
                 >
-              </a>
-              <a href="../gestao-financeira.html">
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="../gestao-de-jornada.html">Gestão de Jornada</a>
+                  <a href="../solucoes-de-rh.html#sst">Segurança e Saúde (SST)</a>
+                  <a href="../solucoes-de-rh.html#documentos">Gestão de Documentos</a>
+                </div>
+              </div>
+              <div class="nav-sol nav-sol--fin">
+                <a href="../gestao-financeira.html" class="nav-sol-main">
                 <span class="nav-access-ico"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +225,15 @@
                   ><strong>Soluções de Cobrança e Pagamentos</strong
                   ><small>Boletos, régua de cobrança e pagamentos</small></span
                 >
-              </a>
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="../gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+                  <a href="../gestao-financeira.html#crm">CRM de cobrança</a>
+                  <a href="../gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+                </div>
+              </div>
               <a href="../solucoes/" class="nav-access-all">
                 <span class="nav-access-ico"
                   ><svg
@@ -243,7 +261,7 @@
           </details>
         </li>
         <li><a href="../blog/">Blog</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a href="../#contato">Contato</a></li>
         <li>
           <details class="nav-access">
             <summary>
@@ -300,7 +318,7 @@
         </li>
       </ul>
       <div style="display: flex; gap: 1rem; align-items: center">
-        <a href="../index.html#contato" class="nav-cta">Fale conosco</a>
+        <a href="../#contato" class="nav-cta">Fale conosco</a>
         <div class="hamburger" id="hamburger">
           <span></span><span></span><span></span>
         </div>
@@ -310,7 +328,7 @@
     <section class="page-hero">
       <div class="page-hero-inner">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../index.html">Início</a>
+          <a href="../">Início</a>
           <span class="breadcrumb-sep">›</span>
           <a href="./">Blog</a>
           <span class="breadcrumb-sep">›</span>
@@ -483,7 +501,7 @@
         <h2>Coloque a cobrança e os pagamentos no piloto automático</h2>
         <p>Integração com qualquer ERP e mais de 25 bancos. Demonstração gratuita, sem compromisso.</p>
         <div class="cta-actions">
-          <a href="../index.html?interesse=cobranca#contato" class="btn-primary">Agendar demonstração gratuita</a>
+          <a href="../?interesse=cobranca#contato" class="btn-primary">Agendar demonstração gratuita</a>
           <a href="../gestao-financeira.html" class="btn-secondary">Ver Soluções de Cobrança e Pagamentos</a>
         </div>
       </div>
@@ -528,7 +546,7 @@
       <div class="ft-inner">
         <div class="ft-brand">
           <a
-            href="../index.html"
+            href="../"
             class="footer-logo"
             aria-label="Auvix Tecnologia"
           >
@@ -725,7 +743,7 @@
             <a href="../solucoes/">Todas as soluções</a>
             <a href="../blog/">Blog</a>
             <a href="../cidades/">Cidades atendidas</a>
-            <a href="../index.html" class="open-rep-modal"
+            <a href="../" class="open-rep-modal"
               >Seja nosso representante</a
             >
             <a href="https://www.auvix.com.br/privacy">Privacidade</a>
@@ -734,7 +752,7 @@
             <h4>Contato</h4>
             <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
             <a href="tel:+554691153255">(46) 99115-3255</a>
-            <a href="../index.html#contato">Fale conosco</a>
+            <a href="../#contato">Fale conosco</a>
           </div>
         </div>
       </div>

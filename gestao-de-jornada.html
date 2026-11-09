@@ -1651,6 +1651,46 @@
         color: var(--teal);
       }
 
+    
+/* ─── SUBMENU DE MÓDULOS (menu Soluções) ─── */
+.nav-sol { position: relative; }
+@media (min-width: 1025px) { .nav-access-left .nav-access-menu { min-width: 370px; } }
+.nav-sol-main { position: relative; padding-right: 2rem !important; }
+.nav-sol-arrow { position: absolute; right: 0.85rem; top: 50%; width: 7px; height: 7px; margin-top: -4px; border-right: 2px solid #60cbe9; border-top: 2px solid #60cbe9; transform: rotate(45deg); opacity: 0.8; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-sol:hover .nav-sol-main, .nav-sol:focus-within .nav-sol-main { background: rgba(96, 203, 233, 0.12); }
+.nav-sol:hover .nav-sol-arrow, .nav-sol:focus-within .nav-sol-arrow { opacity: 1; transform: translateX(2px) rotate(45deg); }
+.nav-sol-sub { position: absolute; left: calc(100% + 0.6rem); top: -0.5rem; min-width: 250px; z-index: 51; display: grid; gap: 0.15rem; padding: 0.5rem; border-radius: 14px; background: #0f2a43; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); opacity: 0; visibility: hidden; transform: translateX(-6px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
+.nav-sol-sub::before { content: ""; position: absolute; top: 0; bottom: 0; left: -0.7rem; width: 0.7rem; }
+.nav-sol:hover .nav-sol-sub, .nav-sol:focus-within .nav-sol-sub { opacity: 1; visibility: visible; transform: translateX(0); }
+.nav-sol-sub-title { display: block; padding: 0.4rem 0.75rem 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8fb3c9; }
+.nav-links .nav-access-menu .nav-sol-sub a { gap: 0.6rem; padding: 0.55rem 0.75rem; font-size: 0.86rem; font-weight: 500; color: #e6f3fa; }
+.nav-links .nav-access-menu .nav-sol-sub a::before { content: ""; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: #60cbe9; }
+.nav-links .nav-access-menu .nav-sol-sub a:hover { background: rgba(96, 203, 233, 0.14); color: #ffffff; }
+.nav-access-menu .nav-sol--fin .nav-access-ico { background: #60cbe9; color: #0a2337; }
+@media (max-width: 1024px) {
+  .nav-sol-main { padding-right: 0.75rem !important; }
+  .nav-sol-arrow { display: none; }
+  .nav-sol-sub { position: static; min-width: 0; opacity: 1; visibility: visible; transform: none; padding: 0 0 0.35rem 3.1rem; background: none; border: 0; box-shadow: none; }
+  .nav-sol-sub::before, .nav-sol-sub-title { display: none; }
+  .nav-links .nav-access-menu .nav-sol-sub a { padding: 0.4rem 0.6rem; font-size: 0.84rem; }
+}
+    
+/* ─── POSTS RELACIONADOS ─── */
+.rel-posts { padding: 80px 5vw; background: var(--bg); border-top: 1px solid var(--border); }
+.rel-posts-inner { max-width: 1200px; margin: 0 auto; }
+.rel-posts-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.rel-posts-head span { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
+.rel-posts-head h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--white); margin: 0; }
+.rel-posts-all { color: var(--teal); font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+.rel-posts-all:hover { opacity: 0.75; }
+.rel-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.rel-post { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.4rem 1.5rem; border-radius: 16px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-card); text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.rel-post:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: var(--shadow-card-hover); }
+.rel-post-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); }
+.rel-post strong { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1rem; line-height: 1.4; color: var(--white); }
+.rel-post p { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--muted); flex: 1; }
+.rel-post-more { font-size: 0.85rem; font-weight: 600; color: var(--teal); }
+@media (max-width: 960px) { .rel-posts-grid { grid-template-columns: 1fr; } .rel-posts { padding: 60px 5vw; } }
     </style>
   </head>
   <body>
@@ -1693,7 +1733,7 @@
 
     <!-- NAV -->
     <nav>
-      <a href="index.html" class="nav-logo">
+      <a href="./" class="nav-logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="4749 643 11716 3600"
@@ -1740,14 +1780,32 @@
           <details class="nav-access nav-access-left">
             <summary>Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
             <div class="nav-access-menu">
-              <a href="solucoes-de-rh.html">
+              <div class="nav-sol nav-sol--rh">
+                <a href="solucoes-de-rh.html" class="nav-sol-main">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
                 <span><strong>Soluções de RH</strong><small>Jornada, SST e gestão de documentos</small></span>
-              </a>
-              <a href="gestao-financeira.html">
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="gestao-de-jornada.html">Gestão de Jornada</a>
+                  <a href="solucoes-de-rh.html#sst">Segurança e Saúde (SST)</a>
+                  <a href="solucoes-de-rh.html#documentos">Gestão de Documentos</a>
+                </div>
+              </div>
+              <div class="nav-sol nav-sol--fin">
+                <a href="gestao-financeira.html" class="nav-sol-main">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
                 <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
-              </a>
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+                  <a href="gestao-financeira.html#crm">CRM de cobrança</a>
+                  <a href="gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+                </div>
+              </div>
               <a href="solucoes/" class="nav-access-all">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
                 <span><strong>Todas as soluções</strong><small>Visão geral das soluções Auvix</small></span>
@@ -2404,6 +2462,54 @@
 </section>
 
 <!-- CONTACT -->
+    <!-- DO BLOG -->
+    <section class="rel-posts" aria-labelledby="rel-posts-titulo">
+      <div class="rel-posts-inner">
+        <div class="rel-posts-head">
+          <div><span>Do blog</span><h2 id="rel-posts-titulo">Aprenda mais sobre ponto e jornada</h2></div>
+          <a class="rel-posts-all" href="blog/">Ver todos os artigos →</a>
+        </div>
+        <div class="rel-posts-grid">
+        <a class="rel-post" href="blog/como-funciona-controle-de-ponto-digital.html">
+          <span class="rel-post-tag">Guia</span>
+          <strong>Como funciona o controle de ponto digital?</strong>
+          <p>Do registro do colaborador aos relatórios para o RH e a integração com a folha.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        <a class="rel-post" href="blog/o-que-e-banco-de-horas.html">
+          <span class="rel-post-tag">Legislação</span>
+          <strong>O que é banco de horas e como funciona?</strong>
+          <p>Base legal, regras de compensação e como automatizar o saldo de horas.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        <a class="rel-post" href="blog/portaria-671-explicada.html">
+          <span class="rel-post-tag">Legislação</span>
+          <strong>Portaria 671 explicada: o que muda para empresas</strong>
+          <p>Quais empresas devem cumprir a Portaria 671 e como se adequar sem complicação.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        <a class="rel-post" href="blog/controle-de-ponto-reconhecimento-facial.html">
+          <span class="rel-post-tag">Tecnologia</span>
+          <strong>Controle de ponto com reconhecimento facial: como funciona?</strong>
+          <p>Como funciona a biometria facial, o liveness e as vantagens sobre a digital.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        <a class="rel-post" href="blog/como-evitar-fraudes-ponto-eletronico.html">
+          <span class="rel-post-tag">Segurança</span>
+          <strong>Como evitar fraudes no ponto eletrônico</strong>
+          <p>Tipos de fraude, impacto financeiro e jurídico e como a biometria elimina o problema.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        <a class="rel-post" href="blog/controle-de-jornada-equipes-externas.html">
+          <span class="rel-post-tag">Equipes externas</span>
+          <strong>Controle de jornada para equipes externas</strong>
+          <p>Como gerenciar a jornada de quem trabalha em campo com geolocalização.</p>
+          <span class="rel-post-more">Ler artigo →</span>
+        </a>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contato">
       <div class="contact-inner">
         <div>
@@ -2659,7 +2765,7 @@
     <footer class="ft">
       <div class="ft-inner">
         <div class="ft-brand">
-          <a href="index.html" class="footer-logo" aria-label="Auvix Tecnologia">
+          <a href="./" class="footer-logo" aria-label="Auvix Tecnologia">
             <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="4749 643 11716 3600"
@@ -2750,7 +2856,7 @@
             <a href="solucoes/">Todas as soluções</a>
             <a href="blog/">Blog</a>
             <a href="cidades/">Cidades atendidas</a>
-            <a href="index.html" class="open-rep-modal">Seja nosso representante</a>
+            <a href="./" class="open-rep-modal">Seja nosso representante</a>
             <a href="https://www.auvix.com.br/privacy">Privacidade</a>
           </div>
           <div class="ft-col">

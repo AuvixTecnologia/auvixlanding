@@ -45,4 +45,5 @@ cities.forEach((city) => {
 });
 
 console.log(`\n${generated} página(s) gerada(s) em cidades/.`);
-console.log("Lembre de atualizar o sitemap.xml após adicionar novas cidades.");
+console.log("As páginas de cidades usam noindex e ficam fora do sitemap (só /cidades/ é indexada).");
+console.log("Depois de alterar páginas, rode: node atualizar-sitemap.js");

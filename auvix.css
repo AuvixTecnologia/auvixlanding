@@ -969,3 +969,43 @@ footer.ft .ft-col a { font-size: 0.86rem; }
   .ft-cols { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.25rem; }
   .ft-col h4 { font-size: 0.72rem; }
 }
+
+/* ─── SUBMENU DE MÓDULOS (menu Soluções) ─── */
+.nav-sol { position: relative; }
+@media (min-width: 1025px) { .nav-access-left .nav-access-menu { min-width: 370px; } }
+.nav-sol-main { position: relative; padding-right: 2rem !important; }
+.nav-sol-arrow { position: absolute; right: 0.85rem; top: 50%; width: 7px; height: 7px; margin-top: -4px; border-right: 2px solid #60cbe9; border-top: 2px solid #60cbe9; transform: rotate(45deg); opacity: 0.8; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-sol:hover .nav-sol-main, .nav-sol:focus-within .nav-sol-main { background: rgba(96, 203, 233, 0.12); }
+.nav-sol:hover .nav-sol-arrow, .nav-sol:focus-within .nav-sol-arrow { opacity: 1; transform: translateX(2px) rotate(45deg); }
+.nav-sol-sub { position: absolute; left: calc(100% + 0.6rem); top: -0.5rem; min-width: 250px; z-index: 51; display: grid; gap: 0.15rem; padding: 0.5rem; border-radius: 14px; background: #0f2a43; border: 1px solid rgba(96, 203, 233, 0.3); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); opacity: 0; visibility: hidden; transform: translateX(-6px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
+.nav-sol-sub::before { content: ""; position: absolute; top: 0; bottom: 0; left: -0.7rem; width: 0.7rem; }
+.nav-sol:hover .nav-sol-sub, .nav-sol:focus-within .nav-sol-sub { opacity: 1; visibility: visible; transform: translateX(0); }
+.nav-sol-sub-title { display: block; padding: 0.4rem 0.75rem 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8fb3c9; }
+.nav-links .nav-access-menu .nav-sol-sub a { gap: 0.6rem; padding: 0.55rem 0.75rem; font-size: 0.86rem; font-weight: 500; color: #e6f3fa; }
+.nav-links .nav-access-menu .nav-sol-sub a::before { content: ""; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: #60cbe9; }
+.nav-links .nav-access-menu .nav-sol-sub a:hover { background: rgba(96, 203, 233, 0.14); color: #ffffff; }
+.nav-access-menu .nav-sol--fin .nav-access-ico { background: #60cbe9; color: #0a2337; }
+@media (max-width: 1024px) {
+  .nav-sol-main { padding-right: 0.75rem !important; }
+  .nav-sol-arrow { display: none; }
+  .nav-sol-sub { position: static; min-width: 0; opacity: 1; visibility: visible; transform: none; padding: 0 0 0.35rem 3.1rem; background: none; border: 0; box-shadow: none; }
+  .nav-sol-sub::before, .nav-sol-sub-title { display: none; }
+  .nav-links .nav-access-menu .nav-sol-sub a { padding: 0.4rem 0.6rem; font-size: 0.84rem; }
+}
+
+/* ─── POSTS RELACIONADOS ─── */
+.rel-posts { padding: 80px 5vw; background: var(--bg); border-top: 1px solid var(--border); }
+.rel-posts-inner { max-width: 1200px; margin: 0 auto; }
+.rel-posts-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.rel-posts-head span { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
+.rel-posts-head h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--white); margin: 0; }
+.rel-posts-all { color: var(--teal); font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+.rel-posts-all:hover { opacity: 0.75; }
+.rel-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.rel-post { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.4rem 1.5rem; border-radius: 16px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-card); text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.rel-post:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: var(--shadow-card-hover); }
+.rel-post-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); }
+.rel-post strong { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1rem; line-height: 1.4; color: var(--white); }
+.rel-post p { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--muted); flex: 1; }
+.rel-post-more { font-size: 0.85rem; font-weight: 600; color: var(--teal); }
+@media (max-width: 960px) { .rel-posts-grid { grid-template-columns: 1fr; } .rel-posts { padding: 60px 5vw; } }

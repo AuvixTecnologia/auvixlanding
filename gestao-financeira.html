@@ -120,7 +120,7 @@
 }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="auvix.css?v=20261109a" />
+    <link rel="stylesheet" href="auvix.css?v=20261109c" />
     <style>
       .fin-hero-points { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.6rem; margin: 1.5rem 0 0.5rem; }
       .fin-hero-points span { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; padding: 0.4rem 0.85rem; border-radius: 999px; border: 1px solid rgba(96, 203, 233, 0.35); color: var(--white); }
@@ -245,7 +245,7 @@
 
     <nav>
       <a
-        href="index.html"
+        href="./"
         class="nav-logo"
         aria-label="Auvix Tecnologia — início"
       >
@@ -285,14 +285,32 @@
           <details class="nav-access nav-access-left">
             <summary style="color:var(--teal)">Soluções <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
             <div class="nav-access-menu">
-              <a href="solucoes-de-rh.html">
+              <div class="nav-sol nav-sol--rh">
+                <a href="solucoes-de-rh.html" class="nav-sol-main">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
                 <span><strong>Soluções de RH</strong><small>Jornada, SST e gestão de documentos</small></span>
-              </a>
-              <a href="gestao-financeira.html">
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="gestao-de-jornada.html">Gestão de Jornada</a>
+                  <a href="solucoes-de-rh.html#sst">Segurança e Saúde (SST)</a>
+                  <a href="solucoes-de-rh.html#documentos">Gestão de Documentos</a>
+                </div>
+              </div>
+              <div class="nav-sol nav-sol--fin">
+                <a href="gestao-financeira.html" class="nav-sol-main">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
                 <span><strong>Soluções de Cobrança e Pagamentos</strong><small>Boletos, régua de cobrança e pagamentos</small></span>
-              </a>
+                  <span class="nav-sol-arrow" aria-hidden="true"></span>
+                </a>
+                <div class="nav-sol-sub">
+                  <span class="nav-sol-sub-title">Módulos</span>
+                  <a href="gestao-financeira.html#cobranca">Gestão de Cobrança</a>
+                  <a href="gestao-financeira.html#crm">CRM de cobrança</a>
+                  <a href="gestao-financeira.html#pagamentos">Gestão de Pagamentos</a>
+                </div>
+              </div>
               <a href="solucoes/" class="nav-access-all">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
                 <span><strong>Todas as soluções</strong><small>Visão geral das soluções Auvix</small></span>
@@ -301,7 +319,7 @@
           </details>
         </li>
         <li><a href="blog/">Blog</a></li>
-        <li><a href="index.html?interesse=cobranca#contato">Contato</a></li>
+        <li><a href="./?interesse=cobranca#contato">Contato</a></li>
         <li>
           <details class="nav-access">
             <summary>Acessar a Plataforma <span class="nav-access-caret" aria-hidden="true">▾</span></summary>
@@ -319,7 +337,7 @@
         </li>
       </ul>
       <div style="display: flex; gap: 1rem; align-items: center">
-        <a href="index.html?interesse=cobranca#contato" class="nav-cta">Fale conosco</a>
+        <a href="./?interesse=cobranca#contato" class="nav-cta">Fale conosco</a>
         <div class="hamburger" id="hamburger">
           <span></span><span></span><span></span>
         </div>
@@ -331,7 +349,7 @@
       <div class="page-hero-inner">
         <div class="fin-hero-text">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Início</a>
+          <a href="./">Início</a>
           <span class="breadcrumb-sep">›</span>
           <a href="solucoes-de-rh.html">Soluções</a>
           <span class="breadcrumb-sep">›</span>
@@ -352,7 +370,7 @@
           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Autenticação em múltiplos fatores</span>
         </div>
         <div class="hero-actions">
-          <a href="index.html?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
+          <a href="./?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
           <a href="#cobranca" class="btn-secondary">Ver como funciona</a>
         </div>
         </div>
@@ -814,7 +832,7 @@
         <h2>Vamos colocar seu financeiro no piloto automático?</h2>
         <p>Cobrança e pagamentos integrados a qualquer ERP e a mais de 25 bancos, num só lugar.</p>
         <div class="cta-actions">
-          <a href="index.html?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
+          <a href="./?interesse=cobranca#contato" class="btn-primary">Agendar demonstração</a>
           <a href="solucoes-de-rh.html" class="btn-secondary">Conheça as Soluções de RH</a>
         </div>
       </div>
@@ -823,7 +841,7 @@
     <footer class="ft">
       <div class="ft-inner">
         <div class="ft-brand">
-          <a href="index.html" class="footer-logo" aria-label="Auvix Tecnologia">
+          <a href="./" class="footer-logo" aria-label="Auvix Tecnologia">
             <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="4749 643 11716 3600"
@@ -914,14 +932,14 @@
             <a href="solucoes/">Todas as soluções</a>
             <a href="blog/">Blog</a>
             <a href="cidades/">Cidades atendidas</a>
-            <a href="index.html" class="open-rep-modal">Seja nosso representante</a>
+            <a href="./" class="open-rep-modal">Seja nosso representante</a>
             <a href="https://www.auvix.com.br/privacy">Privacidade</a>
           </div>
           <div class="ft-col">
             <h4>Contato</h4>
             <a href="mailto:contato@auvix.com.br">contato@auvix.com.br</a>
             <a href="tel:+554691153255">(46) 99115-3255</a>
-            <a href="index.html?interesse=cobranca#contato">Fale conosco</a>
+            <a href="./?interesse=cobranca#contato">Fale conosco</a>
           </div>
         </div>
       </div>
