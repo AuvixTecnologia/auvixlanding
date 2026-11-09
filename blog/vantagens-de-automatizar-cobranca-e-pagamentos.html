@@ -188,7 +188,7 @@
                 ></span>
                 <span
                   ><strong>Soluções de RH</strong
-                  ><small>Ponto, férias, assinatura, folha e SST</small></span
+                  ><small>Jornada, SST e gestão de documentos</small></span
                 >
               </a>
               <a href="../gestao-financeira.html">
@@ -765,6 +765,31 @@
           if (!d.contains(e.target)) d.removeAttribute("open");
         });
       });
+    </script>
+    <script>
+      (function () {
+        var hoverOk = function () {
+          return window.matchMedia("(hover: hover) and (min-width: 1025px)").matches;
+        };
+        document.querySelectorAll("details.nav-access").forEach(function (d) {
+          var timer;
+          d.addEventListener("mouseenter", function () {
+            if (!hoverOk()) return;
+            clearTimeout(timer);
+            document.querySelectorAll("details.nav-access[open]").forEach(function (o) {
+              if (o !== d) o.removeAttribute("open");
+            });
+            d.setAttribute("open", "");
+          });
+          d.addEventListener("mouseleave", function () {
+            if (!hoverOk()) return;
+            timer = setTimeout(function () { d.removeAttribute("open"); }, 200);
+          });
+          d.querySelector("summary").addEventListener("click", function (e) {
+            if (hoverOk() && d.matches(":hover")) e.preventDefault();
+          });
+        });
+      })();
     </script>
   </body>
 </html>

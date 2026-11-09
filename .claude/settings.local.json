@@ -9,7 +9,8 @@
       "mcp__claude-in-chrome__tabs_context_mcp",
       "ClaudeInChromeDomain(localhost:8765)",
       "ClaudeInChromeDomain(www.senior.com.br)",
-      "ClaudeInChromeDomain(www.megasult.com.br)"
+      "ClaudeInChromeDomain(www.megasult.com.br)",
+      "mcp__claude-in-chrome__tabs_create_mcp"
     ],
     "additionalDirectories": [
       "d:\\Repositorios\\auvixlanding"
