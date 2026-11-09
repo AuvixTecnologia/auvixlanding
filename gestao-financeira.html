@@ -287,7 +287,7 @@
             <div class="nav-access-menu">
               <a href="solucoes-de-rh.html">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-                <span><strong>Soluções de RH</strong><small>Ponto, férias, assinatura, folha e SST</small></span>
+                <span><strong>Soluções de RH</strong><small>Jornada, SST e gestão de documentos</small></span>
               </a>
               <a href="gestao-financeira.html">
                 <span class="nav-access-ico"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
@@ -948,6 +948,31 @@
           if (!d.contains(e.target)) d.removeAttribute("open");
         });
       });
+    </script>
+    <script>
+      (function () {
+        var hoverOk = function () {
+          return window.matchMedia("(hover: hover) and (min-width: 1025px)").matches;
+        };
+        document.querySelectorAll("details.nav-access").forEach(function (d) {
+          var timer;
+          d.addEventListener("mouseenter", function () {
+            if (!hoverOk()) return;
+            clearTimeout(timer);
+            document.querySelectorAll("details.nav-access[open]").forEach(function (o) {
+              if (o !== d) o.removeAttribute("open");
+            });
+            d.setAttribute("open", "");
+          });
+          d.addEventListener("mouseleave", function () {
+            if (!hoverOk()) return;
+            timer = setTimeout(function () { d.removeAttribute("open"); }, 200);
+          });
+          d.querySelector("summary").addEventListener("click", function (e) {
+            if (hoverOk() && d.matches(":hover")) e.preventDefault();
+          });
+        });
+      })();
     </script>
   </body>
 </html>
