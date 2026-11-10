@@ -10,7 +10,10 @@
       "ClaudeInChromeDomain(localhost:8765)",
       "ClaudeInChromeDomain(www.senior.com.br)",
       "ClaudeInChromeDomain(www.megasult.com.br)",
-      "mcp__claude-in-chrome__tabs_create_mcp"
+      "mcp__claude-in-chrome__tabs_create_mcp",
+      "ClaudeInChromeDomain(localhost:8766)",
+      "ClaudeInChromeDomain(search.google.com)",
+      "ClaudeInChromeDomain(localhost:8767)"
     ],
     "additionalDirectories": [
       "d:\\Repositorios\\auvixlanding"
