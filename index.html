@@ -1797,6 +1797,88 @@
 .rel-post p { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--muted); flex: 1; }
 .rel-post-more { font-size: 0.85rem; font-weight: 600; color: var(--teal); }
 @media (max-width: 960px) { .rel-posts-grid { grid-template-columns: 1fr; } .rel-posts { padding: 60px 5vw; } }
+      /* ─── HERO (versão A): foco no controle de ponto ─── */
+      .hx-eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.75rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #60cbe9; border: 1px solid rgba(96, 203, 233, 0.45); border-radius: 999px; padding: 0.4rem 0.9rem; }
+      .hx-eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: #2fbf71; box-shadow: 0 0 0 4px rgba(47, 191, 113, 0.2); }
+      .hx-proof { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin: 1.1rem 0 0; padding: 0; list-style: none; color: #c3d8e6; font-size: 0.9rem; }
+      .hx-proof li { display: flex; align-items: center; gap: 0.5rem; }
+      .hx-proof li::before { content: "✓"; color: #60cbe9; font-weight: 700; }
+      .hx-visual { position: relative; justify-self: center; width: 100%; max-width: 360px; padding: 1.5rem 0; }
+      .hx-photo { border-radius: 24px; overflow: hidden; border: 1px solid rgba(96, 203, 233, 0.45); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45); }
+      .hx-photo img { display: block; width: 100%; height: auto; }
+      .hx-float { position: absolute; display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; border-radius: 14px; min-width: 210px; background: rgba(13, 37, 60, 0.94); border: 1px solid rgba(96, 203, 233, 0.45); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); animation: hxBob 6s ease-in-out infinite; color: #ffffff; text-align: left; }
+      .hx-float strong { display: block; font-size: 0.88rem; }
+      .hx-float small { display: block; font-size: 0.74rem; color: #c3d8e6; }
+      .hx-float b { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.05rem; color: #60cbe9; margin-left: auto; padding-left: 0.5rem; font-variant-numeric: tabular-nums; }
+      .hx-float-ico { width: 36px; height: 36px; flex-shrink: 0; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: #0d5f9e; color: #ffffff; }
+      .hx-float-ico.hx-ok { background: #2fbf71; }
+      .hx-float-ico.hx-light { background: #60cbe9; color: #0a2337; }
+      .hx-f1 { top: 10%; left: -22%; }
+      .hx-f2 { top: 48%; right: -18%; animation-delay: -2s; }
+      .hx-f3 { bottom: 6%; left: -14%; animation-delay: -4s; }
+      @keyframes hxBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+      .hx-block { margin-top: 1rem; text-align: left; }
+      .hx-fin-block { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid rgba(96, 203, 233, 0.22); }
+      .hx-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+      .hx-head h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.35rem; margin: 0; color: #ffffff; }
+      .hx-head a { color: #60cbe9; font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+      .hx-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.25rem; }
+      .hx-card { border: 1px solid rgba(96, 203, 233, 0.22); border-radius: 22px; background: rgba(15, 42, 67, 0.72); padding: 1.75rem; min-width: 0; color: #ffffff; }
+      .hx-card h3 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.3rem; margin: 0; color: #ffffff; }
+      .hx-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #60cbe9; border: 1px solid rgba(96, 203, 233, 0.45); border-radius: 999px; padding: 0.25rem 0.7rem; margin-bottom: 1rem; }
+      .hx-ico { width: 44px; height: 44px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: #0d5f9e; color: #ffffff; flex-shrink: 0; }
+      .hx-ico-sst { background: #2fbf71; }
+      .hx-ico-doc { background: #60cbe9; color: #0a2337; }
+      .hx-main { grid-row: span 2; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem; border-color: rgba(96, 203, 233, 0.45); background: linear-gradient(150deg, rgba(13, 95, 158, 0.55), rgba(15, 42, 67, 0.85) 60%); }
+      .hx-main::after { content: ""; position: absolute; right: -90px; top: -90px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(96, 203, 233, 0.22), transparent 70%); pointer-events: none; }
+      .hx-main-top { display: flex; gap: 1rem; align-items: center; }
+      .hx-main .hx-main-top h3 { font-size: 1.65rem; }
+      .hx-main-top small { display: block; color: #60cbe9; font-weight: 600; font-size: 0.85rem; margin-top: 0.2rem; }
+      .hx-feat { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1.5rem; }
+      .hx-feat li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.93rem; line-height: 1.45; }
+      .hx-feat li::before { content: ""; width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; border-radius: 6px; background: rgba(96, 203, 233, 0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2360cbe9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center / 12px no-repeat; }
+      .hx-mods { position: relative; z-index: 1; }
+      .hx-mods-title { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8fb3c9; margin-bottom: 0.25rem; }
+      .hx-mods-list { list-style: none; margin: 0; padding: 0; }
+      .hx-mods-list li { border-bottom: 1px solid rgba(96, 203, 233, 0.22); }
+      .hx-mods-list a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.8rem 0; text-decoration: none; font-size: 0.97rem; color: #ffffff; transition: color 0.2s ease; }
+      .hx-mods-list a span { color: #60cbe9; font-size: 1.15rem; transition: transform 0.2s ease; }
+      .hx-mods-list a:hover { color: #60cbe9; }
+      .hx-mods-list a:hover span { transform: translateX(4px); }
+      .hx-mods-list .hx-soon { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.8rem 0; color: #8fb3c9; border-bottom: 0; }
+      .hx-mods-list .hx-soon em { font-style: normal; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #c3d8e6; border: 1px dashed rgba(96, 203, 233, 0.45); border-radius: 999px; padding: 0.2rem 0.65rem; white-space: nowrap; }
+      .hx-main-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 1.25rem; border-top: 1px solid rgba(96, 203, 233, 0.22); }
+      .hx-main-foot span { color: #c3d8e6; font-size: 0.88rem; }
+      .hx-btn-sm { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
+      .hx-side { display: flex; gap: 1rem; align-items: center; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+      .hx-side:hover { border-color: #60cbe9; transform: translateY(-3px); }
+      .hx-side-title { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.3rem; }
+      .hx-side-desc { display: block; color: #c3d8e6; line-height: 1.6; margin-top: 0.6rem; font-size: 0.95rem; }
+      .hx-more { display: inline-block; margin-top: 0.8rem; color: #60cbe9; font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+      .hx-fin { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 2rem; background: rgba(15, 42, 67, 0.6); }
+      .hx-fin .hx-main-top h3 { font-size: 1.65rem; line-height: 1.2; }
+      .hx-fin-desc { color: #c3d8e6; line-height: 1.6; margin: 1rem 0 0.75rem; font-size: 0.95rem; }
+      .hx-fin-side { display: flex; flex-direction: column; justify-content: center; gap: 1rem; min-width: 0; }
+      .hx-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.55rem; }
+      .hx-chips li { font-size: 0.85rem; color: #60cbe9; background: rgba(96, 203, 233, 0.12); border: 1px solid rgba(96, 203, 233, 0.22); border-radius: 8px; padding: 0.45rem 0.75rem; }
+      @media (prefers-reduced-motion: reduce) { .hx-float { animation: none; } .hx-side, .hx-mods-list a { transition: none; } }
+      @media (max-width: 1000px) {
+        .hx-grid, .hx-fin { grid-template-columns: 1fr; }
+        .hx-main { grid-row: auto; }
+        .hx-fin { gap: 1.5rem; }
+      }
+      @media (max-width: 860px) {
+        .hx-visual { max-width: 290px; }
+        .hx-f1 { left: -10%; } .hx-f2 { right: -10%; } .hx-f3 { left: -6%; }
+      }
+      @media (max-width: 560px) {
+        .hx-feat { grid-template-columns: 1fr; }
+        .hx-float { min-width: 0; padding: 0.6rem 0.75rem; }
+        .hx-float small { display: none; }
+        .hx-f1, .hx-f3 { left: -4%; } .hx-f2 { right: -4%; }
+        .hx-main, .hx-fin, .hx-card { padding: 1.4rem; }
+      }
     </style>
   </head>
   <body>
@@ -1895,7 +1977,7 @@
                 <div class="nav-sol-sub">
                   <span class="nav-sol-sub-title">Módulos</span>
                   <a href="gestao-de-jornada.html">Controle de Ponto</a>
-                  <a href="gestao-de-jornada.html#funcionalidades">Gestão de Jornada</a>
+                  <a href="solucoes-de-rh.html#gestao-de-jornada">Gestão de Jornada</a>
                   <a href="solucoes-de-rh.html#sst">Segurança e Saúde (SST)</a>
                   <a href="solucoes-de-rh.html#documentos">Gestão de Documentos</a>
                 </div>
@@ -1951,54 +2033,130 @@
     <section class="hero hero-split">
       <div class="hero-split-inner">
         <div class="hero-split-top">
-        <div class="hero-split-head">
-          <h1>Tecnologia que simplifica a <em>gestão da sua empresa</em></h1>
-          <p class="hero-text-p">
-            Controle de ponto com reconhecimento facial, Soluções de RH e Soluções de Cobrança e Pagamentos para transformar rotinas manuais em processos automáticos, seguros e com prova.
-          </p>
-          <div class="hero-actions">
-            <a href="#contato" class="btn-primary">Falar com especialista</a>
-            <a href="#solucoes-home" class="btn-secondary">Conhecer os módulos</a>
-          </div>
-        </div>
-          <div class="hero-split-photo">
-            <img src="images/wo1.webp" alt="Consultora Auvix Tecnologia" fetchpriority="high" />
-          </div>
-        </div>
-
-        <div class="hero-areas">
-          <article class="hero-area">
-            <span class="hero-area-tag">RH e segurança do trabalho</span>
-            <h2><span class="ico-tile"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> Soluções de RH</h2>
-            <p>Ponto, documentos e segurança do trabalho do colaborador em um só lugar.</p>
-            <ul class="hero-area-list">
-              <li><a href="gestao-de-jornada.html">Gestão de Jornada: ponto, férias, banco de horas e escalas</a></li>
-              <li><a href="solucoes-de-rh.html#sst">Segurança e Saúde no Trabalho (SST)</a></li>
-              <li><a href="solucoes-de-rh.html#documentos">Gestão de Documentos e assinatura eletrônica</a></li>
-              <li class="soon">Recrutamento e seleção <em>em breve</em></li>
-            </ul>
-            <a href="solucoes-de-rh.html" class="hero-area-more">Ver mais →</a>
-          </article>
-
-          <article class="hero-area">
-            <span class="hero-area-tag">Financeiro</span>
-            <h2><span class="ico-tile ico-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span> Soluções de Cobrança e Pagamentos</h2>
-            <p>Contas a receber e a pagar integradas a qualquer ERP e a mais de 25 bancos.</p>
-            <ul class="hero-area-list">
-              <li><a href="gestao-financeira.html">Gestão de cobrança</a></li>
-              <li><a href="gestao-financeira.html">Gestão de pagamentos</a></li>
-            </ul>
-            <div class="hero-area-chips">
-              <span>+25 bancos integrados</span>
-              <span>CRM de cobrança</span>
-              <span>Boletos registrados</span>
-              <span>Régua por e-mail, WhatsApp e SMS</span>
-              <span>Pagamentos direto no banco</span>
-              <span>Saldo e extrato</span>
-              <span>Baixa automática no ERP</span>
-              <span>Autenticação multifator</span>
+          <div class="hero-split-head">
+            <h1>Tecnologia que simplifica a <em>gestão da sua empresa</em></h1>
+            <p class="hero-text-p">
+              Controle de ponto com reconhecimento facial e Soluções de RH para transformar rotinas manuais em processos automáticos, seguros e com prova.
+            </p>
+            <div class="hero-actions">
+              <a href="#contato" class="btn-primary">Falar com especialista</a>
+              <a href="gestao-de-jornada.html" class="btn-secondary">Conhecer o controle de ponto</a>
             </div>
-            <a href="gestao-financeira.html" class="hero-area-more">Ver mais →</a>
+            <span class="hx-eyebrow"><i></i>Controle de ponto · Conforme Portaria 671</span>
+            <ul class="hx-proof">
+              <li>Celular, tablet, QR Code ou navegador</li>
+              <li>Bloqueia foto e vídeo</li>
+              <li>Integração com a contabilidade</li>
+            </ul>
+          </div>
+          <div class="hx-visual">
+            <div class="hx-photo"><img src="images/wo1.webp" alt="Consultora Auvix Tecnologia" fetchpriority="high" /></div>
+            <div class="hx-float hx-f1" aria-hidden="true">
+              <span class="hx-float-ico hx-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="10" r="3"/><path d="M7 17c1-2 3-3 5-3s4 1 5 3"/></svg></span>
+              <span><strong>Ponto registrado</strong><small>Liveness passivo validado</small></span>
+              <b>08:02</b>
+            </div>
+            <div class="hx-float hx-f2" aria-hidden="true">
+              <span class="hx-float-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"/><path d="M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></svg></span>
+              <span><strong>Banco de horas</strong><small>Saldo do mês</small></span>
+              <b>+6h40</b>
+            </div>
+            <div class="hx-float hx-f3" aria-hidden="true">
+              <span class="hx-float-ico hx-light"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+              <span><strong>Espelho de ponto</strong><small>Assinado no app</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hx-block">
+          <div class="hx-head">
+            <h2>Soluções de RH</h2>
+            <a href="solucoes-de-rh.html">Ver todas as soluções de RH →</a>
+          </div>
+          <div class="hx-grid">
+            <article class="hx-card hx-main">
+              <div>
+                <span class="hx-tag">Módulo principal</span>
+                <div class="hx-main-top">
+                  <span class="hx-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <div><h3>Gestão de Jornada</h3><small>Módulo Ponto</small></div>
+                </div>
+              </div>
+              <ul class="hx-feat">
+                <li>Controle de ponto com antifraude</li>
+                <li>Reconhecimento facial com liveness</li>
+                <li>Controle de jornada e horas extras</li>
+                <li>Banco de horas automático</li>
+                <li>Criação inteligente de escalas</li>
+                <li>Controle de férias</li>
+                <li>Indicadores da equipe</li>
+                <li>Integração com a contabilidade</li>
+                <li>Documentos da folha no app</li>
+              </ul>
+              <div class="hx-mods">
+                <span class="hx-mods-title">Módulos de RH</span>
+                <ul class="hx-mods-list">
+                  <li><a href="gestao-de-jornada.html">Gestão de Jornada: ponto, férias, banco de horas e escalas <span aria-hidden="true">›</span></a></li>
+                  <li><a href="solucoes-de-rh.html#sst">Segurança e Saúde no Trabalho (SST) <span aria-hidden="true">›</span></a></li>
+                  <li><a href="solucoes-de-rh.html#documentos">Gestão de Documentos e assinatura eletrônica <span aria-hidden="true">›</span></a></li>
+                  <li class="hx-soon"><span>Recrutamento e seleção</span><em>Em breve</em></li>
+                </ul>
+              </div>
+              <div class="hx-main-foot">
+                <span>Registro em celular, tablet, QR Code ou navegador.</span>
+                <a class="btn-primary hx-btn-sm" href="gestao-de-jornada.html">Conhecer o módulo →</a>
+              </div>
+            </article>
+
+            <a class="hx-card hx-side" href="solucoes-de-rh.html#sst">
+              <span class="hx-ico hx-ico-sst"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <span>
+                <strong class="hx-side-title">Segurança e Saúde (SST)</strong>
+                <span class="hx-side-desc">EPI, EPC, treinamentos, formulários e estoque com recibo assinado.</span>
+                <span class="hx-more">Conhecer →</span>
+              </span>
+            </a>
+            <a class="hx-card hx-side" href="solucoes-de-rh.html#documentos">
+              <span class="hx-ico hx-ico-doc"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></span>
+              <span>
+                <strong class="hx-side-title">Gestão de Documentos</strong>
+                <span class="hx-side-desc">Pastas digitais, assinatura eletrônica e controle de obrigações.</span>
+                <span class="hx-more">Conhecer →</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hx-block hx-fin-block">
+          <div class="hx-head">
+            <h2>Para o financeiro</h2>
+          </div>
+          <article class="hx-card hx-fin">
+            <div>
+              <span class="hx-tag">Financeiro</span>
+              <div class="hx-main-top">
+                <span class="hx-ico hx-ico-doc"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span>
+                <h3>Soluções de Cobrança e Pagamentos</h3>
+              </div>
+              <p class="hx-fin-desc">Contas a receber e a pagar integradas a qualquer ERP e a mais de 25 bancos.</p>
+              <ul class="hx-mods-list">
+                <li><a href="gestao-financeira.html#cobranca">Gestão de cobrança <span aria-hidden="true">›</span></a></li>
+                <li><a href="gestao-financeira.html#pagamentos">Gestão de pagamentos <span aria-hidden="true">›</span></a></li>
+              </ul>
+            </div>
+            <div class="hx-fin-side">
+              <ul class="hx-chips">
+                <li>+25 bancos integrados</li>
+                <li>CRM de cobrança</li>
+                <li>Boletos registrados</li>
+                <li>Régua por e-mail, WhatsApp e SMS</li>
+                <li>Pagamentos direto no banco</li>
+                <li>Saldo e extrato</li>
+                <li>Baixa automática no ERP</li>
+                <li>Autenticação multifator</li>
+              </ul>
+              <a class="hx-more" href="gestao-financeira.html">Ver mais →</a>
+            </div>
           </article>
         </div>
       </div>
